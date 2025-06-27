@@ -5,17 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate-translations": "node scripts/translate-locales.js",
     "build": "npm run generate-translations && vite build",
-    "generate-translations": "node -r ts-node/register scripts/translate-locales.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.81.2",
     "airtable": "^0.12.2",
+    "dotenv": "^16.6.0",
     "i18next": "^25.2.1",
     "i18next-http-backend": "^3.0.2",
     "lucide-react": "^0.523.0",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -36,10 +38,8 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
-    "node-fetch": "^3.3.2",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^6.3.5"
