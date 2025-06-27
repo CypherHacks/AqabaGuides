@@ -6,7 +6,7 @@
   "nav.about": "About Us",
   "nav.listYourBusiness": "List Your Business",
   "aria.toggleMenu": "Toggle navigation menu",
-   "footer.logoAlt": "AqabaGuide logo",
+  "footer.logoAlt": "AqabaGuide logo",
   "footer.description": "Your trusted guide to Aqaba's business landscape, connecting visitors and businesses.",
   "footer.loadError": "Failed to load categories for footer:",
   "footer.mainCategoriesTitle": "Main Categories",
