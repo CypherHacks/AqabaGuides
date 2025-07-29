@@ -175,28 +175,14 @@ const Hero: React.FC = () => {
    },
  ];
 
- // Enhanced motion variants
- const containerVariants = {
-   hidden: { opacity: 0 },
-   visible: {
-     opacity: 1,
-     transition: {
-       duration: 0.3,
-       staggerChildren: 0.15,
-     }
-   }
+ // Animation variants
+ const fadeInUp: Variants = {
+   hidden: { opacity: 0, y: 20 },
+   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
  };
 
- const itemVariants: Variants = {
-   hidden: { opacity: 0, y: 30 },
-   visible: {
-     opacity: 1,
-     y: 0,
-     transition: {
-       duration: 0.6,
-       ease: [0.25, 0.46, 0.45, 0.94]
-     }
-   }
+ const stagger = {
+   visible: { transition: { staggerChildren: 0.1 } }
  };
 
  const formattedSync = lastSync
@@ -204,279 +190,210 @@ const Hero: React.FC = () => {
    : '—';
 
  return (
-   <section className="relative min-h-screen flex flex-col overflow-hidden">
-     {/* Enhanced Map Background with Mobile Optimization */}
+   <section className="relative min-h-screen bg-gray-900 overflow-hidden">
+     {/* Fixed Map Background - Properly Displayed */}
      <div className="absolute inset-0 z-0">
-       {/* Primary map layer with mobile-optimized positioning */}
+       {/* Map Layer - Fixed to show full map */}
        <div 
-         className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
+         className="absolute inset-0 w-full h-full"
          style={{ 
            backgroundImage: `url(${Map})`,
-           backgroundPosition: 'center 30%', // Better mobile positioning
-           filter: 'brightness(0.4) contrast(1.1) saturate(1.2)'
+           backgroundSize: 'cover',
+           backgroundPosition: 'center center',
+           backgroundRepeat: 'no-repeat',
+           backgroundAttachment: 'fixed'
          }}
        />
        
-       {/* Mobile-specific map overlay for better readability */}
-       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/80 md:from-slate-900/40 md:via-slate-900/20 md:to-slate-900/60" />
+       {/* Overlay for readability - lighter for better map visibility */}
+       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/60 to-gray-900/80" />
        
-       {/* Animated gradient overlay */}
-       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-emerald-900/20 animate-pulse-slow" />
-       
-       {/* Dynamic light effect */}
-       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl">
-         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-yellow-400/15 via-yellow-300/5 to-transparent rounded-full blur-3xl animate-float" />
-       </div>
-       
-       {/* Subtle grid pattern for depth */}
-       <div className="absolute inset-0 opacity-10">
+       {/* Subtle pattern overlay */}
+       <div className="absolute inset-0 opacity-5">
          <div 
-           className="w-full h-full animate-grid-flow"
+           className="w-full h-full"
            style={{
-             backgroundImage: `
-               linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-               linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-             `,
-             backgroundSize: '60px 60px'
+             backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)',
+             backgroundSize: '50px 50px'
            }}
          />
        </div>
      </div>
 
-     {/* Sponsors Section - Enhanced Mobile Design */}
+     {/* Sponsors Section - Clean & Professional */}
      <motion.div
-       className="relative z-20 backdrop-blur-md bg-slate-900/30 border-b border-white/10"
+       className="relative z-10 bg-white/5 backdrop-blur-sm border-b border-white/10"
        initial="hidden"
-       whileInView="visible"
-       viewport={{ once: true, amount: 0.2 }}
-       variants={containerVariants}
+       animate="visible"
+       variants={stagger}
      >
-       <div className="container mx-auto px-4 py-8 md:py-12">
-         <motion.div className="text-center mb-8 md:mb-12" variants={itemVariants}>
-           <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-white mb-3 tracking-tight">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+         <motion.div className="text-center mb-8" variants={fadeInUp}>
+           <h3 className="text-2xl font-bold text-white mb-2">
              {t('hero.supportersTitle')}
            </h3>
-           <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+           <p className="text-gray-300 max-w-2xl mx-auto">
              {t('hero.supportersDesc')}
            </p>
          </motion.div>
 
-         <motion.div variants={itemVariants}>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-             {sponsors.map((sponsor, index) => (
-               <motion.div
-                 key={sponsor.name}
-                 variants={itemVariants}
-                 whileHover={{ y: -4, scale: 1.02 }}
-                 transition={{ duration: 0.3 }}
+         <motion.div 
+           className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+           variants={stagger}
+         >
+           {sponsors.map((sponsor, _index) => (
+             <motion.div key={sponsor.name} variants={fadeInUp}>
+               <a
+                 href={sponsor.url}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="group flex items-center p-6 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 hover:bg-white/15 hover:border-white/20 transition-all duration-300"
                >
-                 <a
-                   href={sponsor.url}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="group block h-full rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500 hover:border-yellow-400/30 hover:shadow-2xl hover:shadow-yellow-400/10 p-4 md:p-6"
-                 >
-                   <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 h-full">
-                     <div className="flex-shrink-0 rounded-xl md:rounded-2xl bg-white/95 p-3 md:p-4 shadow-lg group-hover:shadow-xl transition-shadow duration-500">
-                       <img 
-                         src={sponsor.logo} 
-                         alt={sponsor.name} 
-                         className="h-12 md:h-16 w-auto object-contain max-w-[140px] md:max-w-[180px]" 
-                       />
-                     </div>
-                     <div className="text-center sm:text-left flex-1 min-w-0">
-                       <h4 className="text-base md:text-lg font-bold text-white group-hover:text-yellow-300 transition-colors duration-300 mb-1 md:mb-2">
-                         {sponsor.name}
-                       </h4>
-                       <p className="text-xs md:text-sm text-slate-300 mb-2 md:mb-3 line-clamp-2">
-                         {sponsor.description}
-                       </p>
-                       <span className="inline-flex items-center text-xs md:text-sm text-slate-400 group-hover:text-yellow-200 transition-colors duration-300">
-                         {t('hero.visitWebsite')} 
-                         <ExternalLink className="ml-1 h-3 w-3 md:h-4 md:w-4" />
-                       </span>
-                     </div>
-                   </div>
-                 </a>
-               </motion.div>
-             ))}
-           </div>
+                 <div className="flex-shrink-0 bg-white rounded-lg p-3 mr-4">
+                   <img 
+                     src={sponsor.logo} 
+                     alt={sponsor.name} 
+                     className="h-12 w-auto object-contain" 
+                   />
+                 </div>
+                 <div className="flex-1 min-w-0">
+                   <h4 className="text-lg font-semibold text-white group-hover:text-yellow-300 transition-colors">
+                     {sponsor.name}
+                   </h4>
+                   <p className="text-sm text-gray-300 mt-1">
+                     {sponsor.description}
+                   </p>
+                   <span className="inline-flex items-center text-sm text-gray-400 mt-2 group-hover:text-yellow-200 transition-colors">
+                     {t('hero.visitWebsite')} 
+                     <ExternalLink className="ml-1 h-4 w-4" />
+                   </span>
+                 </div>
+               </a>
+             </motion.div>
+           ))}
          </motion.div>
        </div>
      </motion.div>
 
-     {/* Main Hero Content - Enhanced Mobile-First Design */}
-     <div className="relative z-10 flex-1 flex items-center">
-       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
+     {/* Main Hero Content - Centered & Clean */}
+     <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-200px)]">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
          <motion.div
-           className="max-w-4xl mx-auto text-center"
+           className="text-center max-w-4xl mx-auto"
            initial="hidden"
-           whileInView="visible"
-           viewport={{ once: true, amount: 0.3 }}
-           variants={containerVariants}
+           animate="visible"
+           variants={stagger}
          >
-           {/* Main Title */}
+           {/* Brand Title */}
            <motion.h1 
-             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-4 md:mb-6"
-             variants={itemVariants}
+             className="text-5xl md:text-7xl font-bold text-white mb-6"
+             variants={fadeInUp}
            >
-             <span className="gradient-text bg-clip-text text-transparent inline-block">
+             <span className="gradient-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent">
                {t('hero.brand')}
              </span>
            </motion.h1>
 
-           {/* Subtitle */}
+           {/* Tagline */}
            <motion.h2 
-             className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-slate-200 mb-4 md:mb-6"
-             variants={itemVariants}
+             className="text-2xl md:text-3xl font-medium text-gray-200 mb-4"
+             variants={fadeInUp}
            >
              {t('hero.tagline')}
            </motion.h2>
 
            {/* Description */}
            <motion.p 
-             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 md:mb-12"
-             variants={itemVariants}
+             className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+             variants={fadeInUp}
            >
              {t('hero.description')}
            </motion.p>
 
-           {/* Enhanced Search Bar */}
+           {/* Search Bar - Clean & Modern */}
            <motion.div 
              ref={containerRef} 
-             className="relative mx-auto max-w-md md:max-w-lg mb-12 md:mb-16"
-             variants={itemVariants}
+             className="relative max-w-2xl mx-auto mb-16"
+             variants={fadeInUp}
            >
-             <div className="relative group">
-               <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 group-focus-within:text-yellow-400 transition-colors duration-300 z-10" />
+             <div className="relative">
+               <SearchIcon className="absolute left-6 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
                <input
                  type="text"
                  placeholder={t('hero.searchPlaceholder')}
                  value={query}
                  onChange={(e) => setQuery(e.target.value)}
                  onFocus={() => query && setIsOpen(true)}
-                 aria-autocomplete="list"
-                 aria-expanded={isOpen}
-                 aria-controls="hero-suggestions"
-                 className="w-full h-14 md:h-16 rounded-2xl md:rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl px-12 md:px-14 text-white placeholder-slate-400 outline-none transition-all duration-300 focus:border-yellow-400/60 focus:bg-white/15 focus:shadow-2xl focus:shadow-yellow-400/20 text-sm md:text-base"
+                 className="w-full h-16 pl-16 pr-6 text-lg bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
                />
-               
-               {/* Enhanced glow effect */}
-               <div className="absolute inset-0 rounded-2xl md:rounded-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none">
-                 <div className="absolute inset-0 rounded-2xl md:rounded-3xl bg-gradient-to-r from-yellow-400/20 via-yellow-300/30 to-yellow-400/20 blur-xl" />
-               </div>
              </div>
 
-             {/* Enhanced Suggestions Dropdown */}
+             {/* Search Suggestions */}
              {isOpen && suggestions.length > 0 && (
-               <motion.ul
-                 id="hero-suggestions"
-                 role="listbox"
-                 className="absolute top-full mt-3 w-full max-h-64 overflow-auto rounded-2xl md:rounded-3xl border border-white/10 bg-slate-900/95 backdrop-blur-2xl shadow-2xl shadow-black/50 divide-y divide-white/5 z-50"
-                 initial={{ opacity: 0, y: 8, scale: 0.95 }}
-                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                 transition={{ duration: 0.2 }}
-               >
+               <div className="absolute top-full mt-2 w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden shadow-2xl z-50">
                  {suggestions.map((item) => (
-                   <li
+                   <div
                      key={`${item.type}-${item.id}`}
-                     role="option"
                      onClick={() => handleSelect(item)}
-                     className="flex justify-between items-center px-4 md:px-6 py-3 md:py-4 cursor-pointer transition-all duration-200 hover:bg-white/10 hover:backdrop-blur-xl group"
+                     className="flex justify-between items-center px-6 py-4 hover:bg-white/10 cursor-pointer transition-colors border-b border-white/10 last:border-b-0"
                    >
-                     <span className="text-white text-sm md:text-base font-medium group-hover:text-yellow-300 transition-colors duration-200 truncate">
-                       {item.name}
-                     </span>
-                     <span className="text-slate-400 text-xs md:text-sm font-medium ml-2 flex-shrink-0">
+                     <span className="text-white font-medium">{item.name}</span>
+                     <span className="text-gray-400 text-sm">
                        {t(item.type === 'business' ? 'hero.type.business' : 'hero.type.subcategory')}
                      </span>
-                   </li>
+                   </div>
                  ))}
-               </motion.ul>
+               </div>
              )}
            </motion.div>
 
-           {/* Enhanced Stats Grid */}
+           {/* Stats - Clean Grid */}
            <motion.div 
-             className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto"
-             variants={itemVariants}
+             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+             variants={stagger}
            >
-             <StatCard
-               icon={<Building2 className="h-6 w-6 md:h-8 md:w-8" />}
-               value="1000+"
-               title={t('hero.stats.businesses')}
-             />
-             <StatCard
-               icon={<Users className="h-6 w-6 md:h-8 md:w-8" />}
-               value={t('hero.stats.communityTitle', 'Community Driven')}
-               title={t('hero.stats.communityDesc', 'Built for locals & visitors')}
-             />
-             <StatCard
-               icon={<Clock className="h-6 w-6 md:h-8 md:w-8" />}
-               value={`Last Sync: ${formattedSync}`}
-               title={t('hero.stats.upToDate', 'Always up‑to‑date')}
-             />
+             <motion.div variants={fadeInUp}>
+               <StatCard
+                 icon={<Building2 className="h-8 w-8 text-yellow-400 mx-auto mb-4" />}
+                 value="1000+"
+                 title={t('hero.stats.businesses')}
+               />
+             </motion.div>
+             <motion.div variants={fadeInUp}>
+               <StatCard
+                 icon={<Users className="h-8 w-8 text-yellow-400 mx-auto mb-4" />}
+                 value={t('hero.stats.communityTitle', 'Community Driven')}
+                 title={t('hero.stats.communityDesc', 'Built for locals & visitors')}
+               />
+             </motion.div>
+             <motion.div variants={fadeInUp}>
+               <StatCard
+                 icon={<Clock className="h-8 w-8 text-yellow-400 mx-auto mb-4" />}
+                 value={formattedSync}
+                 title={t('hero.stats.upToDate', 'Always up‑to‑date')}
+               />
+             </motion.div>
            </motion.div>
          </motion.div>
        </div>
      </div>
 
-     {/* Enhanced CSS Animations */}
+     {/* Custom Styles */}
      <style>{`
        .gradient-text {
-         background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #f59e0b 75%, #fbbf24 100%);
-         background-size: 300% 300%;
-         animation: gradientShift 8s ease-in-out infinite;
+         background-size: 200% 200%;
+         animation: gradientShift 3s ease-in-out infinite;
        }
        
        @keyframes gradientShift {
          0%, 100% { background-position: 0% 50%; }
          50% { background-position: 100% 50%; }
        }
-       
-       .animate-pulse-slow {
-         animation: pulseGlow 4s ease-in-out infinite;
-       }
-       
-       @keyframes pulseGlow {
-         0%, 100% { opacity: 0.3; }
-         50% { opacity: 0.6; }
-       }
-       
-       .animate-float {
-         animation: floatMove 6s ease-in-out infinite;
-       }
-       
-       @keyframes floatMove {
-         0%, 100% { transform: translateY(0px) translateX(-50%); }
-         50% { transform: translateY(-20px) translateX(-50%); }
-       }
-       
-       .animate-grid-flow {
-         animation: gridFlow 20s linear infinite;
-       }
-       
-       @keyframes gridFlow {
-         0% { transform: translate(0, 0); }
-         100% { transform: translate(60px, 60px); }
-       }
-       
-       .bg-gradient-radial {
-         background: radial-gradient(circle, var(--tw-gradient-stops));
-       }
-       
-       .line-clamp-2 {
-         display: -webkit-box;
-         -webkit-line-clamp: 2;
-         -webkit-box-orient: vertical;
-         overflow: hidden;
-       }
-       
-       /* Mobile-specific improvements */
-       @media (max-width: 640px) {
-         .gradient-text {
-           background-size: 200% 200%;
-           animation-duration: 6s;
+
+       /* Mobile optimizations */
+       @media (max-width: 768px) {
+         .bg-fixed {
+           background-attachment: scroll;
          }
        }
      `}</style>
@@ -484,7 +401,7 @@ const Hero: React.FC = () => {
  );
 };
 
-// -------------------- Enhanced Sub Components --------------------
+// -------------------- Stat Card Component --------------------
 interface StatCardProps {
  icon: React.ReactNode;
  value: string;
@@ -492,21 +409,11 @@ interface StatCardProps {
 }
 
 const StatCard: React.FC<StatCardProps> = ({ icon, value, title }) => (
- <motion.div 
-   className="group rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-4 md:p-6 text-center transition-all duration-500 hover:border-yellow-400/30 hover:bg-white/10 hover:shadow-2xl hover:shadow-yellow-400/10"
-   whileHover={{ y: -2, scale: 1.02 }}
-   transition={{ duration: 0.3 }}
- >
-   <div className="text-yellow-400 mb-2 md:mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
-     {icon}
-   </div>
-   <div className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2 leading-tight">
-     {value}
-   </div>
-   <div className="text-xs md:text-sm text-slate-300 leading-tight">
-     {title}
-   </div>
- </motion.div>
+ <div className="text-center p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+   {icon}
+   <div className="text-2xl font-bold text-white mb-2">{value}</div>
+   <div className="text-gray-300">{title}</div>
+ </div>
 );
 
 export default Hero;
