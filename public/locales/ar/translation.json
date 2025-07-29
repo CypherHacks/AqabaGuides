@@ -1,299 +1,299 @@
 {
-  "sponsor.banner": "Premium Aqaba Business Directory - Partner With Us",
-  "header.siteName": "AqabaGuide",
-  "header.logoAlt": "AqabaGuide logo",
-  "nav.home": "Home",
-  "nav.about": "About Us",
-  "nav.listYourBusiness": "List Your Business",
-  "aria.toggleMenu": "Toggle navigation menu",
-  "hero.loadError": "Failed to load search data",
-  "hero.supportersTitle": "Our Valued Supporters",
-  "hero.supportersDesc": "These organizations play a vital role in supporting Aqaba's growth and development",
-  "hero.sponsors.adc": "Driving economic growth and development in Aqaba",
-  "hero.sponsors.aseza": "Overseeing Aqaba's special economic zone",
-  "hero.visitWebsite": "Visit website",
-  "hero.brand": "AqabaGuide",
-  "hero.tagline": "Discover Aqaba's Business Hub",
-  "hero.description": "Your comprehensive guide to tourist facilities, logistics, industrial sites, and commercial establishments in Jordan's gateway to the Red Sea",
-  "hero.searchPlaceholder": "Search businesses or subcategories...",
-  "hero.type.business": "Business",
-  "hero.type.subcategory": "Subcategory",
-  "hero.stats.businesses": "Businesses Listed",
-  "hero.stats.communityTitle": "Community Driven",
-  "hero.stats.communityDesc": "Built for locals & visitors",
-  "hero.stats.upToDate": "Always up‑to‑date",
-  "footer.description": "Your trusted guide to Aqaba's business landscape, connecting visitors and businesses.",
-  "footer.logoAlt": "AqabaGuide logo",
-  "footer.mainCategoriesTitle": "Main Categories",
-  "footer.quickLinksTitle": "Quick Links",
-  "footer.contactUsTitle": "Contact Us",
-  "footer.privacyPolicy": "Privacy Policy",
-  "footer.termsOfService": "Terms of Service",
-  "footer.allRights": "All rights reserved.",
-  "footer.loadError": "Failed to load categories for footer:",
-  "categories.exploreTitle": "Explore Aqaba's Business Landscape",
-  "categories.exploreDesc": "Navigate our directory by industry sector",
-  "categories.exploreLabel": "Explore",
-  "categories.businesses": "Businesses",
-  "categories.subcategories": "Sub-categories",
-  "categories.loadError": "Error loading categories",
-  "categories.logistics": "Logistics",
-  "categories.logistics.description": "Transport & shipping companies",
-  "categories.industrial": "Industrial",
-  "categories.industrial.description": "Factories, plants, and manufacturers",
-  "categories.tourism": "Tourism",
-  "categories.tourism.description": "Facilities and services for tourists",
-  "categories.commercial": "Commercial",
-  "categories.commercial.description": "Shops, markets, and offices",
-  "categories.healthcare": "Healthcare",
-  "categories.healthcare.description": "Hospitals, Clinics, Pharmacies, Labs",
-  "categories.governmental": "Governmental",
-  "categories.governmental.description": "Government Sectors",
-  "categories.other": "Other",
-  "sub.title": "Subcategories",
-  "sub.count": "Subcategories",
-  "sub.total": "Total Businesses",
-  "sub.loading": "Loading sub-categories…",
-  "sub.errorLoad": "Failed to load sub-categories.",
-  "sub.none": "No sub-categories available.",
-  "sub.businesses": "businesses",
-  "sub.viewAll": "View All",
-  "sub.back": "Back",
-  "sub.viewPDF": "View PDF",
-  "sub.downloadPDF": "Download PDF",
-  "sub.logisticsGuide.title": "View Guide",
-  "sub.logisticsGuide.desc": "Comprehensive guide to logistics services in the region with helpful resources.",
-  "sub.logisticsGuide.alt": "View Guide",
-  "sub.logisticsGuide.downloadOverlay": "Download Guide",
-  "sub.logisticsGuide.downloadButton": "Download PDF",
-  "sub.supporterLabel": "Proudly Supported by",
-  "sub.supporter.alt": "Aqaba Water Company Logo",
-  "sub.supporter.aria": "Visit Aqaba Water Company website",
-  "sub.supporter.name": "Aqaba Water Company",
-  "sub.supporter.desc": "Providing sustainable water solutions for the region since 2004.",
-  "sub.supporter.visit": "Visit Website",
-  "list.heroTitle": "Grow Your Business in ASEZ",
-  "list.heroDesc": "Join AqabaGuide's trusted directory and connect with investors, customers, and partners in the Aqaba Special Economic Zone.",
-  "list.benefitsTitle": "Why List With Us?",
-  "list.benefits.visibility.title": "Increased Visibility",
-  "list.benefits.visibility.desc": "Reach thousands of potential clients and investors searching for services in ASEZ.",
-  "list.benefits.advertising.title": "Premium Advertising",
-  "list.benefits.advertising.desc": "Highlight your business with sponsored listings, banners, and featured spots.",
-  "list.benefits.networking.title": "Networking Opportunities",
-  "list.benefits.networking.desc": "Get invited to exclusive ASEZ investor events and trade forums.",
-  "list.formTitle": "Submit Your Business",
-  "list.formDesc": "Complete the form below, and our team will contact you within 24 hours to discuss listing options, advertising packages, and pricing.",
-  "list.fields.name.label": "Business Name",
-  "list.fields.name.placeholder": "e.g., Aqaba Logistics Solutions",
-  "list.fields.industry.label": "Industry",
-  "list.fields.industry.placeholder": "Select Category",
-  "list.fields.contact.label": "Contact Person",
-  "list.fields.contact.placeholder": "e.g., John Doe",
-  "list.fields.email.label": "Email",
+  "sponsor.banner": "دليل أعمال العقبة المميز - كن شريكًا معنا",
+  "header.siteName": "دليل العقبة",
+  "header.logoAlt": "شعار دليل العقبة",
+  "nav.home": "الصفحة الرئيسية",
+  "nav.about": "نبذة عنا",
+  "nav.listYourBusiness": "أدرج نشاطك التجاري",
+  "aria.toggleMenu": "تبديل قائمة التصفح",
+  "hero.loadError": "فشل تحميل بيانات البحث",
+  "hero.supportersTitle": "داعمونا الكرام",
+  "hero.supportersDesc": "تلعب هذه المنظمات دوراً حيوياً في دعم نمو العقبة وتطورها",
+  "hero.sponsors.adc": "دفع عجلة النمو الاقتصادي والتنمية في العقبة",
+  "hero.sponsors.aseza": "الإشراف على المنطقة الاقتصادية الخاصة في العقبة",
+  "hero.visitWebsite": "زيارة الموقع الإلكتروني",
+  "hero.brand": "دليل العقبة",
+  "hero.tagline": "اكتشف مركز الأعمال في العقبة",
+  "hero.description": "دليلك الشامل للمرافق السياحية، والخدمات اللوجستية، والمواقع الصناعية، والمنشآت التجارية في بوابة الأردن على البحر الأحمر",
+  "hero.searchPlaceholder": "ابحث عن الشركات أو الفئات الفرعية...",
+  "hero.type.business": "الأعمال التجارية",
+  "hero.type.subcategory": "الفئة الفرعية",
+  "hero.stats.businesses": "الشركات المدرجة",
+  "hero.stats.communityTitle": "مدفوعة من المجتمع",
+  "hero.stats.communityDesc": "مصممة للسكان المحليين والزوار",
+  "hero.stats.upToDate": "محدّثة دائماً",
+  "footer.description": "دليلك الموثوق به لمشهد الأعمال في العقبة، الذي يربط بين الزائرين والشركات.",
+  "footer.logoAlt": "شعار دليل العقبة",
+  "footer.mainCategoriesTitle": "الفئات الرئيسية",
+  "footer.quickLinksTitle": "روابط سريعة",
+  "footer.contactUsTitle": "اتصل بنا",
+  "footer.privacyPolicy": "سياسة الخصوصية",
+  "footer.termsOfService": "شروط الخدمة",
+  "footer.allRights": "جميع الحقوق محفوظة.",
+  "footer.loadError": "فشل تحميل الفئات للتذييل:",
+  "categories.exploreTitle": "استكشف المشهد التجاري في العقبة",
+  "categories.exploreDesc": "تصفح دليلنا حسب قطاع الصناعة",
+  "categories.exploreLabel": "استكشف",
+  "categories.businesses": "الشركات",
+  "categories.subcategories": "الفئات الفرعية",
+  "categories.loadError": "فئات الأخطاء في تحميل الأخطاء",
+  "categories.logistics": "الخدمات اللوجستية",
+  "categories.logistics.description": "شركات النقل والشحن",
+  "categories.industrial": "صناعي",
+  "categories.industrial.description": "المصانع والمعامل والمصانع والمصنعون",
+  "categories.tourism": "السياحة",
+  "categories.tourism.description": "المرافق والخدمات للسياح",
+  "categories.commercial": "تجاري",
+  "categories.commercial.description": "المتاجر والأسواق والمكاتب",
+  "categories.healthcare": "الرعاية الصحية",
+  "categories.healthcare.description": "المستشفيات، والعيادات، والصيدليات، والمختبرات",
+  "categories.governmental": "حكومي",
+  "categories.governmental.description": "القطاعات الحكومية",
+  "categories.other": "أخرى",
+  "sub.title": "الفئات الفرعية",
+  "sub.count": "الفئات الفرعية",
+  "sub.total": "مجموع الشركات",
+  "sub.loading": "تحميل الفئات الفرعية..",
+  "sub.errorLoad": "فشل تحميل الفئات الفرعية.",
+  "sub.none": "لا توجد فئات فرعية متاحة.",
+  "sub.businesses": "الأعمال التجارية",
+  "sub.viewAll": "عرض الكل",
+  "sub.back": "رجوع",
+  "sub.viewPDF": "عرض ملف PDF",
+  "sub.downloadPDF": "تنزيل ملف PDF",
+  "sub.logisticsGuide.title": "عرض الدليل",
+  "sub.logisticsGuide.desc": "دليل شامل للخدمات اللوجستية في المنطقة مع موارد مفيدة.",
+  "sub.logisticsGuide.alt": "عرض الدليل",
+  "sub.logisticsGuide.downloadOverlay": "تنزيل الدليل",
+  "sub.logisticsGuide.downloadButton": "تنزيل ملف PDF",
+  "sub.supporterLabel": "مدعوم بفخر من",
+  "sub.supporter.alt": "شعار شركة مياه العقبة",
+  "sub.supporter.aria": "قم بزيارة الموقع الإلكتروني لشركة مياه العقبة",
+  "sub.supporter.name": "شركة مياه العقبة",
+  "sub.supporter.desc": "توفير حلول مياه مستدامة للمنطقة منذ عام 2004.",
+  "sub.supporter.visit": "زيارة الموقع الإلكتروني",
+  "list.heroTitle": "تنمية أعمالك في منطقة الشرق الأوسط وأفريقيا وجنوب شرق آسيا",
+  "list.heroDesc": "انضم إلى دليل AqabaGuide الموثوق وتواصل مع المستثمرين والعملاء والشركاء في منطقة العقبة الاقتصادية الخاصة.",
+  "list.benefitsTitle": "لماذا تدرج معنا؟",
+  "list.benefits.visibility.title": "زيادة الرؤية",
+  "list.benefits.visibility.desc": "يمكنك الوصول إلى آلاف العملاء والمستثمرين المحتملين الذين يبحثون عن خدمات في المنطقة الاقتصادية الخاصة الآسيوية.",
+  "list.benefits.advertising.title": "الإعلانات المميزة",
+  "list.benefits.advertising.desc": "قم بتسليط الضوء على نشاطك التجاري من خلال القوائم الدعائية واللافتات والمواقع المميزة.",
+  "list.benefits.networking.title": "فرص التواصل",
+  "list.benefits.networking.desc": "احصل على دعوة لحضور فعاليات مستثمري المنطقة الاقتصادية الخاصة بالدقم الحصرية والمنتديات التجارية.",
+  "list.formTitle": "أرسل نشاطك التجاري",
+  "list.formDesc": "أكمل النموذج أدناه، وسيقوم فريقنا بالاتصال بك في غضون 24 ساعة لمناقشة خيارات الإدراج وباقات الإعلانات والأسعار.",
+  "list.fields.name.label": "الاسم التجاري",
+  "list.fields.name.placeholder": "على سبيل المثال، شركة العقبة للحلول اللوجستية",
+  "list.fields.industry.label": "الصناعة",
+  "list.fields.industry.placeholder": "اختر الفئة",
+  "list.fields.contact.label": "الاتصال بالشخص",
+  "list.fields.contact.placeholder": "على سبيل المثال، جون دو",
+  "list.fields.email.label": "البريد الإلكتروني",
   "list.fields.email.placeholder": "contact@example.com",
-  "list.fields.phone.label": "Phone",
-  "list.fields.phone.placeholder": "+962 7X XXX XXXX",
-  "list.fields.message.label": "Additional Details",
-  "list.fields.message.placeholder": "Tell us about your business, advertising preferences, or special requests...",
-  "list.fields.terms": "I agree to AqabaGuide's <1>Terms of Service</1>.",
-  "list.button.submit": "Submit Application",
-  "list.status.sending": "Sending…",
-  "list.status.sent": "✓ Submitted!",
-  "list.status.error": "✕ Submission failed.",
-  "list.cta.title": "Need Help?",
-  "list.cta.desc": "Email us at <1>partners@aqabaguide.com</1> or call <3>+962 7 7691 1233</3>.",
-  "detail.back": "Back to Listings",
-  "detail.premiumProfile": "Premium Business Profile",
-  "detail.reviews": "reviews",
-  "detail.contactTitle": "Contact & Location",
-  "detail.servicesTitle": "Special Services",
-  "detail.service.support": "24/7 Customer Support",
-  "detail.service.consult": "On-site Consultation",
-  "about.title": "About AqabaGuide",
-  "about.gatewayTitle": "Your Gateway to Business Success in ASEZ",
-  "about.gatewayDesc1": "AqabaGuide is the premier business directory designed to empower <0>{{bold1}}</0>, investors, and businesses looking to establish or expand their commercial activities in the <1>{{bold2}}</1>. Our platform serves as a strategic tool, offering precise details on world-class infrastructure projects, logistics services, and investment opportunities in Aqaba.",
-  "about.gatewayDesc2": "Whether you're a local startup or a global investor, we connect you with the right partners, services, and resources to thrive in one of the Middle East's most dynamic economic hubs.",
-  "about.whyTitle": "Why Choose AqabaGuide?",
-  "about.features.comprehensive.title": "Comprehensive Directory",
-  "about.features.comprehensive.desc": "Access verified contacts for logistics, trade, tourism, and industrial services in ASEZ.",
-  "about.features.investment.title": "Investment Support",
-  "about.features.investment.desc": "Stay updated with the latest economic developments, incentives, and regulatory frameworks.",
-  "about.features.networking.title": "Strategic Networking",
-  "about.features.networking.desc": "Bridge connections between businesses, government entities, and international investors.",
-  "about.features.growth.title": "Economic Growth",
-  "about.features.growth.desc": "Contribute to Aqaba's vision as a regional leader in trade, tourism, and innovation.",
-  "about.missionTitle": "Our Mission",
-  "about.missionDesc1": "At <0>{{bold}}</0>, we work tirelessly to promote Aqaba's economic development on local, regional, and international stages. This directory reflects our commitment to:",
-  "about.mission.point1": "Creating a favorable business environment in ASEZ.",
-  "about.mission.point2": "Supporting the growth of SMEs and large-scale enterprises alike.",
-  "about.mission.point3": "Providing up-to-date, actionable insights for investors and entrepreneurs.",
-  "about.bold.brandName": "Ayn Al Aqaba",
-  "about.bold.entrepreneurs": "entrepreneurs",
-  "about.bold.ASEZ": "ASEZ",
-  "about.joinTitle": "Join Aqaba's Economic Success Story",
-  "about.joinDesc": "Explore endless possibilities in ASEZ—where strategic location, tax incentives, and cutting-edge infrastructure converge. Let AqabaGuide be your first step toward unlocking new opportunities.",
-  "about.joinButton": "Connect With Us",
-  "Category": "Category",
-  "Description": "Description",
-  "Email": "Email",
-  "Image": "Image",
-  "IsPremium": "Is Premium",
-  "Location": "Location",
-  "Name": "Name",
-  "Phone": "Phone",
-  "Rating": "Rating",
-  "Reviews": "Reviews",
-  "Subcategory": "Subcategory",
-  "Website": "Website",
+  "list.fields.phone.label": "الهاتف",
+  "list.fields.phone.placeholder": "+962 7x 7x xxx xxxxxxxx",
+  "list.fields.message.label": "تفاصيل إضافية",
+  "list.fields.message.placeholder": "أخبرنا عن عملك أو تفضيلاتك الإعلانية أو طلباتك الخاصة...",
+  "list.fields.terms": "أوافق على <1>شروط خدمة</1> AqabaGuide.",
+  "list.button.submit": "تقديم الطلب",
+  "list.status.sending": "إرسال..",
+  "list.status.sent": "✓ مقدم!",
+  "list.status.error": "✕ فشل التقديم.",
+  "list.cta.title": "هل تحتاج إلى مساعدة؟",
+  "list.cta.desc": "راسلنا عبر البريد الإلكتروني <1>partners@aqabaguide.com</1> أو اتصل بنا على <3>+962 7 7 7691 1233</3>.",
+  "detail.back": "العودة إلى القوائم",
+  "detail.premiumProfile": "الملف التجاري المميز",
+  "detail.reviews": "المراجعات",
+  "detail.contactTitle": "الاتصال والموقع",
+  "detail.servicesTitle": "الخدمات الخاصة",
+  "detail.service.support": "دعم العملاء على مدار الساعة طوال أيام الأسبوع",
+  "detail.service.consult": "استشارة في الموقع",
+  "about.title": "نبذة عن دليل العقبة",
+  "about.gatewayTitle": "بوابتك لنجاح الأعمال في المنطقة الاقتصادية الخاصة الآسيوية",
+  "about.gatewayDesc1": "AqabaGuide هو دليل الأعمال الرئيسي المصمم لتمكين <0>{{bold1}}</0> والمستثمرين والشركات التي تتطلع إلى تأسيس أو توسيع أنشطتها التجارية في <1>{{bold2}}</1>. تعمل منصتنا كأداة استراتيجية تقدم تفاصيل دقيقة عن مشاريع البنية التحتية والخدمات اللوجستية وفرص الاستثمار في العقبة.",
+  "about.gatewayDesc2": "وسواء كنت شركة ناشئة محلية أو مستثمراً عالمياً، فنحن نربطك بالشركاء المناسبين والخدمات والموارد المناسبة لتزدهر في أحد أكثر المراكز الاقتصادية ديناميكية في الشرق الأوسط.",
+  "about.whyTitle": "لماذا تختار AqabaGuide؟",
+  "about.features.comprehensive.title": "الدليل الشامل",
+  "about.features.comprehensive.desc": "الوصول إلى جهات الاتصال التي تم التحقق منها للخدمات اللوجستية والتجارية والسياحية والصناعية في المنطقة الاقتصادية الخاصة الآسيوية.",
+  "about.features.investment.title": "دعم الاستثمار",
+  "about.features.investment.desc": "اطلع على أحدث التطورات الاقتصادية والحوافز والأطر التنظيمية.",
+  "about.features.networking.title": "الربط الشبكي الاستراتيجي",
+  "about.features.networking.desc": "مد جسور التواصل بين الشركات والكيانات الحكومية والمستثمرين الدوليين.",
+  "about.features.growth.title": "النمو الاقتصادي",
+  "about.features.growth.desc": "المساهمة في رؤية العقبة كرائد إقليمي في التجارة والسياحة والابتكار.",
+  "about.missionTitle": "مهمتنا",
+  "about.missionDesc1": "في <0>{{بولد}}،</0> نعمل بلا كلل لتعزيز التنمية الاقتصادية في العقبة على المستويات المحلية والإقليمية والدولية. ويعكس هذا الدليل التزامنا بـ",
+  "about.mission.point1": "تهيئة بيئة أعمال مواتية في المنطقة الاقتصادية الخاصة الآسيوية.",
+  "about.mission.point2": "دعم نمو الشركات الصغيرة والمتوسطة والشركات الكبيرة على حد سواء.",
+  "about.mission.point3": "توفير رؤى حديثة وقابلة للتنفيذ للمستثمرين ورواد الأعمال.",
+  "about.bold.brandName": "عين العقبة",
+  "about.bold.entrepreneurs": "المتعاقدون",
+  "about.bold.ASEZ": "أسيز",
+  "about.joinTitle": "انضم إلى قصة النجاح الاقتصادي في العقبة",
+  "about.joinDesc": "استكشف الإمكانيات اللامتناهية في منطقة العقبة الاقتصادية الخاصة - حيث يجتمع الموقع الاستراتيجي والحوافز الضريبية والبنية التحتية المتطورة. اجعل من AqabaGuide خطوتك الأولى نحو إطلاق فرص جديدة.",
+  "about.joinButton": "تواصل معنا",
+  "Category": "الفئة",
+  "Description": "الوصف",
+  "Email": "البريد الإلكتروني",
+  "Image": "الصورة",
+  "IsPremium": "هو بريميوم",
+  "Location": "الموقع",
+  "Name": "الاسم",
+  "Phone": "الهاتف",
+  "Rating": "التقييم",
+  "Reviews": "المراجعات",
+  "Subcategory": "الفئة الفرعية",
+  "Website": "الموقع الإلكتروني",
   "tailwindcss": "Tailwind CSS",
   "subcategories": {
     "recSaZ8GSIQonWtUP": {
-      "name": "Custom Clearance",
-      "description": "Manages import/export paperwork"
+      "name": "التخليص المخصص",
+      "description": "إدارة أوراق الاستيراد/التصدير"
     },
     "recOts1U1r6Fu5Rqe": {
-      "name": "Martime service provider",
-      "description": "Supplies and supports vessels"
+      "name": "مزود خدمة مارتيم",
+      "description": "إمدادات ودعم السفن"
     },
     "recVttIPxLBdUekj5": {
-      "name": "Hotels & Hotel apartments",
-      "description": "Furnished guest accommodation"
+      "name": "الفنادق والشقق الفندقية",
+      "description": "أماكن إقامة النزلاء المفروشة"
     },
     "recq4jY66uUxMRmPO": {
-      "name": "Tourism offices & Car rental agencies",
-      "description": "Travel guidance and car hire"
+      "name": "مكاتب السياحة ووكالات تأجير السيارات",
+      "description": "إرشادات السفر وتأجير السيارات"
     },
     "recEv6uxzVnxCCV8V": {
-      "name": "Trade & Commercial services",
-      "description": "Business support and logistics"
+      "name": "التجارة والخدمات التجارية",
+      "description": "دعم الأعمال والخدمات اللوجستية"
     },
     "recWw868BaUo5KW9U": {
-      "name": "Hospitals & Clinics",
-      "description": "Medical treatment and care"
+      "name": "المستشفيات والعيادات",
+      "description": "العلاج الطبي والرعاية الطبية"
     },
     "reck5OGOOlmv2Zzee": {
-      "name": "pharmacies",
-      "description": "Dispenses medications and advice"
+      "name": "الصيدليات",
+      "description": "صرف الأدوية وتقديم المشورة الطبية"
     },
     "recGFVw4JBXJ1Nqh8": {
-      "name": "Government Services",
-      "description": "Issues permits and public records"
+      "name": "الخدمات الحكومية",
+      "description": "إصدار التصاريح والسجلات العامة"
     },
     "rec5pC1VdAgz5DtVq": {
-      "name": "Restaurants",
-      "description": "Food serving"
+      "name": "المطاعم",
+      "description": "تقديم الطعام"
     },
     "recqDDCujh0AMqFAF": {
-      "name": "Import & Export",
-      "description": "Importing and Exporting goods"
+      "name": "الاستيراد والتصدير",
+      "description": "استيراد البضائع وتصديرها"
     },
     "recSMDwzx6Qzq5MDM": {
-      "name": "Fresh Foods",
-      "description": " Fresh Food & Grocery"
+      "name": "الأطعمة الطازجة",
+      "description": " الأغذية الطازجة والبقالة"
     },
     "rect1IOqKF8wDQUyx": {
-      "name": "Bakery & Confectionery",
-      "description": "bakery & sweets"
+      "name": "المخبوزات والحلويات",
+      "description": "المخبوزات والحلويات"
     },
     "recwUCk79GzljVTND": {
-      "name": "Cafés",
-      "description": "Cafés"
+      "name": "المقاهي",
+      "description": "المقاهي"
     },
     "recfIti1Mxb7ccnUp": {
-      "name": "Coffee & Nut Roasters",
-      "description": "Roastery"
+      "name": "محامص القهوة والمكسرات",
+      "description": "المحمصة"
     },
     "recTIvmVceJ4kYgTW": {
-      "name": "Grocery & Food Suppliers",
-      "description": "Grocery & Food Suppliers"
+      "name": "موردو البقالة والمواد الغذائية",
+      "description": "موردو البقالة والمواد الغذائية"
     },
     "rec0yR9q4pJkETkRx": {
-      "name": "Grocery & Supermarkets",
-      "description": "Grocery store, Mini-market, Supermarket"
+      "name": "البقالة والسوبر ماركت",
+      "description": "متجر بقالة، سوق صغير، سوبر ماركت، سوبر ماركت"
     },
     "recLpW8IIdV0SKHqQ": {
-      "name": "Industrial Operations & Infrastructure",
-      "description": "Industrial Systems & Maintenance"
+      "name": "العمليات الصناعية والبنية التحتية",
+      "description": "الأنظمة الصناعية والصيانة"
     },
     "recwbqJAHAlEClt1r": {
-      "name": "Industrial Services",
-      "description": "Production,Manufacturing,Factory"
+      "name": "الخدمات الصناعية",
+      "description": "الإنتاج، التصنيع، المصنع، المصنع"
     }
   },
-  "business.back": "Back",
-  "business.searchPlaceholder": "Search businesses…",
-  "business.premiumOnly": "Premium Only",
-  "business.errorLoad": "Failed to load businesses.",
-  "business.none": "No businesses found.",
-  "business.viewDetails": "View Details",
+  "business.back": "رجوع",
+  "business.searchPlaceholder": "ابحث عن الشركات..",
+  "business.premiumOnly": "قسط فقط",
+  "business.errorLoad": "فشل تحميل الأعمال التجارية.",
+  "business.none": "لم يتم العثور على أي أعمال تجارية.",
+  "business.viewDetails": "عرض التفاصيل",
   "sponsors": {
     "1": {
-      "name": "Agility"
+      "name": "الرشاقة"
     },
     "2": {
-      "name": "Aqaba Logistics Village (ALV)"
+      "name": "قرية العقبة اللوجستية (ALV)"
     },
     "3": {
-      "name": "Aqaba Company for Port Management & Operation"
+      "name": "شركة العقبة لإدارة وتشغيل الموانئ في العقبة"
     },
     "4": {
-      "name": "Aqaba Port Marine Services Company"
+      "name": "شركة ميناء العقبة للخدمات البحرية"
     },
     "5": {
-      "name": "Badr Marine Repairs and Services Co."
+      "name": "شركة بدر للإصلاحات والخدمات البحرية"
     },
     "6": {
-      "name": "The Housing Bank for Trade and Finance"
+      "name": "بنك الإسكان للتجارة والتمويل العقاري"
     },
     "7": {
       "name": "CMA CGM"
     },
     "8": {
-      "name": "Eagle Hills"
+      "name": "إيجل هيلز إيجل هيلز"
     },
     "9": {
-      "name": "Gulf Agency Company"
+      "name": "شركة وكالة الخليج للوكالات"
     },
     "10": {
-      "name": "Golden Triangle for Investment Co."
+      "name": "شركة المثلث الذهبي للاستثمار"
     },
     "11": {
-      "name": "King Hussein International Airport"
+      "name": "مطار الملك حسين الدولي"
     },
     "12": {
-      "name": "Jordan Maritime Authority"
+      "name": "الهيئة البحرية الأردنية"
     },
     "13": {
-      "name": "MEEES Corp."
+      "name": "شركة MEEES"
     },
     "14": {
-      "name": "National Aviation Services (NAS)"
+      "name": "خدمات الطيران الوطنية (NAS)"
     },
     "15": {
-      "name": "National Real Estate Company"
+      "name": "الشركة الوطنية العقارية"
     },
     "16": {
-      "name": "Orange Jordan"
+      "name": "برتقال الأردن"
     },
     "17": {
-      "name": "PBI Aqaba Industrial Estate LLP"
+      "name": "شركة PBI العقبة الصناعية المحدودة PBI العقبة الصناعية المحدودة"
     },
     "18": {
-      "name": "Pacific International Lines (PIL)"
+      "name": "خطوط باسيفيك إنترناشيونال لاينز (PIL)"
     },
     "19": {
-      "name": "Jordan Academy for Maritime Studies"
+      "name": "الأكاديمية الأردنية للدراسات البحرية"
     },
     "20": {
-      "name": "Trust For Logistic Services Ltd."
+      "name": "شركة ترست للخدمات اللوجستية المحدودة"
     }
   },
   "business": {
-    "back": "Back",
-    "searchPlaceholder": "Search businesses…",
-    "errorLoad": "Failed to load businesses.",
-    "none": "No businesses found.",
-    "viewDetails": "View Details",
-    "loadMore": "Load More"
+    "back": "رجوع",
+    "searchPlaceholder": "ابحث عن الشركات..",
+    "errorLoad": "فشل تحميل الأعمال التجارية.",
+    "none": "لم يتم العثور على أي أعمال تجارية.",
+    "viewDetails": "عرض التفاصيل",
+    "loadMore": "تحميل المزيد"
   }
 }
