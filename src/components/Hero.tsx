@@ -1,20 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import {
-  getCategories,
-  getSubcategories,
-  getAllBusinesses,
-  Subcategory,
-  Business,
+ getCategories,
+ getSubcategories,
+ getAllBusinesses,
+ Subcategory,
+ Business,
 } from '../lib/airtable';
 import {
-  Building2,
-  ExternalLink,
-  Search as SearchIcon,
-  Users,
-  Clock,
+ Building2,
+ ExternalLink,
+ Search as SearchIcon,
+ Users,
+ Clock,
 } from 'lucide-react';
 import ADC from '../assets/ADC.png';
 import ASEZA from '../assets/ASEZA.png';
@@ -23,371 +23,490 @@ import { useTranslation } from 'react-i18next';
 
 // -------------------- Types & Cache --------------------
 interface SubWithCat extends Subcategory {
-  categoryId: string;
+ categoryId: string;
 }
 
 type Suggestion =
-  | { type: 'business'; id: string; name: string }
-  | { type: 'subcategory'; id: string; name: string; categoryId: string };
+ | { type: 'business'; id: string; name: string }
+ | { type: 'subcategory'; id: string; name: string; categoryId: string };
 
 type SearchData = {
-  subcategories: SubWithCat[];
-  businesses: Business[];
+ subcategories: SubWithCat[];
+ businesses: Business[];
 };
 
 const CACHE_TTL = 1000 * 60 * 5; // 5 minutes
 let searchCache: (SearchData & { timestamp: number }) | null = null;
 
 const fetchSearchData = async (_locale: string): Promise<SearchData> => {
-  const categories = await getCategories();
-  const subArrays = await Promise.all(
-    categories.map((cat) =>
-      getSubcategories(cat.id).then((subs) =>
-        subs.map((s) => ({ ...s, categoryId: cat.id } as SubWithCat))
-      )
-    )
-  );
+ const categories = await getCategories();
+ const subArrays = await Promise.all(
+   categories.map((cat) =>
+     getSubcategories(cat.id).then((subs) =>
+       subs.map((s) => ({ ...s, categoryId: cat.id } as SubWithCat))
+     )
+   )
+ );
 
-  const allSubs = subArrays.flat();
-  const businesses = await getAllBusinesses();
+ const allSubs = subArrays.flat();
+ const businesses = await getAllBusinesses();
 
-  return {
-    subcategories: allSubs,
-    businesses,
-  };
+ return {
+   subcategories: allSubs,
+   businesses,
+ };
 };
 
 // -------------------- Component --------------------
 const Hero: React.FC = () => {
-  const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
-  const containerRef = useRef<HTMLDivElement>(null);
+ const { t, i18n } = useTranslation();
+ const navigate = useNavigate();
+ const containerRef = useRef<HTMLDivElement>(null);
 
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
-  const [subcategories, setSubcategories] = useState<SubWithCat[]>([]);
-  const [businesses, setBusinesses] = useState<Business[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const [lastSync, setLastSync] = useState<number | null>(null);
+ const [query, setQuery] = useState('');
+ const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+ const [subcategories, setSubcategories] = useState<SubWithCat[]>([]);
+ const [businesses, setBusinesses] = useState<Business[]>([]);
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState<string | null>(null);
+ const [isOpen, setIsOpen] = useState(false);
+ const [lastSync, setLastSync] = useState<number | null>(null);
 
-  // Load & cache subcategories & businesses
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        setLoading(true);
-        const now = Date.now();
-        let data: SearchData;
-        if (searchCache && now - searchCache.timestamp < CACHE_TTL) {
-          data = searchCache;
-        } else {
-          data = await fetchSearchData(i18n.language);
-          searchCache = { ...data, timestamp: now };
-        }
-        if (!cancelled) {
-          setSubcategories(data.subcategories);
-          setBusinesses(data.businesses);
-          // use cache timestamp if available, fallback to now
-          setLastSync(searchCache?.timestamp ?? now);
-        }
-      } catch (e) {
-        console.error(t('hero.loadError'), e);
-        if (!cancelled) setError(t('hero.loadError'));
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [t, i18n.language]);
+ // Load & cache subcategories & businesses
+ useEffect(() => {
+   let cancelled = false;
+   (async () => {
+     try {
+       setLoading(true);
+       const now = Date.now();
+       let data: SearchData;
+       if (searchCache && now - searchCache.timestamp < CACHE_TTL) {
+         data = searchCache;
+       } else {
+         data = await fetchSearchData(i18n.language);
+         searchCache = { ...data, timestamp: now };
+       }
+       if (!cancelled) {
+         setSubcategories(data.subcategories);
+         setBusinesses(data.businesses);
+         setLastSync(searchCache?.timestamp ?? now);
+       }
+     } catch (e) {
+       console.error(t('hero.loadError'), e);
+       if (!cancelled) setError(t('hero.loadError'));
+     } finally {
+       if (!cancelled) setLoading(false);
+     }
+   })();
+   return () => {
+     cancelled = true;
+   };
+ }, [t, i18n.language]);
 
-  // Update suggestions when query changes
-  useEffect(() => {
-    if (!query.trim() || loading || error) {
-      setSuggestions([]);
-      return;
-    }
-    const q = query.toLowerCase();
+ // Update suggestions when query changes
+ useEffect(() => {
+   if (!query.trim() || loading || error) {
+     setSuggestions([]);
+     return;
+   }
+   const q = query.toLowerCase();
 
-    const bizMatches: Suggestion[] = businesses
-      .filter((b) => {
-        const ar = b.name.toLowerCase();
-        const en = (b.name_en ?? '').toLowerCase();
-        return ar.includes(q) || en.includes(q);
-      })
-      .slice(0, 5)
-      .map((b) => ({
-        type: 'business',
-        id: b.id,
-        name: i18n.language === 'en' ? b.name_en ?? b.name : b.name,
-      }));
+   const bizMatches: Suggestion[] = businesses
+     .filter((b) => {
+       const ar = b.name.toLowerCase();
+       const en = (b.name_en ?? '').toLowerCase();
+       return ar.includes(q) || en.includes(q);
+     })
+     .slice(0, 5)
+     .map((b) => ({
+       type: 'business',
+       id: b.id,
+       name: i18n.language === 'en' ? b.name_en ?? b.name : b.name,
+     }));
 
-    const subMatches: Suggestion[] = subcategories
-      .filter((s) => s.name.toLowerCase().includes(q))
-      .slice(0, 5)
-      .map((s) => ({
-        type: 'subcategory',
-        id: s.id,
-        name: s.name,
-        categoryId: s.categoryId,
-      }));
+   const subMatches: Suggestion[] = subcategories
+     .filter((s) => s.name.toLowerCase().includes(q))
+     .slice(0, 5)
+     .map((s) => ({
+       type: 'subcategory',
+       id: s.id,
+       name: s.name,
+       categoryId: s.categoryId,
+     }));
 
-    setSuggestions([...bizMatches, ...subMatches]);
-    setIsOpen(true);
-  }, [query, businesses, subcategories, loading, error, i18n.language]);
+   setSuggestions([...bizMatches, ...subMatches]);
+   setIsOpen(true);
+ }, [query, businesses, subcategories, loading, error, i18n.language]);
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+ // Close dropdown on outside click
+ useEffect(() => {
+   const handleClickOutside = (e: MouseEvent) => {
+     if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+       setIsOpen(false);
+     }
+   };
+   document.addEventListener('mousedown', handleClickOutside);
+   return () => document.removeEventListener('mousedown', handleClickOutside);
+ }, []);
 
-  // Handle selection
-  const handleSelect = (item: Suggestion) => {
-    setQuery('');
-    setIsOpen(false);
-    if (item.type === 'business') {
-      navigate(`/business/${item.id}`);
-    } else {
-      navigate(`/categories/${item.categoryId}/${item.id}`);
-    }
-  };
+ // Handle selection
+ const handleSelect = (item: Suggestion) => {
+   setQuery('');
+   setIsOpen(false);
+   if (item.type === 'business') {
+     navigate(`/business/${item.id}`);
+   } else {
+     navigate(`/categories/${item.categoryId}/${item.id}`);
+   }
+ };
 
-  const sponsors = [
-    {
-      name: 'Aqaba Development Corporation',
-      logo: ADC,
-      url: 'https://www.adc.jo/',
-      description: t('hero.sponsors.adc'),
-    },
-    {
-      name: 'Aqaba Special Economic Zone Authority',
-      logo: ASEZA,
-      url: 'https://aseza.jo/Default/En',
-      description: t('hero.sponsors.aseza'),
-    },
-  ];
+ const sponsors = [
+   {
+     name: 'Aqaba Development Corporation',
+     logo: ADC,
+     url: 'https://www.adc.jo/',
+     description: t('hero.sponsors.adc'),
+   },
+   {
+     name: 'Aqaba Special Economic Zone Authority',
+     logo: ASEZA,
+     url: 'https://aseza.jo/Default/En',
+     description: t('hero.sponsors.aseza'),
+   },
+ ];
 
-  // Motion variants
-  const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.6 } }),
-  };
+ // Enhanced motion variants
+ const containerVariants = {
+   hidden: { opacity: 0 },
+   visible: {
+     opacity: 1,
+     transition: {
+       duration: 0.3,
+       staggerChildren: 0.15,
+     }
+   }
+ };
 
-  const formattedSync = lastSync
-    ? new Intl.DateTimeFormat(i18n.language, { dateStyle: 'medium' }).format(new Date(lastSync))
-    : '—';
+ const itemVariants: Variants = {
+   hidden: { opacity: 0, y: 30 },
+   visible: {
+     opacity: 1,
+     y: 0,
+     transition: {
+       duration: 0.6,
+       ease: [0.25, 0.46, 0.45, 0.94]
+     }
+   }
+ };
 
-  return (
-    <section className="relative isolate overflow-hidden bg-gray-950 text-white">
-      {/* Decorative Background Layers */}
-      <div
-        className="absolute inset-0 -z-20 opacity-40"
-        style={{ backgroundImage: `url(${Map})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 -z-30 bg-gradient-to-b from-gray-900 via-gray-950 to-black" />
-      <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-yellow-400/30 via-yellow-200/10 to-transparent blur-3xl" />
+ const formattedSync = lastSync
+   ? new Intl.DateTimeFormat(i18n.language, { dateStyle: 'medium' }).format(new Date(lastSync))
+   : '—';
 
-      {/* Animated grid overlay */}
-      <div className="absolute inset-0 -z-10 opacity-20 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
-        <div
-          className="h-full w-full animate-slow-pan bg-[length:200%_200%]"
-          style={{
-            backgroundImage:
-              'linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(0deg, rgba(255,255,255,.05) 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-          }}
-        />
-      </div>
+ return (
+   <section className="relative min-h-screen flex flex-col overflow-hidden">
+     {/* Enhanced Map Background with Mobile Optimization */}
+     <div className="absolute inset-0 z-0">
+       {/* Primary map layer with mobile-optimized positioning */}
+       <div 
+         className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
+         style={{ 
+           backgroundImage: `url(${Map})`,
+           backgroundPosition: 'center 30%', // Better mobile positioning
+           filter: 'brightness(0.4) contrast(1.1) saturate(1.2)'
+         }}
+       />
+       
+       {/* Mobile-specific map overlay for better readability */}
+       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/80 md:from-slate-900/40 md:via-slate-900/20 md:to-slate-900/60" />
+       
+       {/* Animated gradient overlay */}
+       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-emerald-900/20 animate-pulse-slow" />
+       
+       {/* Dynamic light effect */}
+       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl">
+         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-yellow-400/15 via-yellow-300/5 to-transparent rounded-full blur-3xl animate-float" />
+       </div>
+       
+       {/* Subtle grid pattern for depth */}
+       <div className="absolute inset-0 opacity-10">
+         <div 
+           className="w-full h-full animate-grid-flow"
+           style={{
+             backgroundImage: `
+               linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
+             `,
+             backgroundSize: '60px 60px'
+           }}
+         />
+       </div>
+     </div>
 
-      {/* Sponsors */}
-      <motion.div
-        className="relative py-10 border-b border-white/10 backdrop-blur-sm bg-gray-900/70"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div className="flex flex-col items-center mb-8" variants={fadeUp}>
-            <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              {t('hero.supportersTitle')}
-            </h3>
-            <p className="mt-2 max-w-2xl text-center text-gray-300 leading-relaxed">
-              {t('hero.supportersDesc')}
-            </p>
-          </motion.div>
+     {/* Sponsors Section - Enhanced Mobile Design */}
+     <motion.div
+       className="relative z-20 backdrop-blur-md bg-slate-900/30 border-b border-white/10"
+       initial="hidden"
+       whileInView="visible"
+       viewport={{ once: true, amount: 0.2 }}
+       variants={containerVariants}
+     >
+       <div className="container mx-auto px-4 py-8 md:py-12">
+         <motion.div className="text-center mb-8 md:mb-12" variants={itemVariants}>
+           <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-white mb-3 tracking-tight">
+             {t('hero.supportersTitle')}
+           </h3>
+           <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+             {t('hero.supportersDesc')}
+           </p>
+         </motion.div>
 
-          <div className="relative overflow-hidden">
-            <ul className="flex flex-col md:flex-row items-stretch justify-center gap-8 max-w-5xl mx-auto">
-              {sponsors.map((s, i) => (
-                <motion.li key={s.name} custom={i} variants={fadeUp} className="flex-1">
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block h-full rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-yellow-300/40 hover:shadow-[0_0_30px_rgba(250,204,21,.15)] hover:-translate-y-1"
-                  >
-                    <div className="flex h-full flex-col items-center md:flex-row md:items-start gap-6">
-                      <div className="flex-shrink-0 rounded-xl bg-white p-4 shadow-md">
-                        <img src={s.logo} alt={s.name} className="h-16 w-auto object-contain max-w-[180px]" />
-                      </div>
-                      <div className="text-center md:text-left flex-grow">
-                        <h4 className="text-lg font-bold text-white transition-colors group-hover:text-yellow-300">
-                          {s.name}
-                        </h4>
-                        <p className="mt-1 text-sm text-gray-300">{s.description}</p>
-                        <span className="mt-3 inline-flex items-center text-sm text-gray-400 transition-colors group-hover:text-yellow-200">
-                          {t('hero.visitWebsite')} <ExternalLink className="ml-1 h-4 w-4" />
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
+         <motion.div variants={itemVariants}>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+             {sponsors.map((sponsor, index) => (
+               <motion.div
+                 key={sponsor.name}
+                 variants={itemVariants}
+                 whileHover={{ y: -4, scale: 1.02 }}
+                 transition={{ duration: 0.3 }}
+               >
+                 <a
+                   href={sponsor.url}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="group block h-full rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-500 hover:border-yellow-400/30 hover:shadow-2xl hover:shadow-yellow-400/10 p-4 md:p-6"
+                 >
+                   <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 h-full">
+                     <div className="flex-shrink-0 rounded-xl md:rounded-2xl bg-white/95 p-3 md:p-4 shadow-lg group-hover:shadow-xl transition-shadow duration-500">
+                       <img 
+                         src={sponsor.logo} 
+                         alt={sponsor.name} 
+                         className="h-12 md:h-16 w-auto object-contain max-w-[140px] md:max-w-[180px]" 
+                       />
+                     </div>
+                     <div className="text-center sm:text-left flex-1 min-w-0">
+                       <h4 className="text-base md:text-lg font-bold text-white group-hover:text-yellow-300 transition-colors duration-300 mb-1 md:mb-2">
+                         {sponsor.name}
+                       </h4>
+                       <p className="text-xs md:text-sm text-slate-300 mb-2 md:mb-3 line-clamp-2">
+                         {sponsor.description}
+                       </p>
+                       <span className="inline-flex items-center text-xs md:text-sm text-slate-400 group-hover:text-yellow-200 transition-colors duration-300">
+                         {t('hero.visitWebsite')} 
+                         <ExternalLink className="ml-1 h-3 w-3 md:h-4 md:w-4" />
+                       </span>
+                     </div>
+                   </div>
+                 </a>
+               </motion.div>
+             ))}
+           </div>
+         </motion.div>
+       </div>
+     </motion.div>
 
-      {/* Hero Content */}
-      <div className="relative container mx-auto px-4 py-20 md:py-28">
-        <motion.div
-          className="mx-auto max-w-3xl text-center space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight" variants={fadeUp}>
-            <span className="gradient-text bg-clip-text text-transparent">{t('hero.brand')}</span>
-          </motion.h1>
+     {/* Main Hero Content - Enhanced Mobile-First Design */}
+     <div className="relative z-10 flex-1 flex items-center">
+       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
+         <motion.div
+           className="max-w-4xl mx-auto text-center"
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true, amount: 0.3 }}
+           variants={containerVariants}
+         >
+           {/* Main Title */}
+           <motion.h1 
+             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-4 md:mb-6"
+             variants={itemVariants}
+           >
+             <span className="gradient-text bg-clip-text text-transparent inline-block">
+               {t('hero.brand')}
+             </span>
+           </motion.h1>
 
-          <motion.h2 className="text-2xl md:text-3xl font-semibold text-gray-200" custom={1} variants={fadeUp}>
-            {t('hero.tagline')}
-          </motion.h2>
+           {/* Subtitle */}
+           <motion.h2 
+             className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-slate-200 mb-4 md:mb-6"
+             variants={itemVariants}
+           >
+             {t('hero.tagline')}
+           </motion.h2>
 
-          <motion.p className="text-lg md:text-xl leading-relaxed text-gray-300" custom={2} variants={fadeUp}>
-            {t('hero.description')}
-          </motion.p>
+           {/* Description */}
+           <motion.p 
+             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 md:mb-12"
+             variants={itemVariants}
+           >
+             {t('hero.description')}
+           </motion.p>
 
-          {/* Search */}
-          <motion.div ref={containerRef} className="relative mx-auto mt-10 w-full max-w-md" custom={3} variants={fadeUp}>
-            <SearchIcon className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder={t('hero.searchPlaceholder')}
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              onFocus={() => query && setIsOpen(true)}
-              aria-autocomplete="list"
-              aria-expanded={isOpen}
-              aria-controls="hero-suggestions"
-              className="peer w-full rounded-full border border-white/10 bg-white/10 px-12 py-3 text-white placeholder-gray-400 backdrop-blur-sm outline-none transition-all focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-300/40"
-            />
-            {/* Glow effect */}
-            <div
-              className="pointer-events-none absolute inset-0 rounded-full opacity-0 blur-xl transition-opacity peer-focus:opacity-40"
-              style={{
-                background:
-                  'radial-gradient(ellipse at center, rgba(250,204,21,.35) 0%, rgba(250,204,21,0) 70%)',
-              }}
-            />
+           {/* Enhanced Search Bar */}
+           <motion.div 
+             ref={containerRef} 
+             className="relative mx-auto max-w-md md:max-w-lg mb-12 md:mb-16"
+             variants={itemVariants}
+           >
+             <div className="relative group">
+               <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 group-focus-within:text-yellow-400 transition-colors duration-300 z-10" />
+               <input
+                 type="text"
+                 placeholder={t('hero.searchPlaceholder')}
+                 value={query}
+                 onChange={(e) => setQuery(e.target.value)}
+                 onFocus={() => query && setIsOpen(true)}
+                 aria-autocomplete="list"
+                 aria-expanded={isOpen}
+                 aria-controls="hero-suggestions"
+                 className="w-full h-14 md:h-16 rounded-2xl md:rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl px-12 md:px-14 text-white placeholder-slate-400 outline-none transition-all duration-300 focus:border-yellow-400/60 focus:bg-white/15 focus:shadow-2xl focus:shadow-yellow-400/20 text-sm md:text-base"
+               />
+               
+               {/* Enhanced glow effect */}
+               <div className="absolute inset-0 rounded-2xl md:rounded-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none">
+                 <div className="absolute inset-0 rounded-2xl md:rounded-3xl bg-gradient-to-r from-yellow-400/20 via-yellow-300/30 to-yellow-400/20 blur-xl" />
+               </div>
+             </div>
 
-            {isOpen && suggestions.length > 0 && (
-              <ul
-                id="hero-suggestions"
-                role="listbox"
-                className="absolute top-full z-50 mt-2 max-h-64 w-full overflow-auto rounded-2xl border border-white/10 bg-gray-900/95 backdrop-blur-xl shadow-2xl divide-y divide-white/5 animate-fade-in"
-              >
-                {suggestions.map((item) => (
-                  <li
-                    key={`${item.type}-${item.id}`}
-                    role="option"
-                    onClick={() => handleSelect(item)}
-                    className="flex cursor-pointer justify-between px-4 py-3 text-sm text-white transition-colors hover:bg-white/10"
-                  >
-                    <span>{item.name}</span>
-                    <span className="text-gray-400">
-                      {t(item.type === 'business' ? 'hero.type.business' : 'hero.type.subcategory')}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </motion.div>
+             {/* Enhanced Suggestions Dropdown */}
+             {isOpen && suggestions.length > 0 && (
+               <motion.ul
+                 id="hero-suggestions"
+                 role="listbox"
+                 className="absolute top-full mt-3 w-full max-h-64 overflow-auto rounded-2xl md:rounded-3xl border border-white/10 bg-slate-900/95 backdrop-blur-2xl shadow-2xl shadow-black/50 divide-y divide-white/5 z-50"
+                 initial={{ opacity: 0, y: 8, scale: 0.95 }}
+                 animate={{ opacity: 1, y: 0, scale: 1 }}
+                 transition={{ duration: 0.2 }}
+               >
+                 {suggestions.map((item) => (
+                   <li
+                     key={`${item.type}-${item.id}`}
+                     role="option"
+                     onClick={() => handleSelect(item)}
+                     className="flex justify-between items-center px-4 md:px-6 py-3 md:py-4 cursor-pointer transition-all duration-200 hover:bg-white/10 hover:backdrop-blur-xl group"
+                   >
+                     <span className="text-white text-sm md:text-base font-medium group-hover:text-yellow-300 transition-colors duration-200 truncate">
+                       {item.name}
+                     </span>
+                     <span className="text-slate-400 text-xs md:text-sm font-medium ml-2 flex-shrink-0">
+                       {t(item.type === 'business' ? 'hero.type.business' : 'hero.type.subcategory')}
+                     </span>
+                   </li>
+                 ))}
+               </motion.ul>
+             )}
+           </motion.div>
 
-          {/* Stats */}
-          <motion.div className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-5 md:grid-cols-3" custom={4} variants={fadeUp}>
-            <StatCard
-              icon={<Building2 className="mx-auto h-7 w-7" />}
-              value="1000+"
-              title={t('hero.stats.businesses')}
-            />
-            <StatCard
-              icon={<Users className="mx-auto h-7 w-7" />}
-              value={t('hero.stats.communityTitle', 'Community Driven')}
-              title={t('hero.stats.communityDesc', 'Built for locals & visitors')}
-            />
-            <StatCard
-              icon={<Clock className="mx-auto h-7 w-7" />}
-              value={`Last Sync: ${formattedSync}`}
-              title={t('hero.stats.upToDate', 'Always up‑to‑date')}
-            />
-          </motion.div>
-        </motion.div>
-      </div>
+           {/* Enhanced Stats Grid */}
+           <motion.div 
+             className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto"
+             variants={itemVariants}
+           >
+             <StatCard
+               icon={<Building2 className="h-6 w-6 md:h-8 md:w-8" />}
+               value="1000+"
+               title={t('hero.stats.businesses')}
+             />
+             <StatCard
+               icon={<Users className="h-6 w-6 md:h-8 md:w-8" />}
+               value={t('hero.stats.communityTitle', 'Community Driven')}
+               title={t('hero.stats.communityDesc', 'Built for locals & visitors')}
+             />
+             <StatCard
+               icon={<Clock className="h-6 w-6 md:h-8 md:w-8" />}
+               value={`Last Sync: ${formattedSync}`}
+               title={t('hero.stats.upToDate', 'Always up‑to‑date')}
+             />
+           </motion.div>
+         </motion.div>
+       </div>
+     </div>
 
-      {/* Local styles for animations */}
-      <style>{`
-        .gradient-text {
-          background-image: linear-gradient(90deg, #fde047, #facc15, #fde047);
-          background-size: 200% 200%;
-          animation: gradientShift 6s linear infinite;
-        }
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-slow-pan {
-          animation: slowPan 30s linear infinite;
-        }
-        @keyframes slowPan {
-          0% { background-position: 0% 0%; }
-          100% { background-position: 200% 200%; }
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.25s ease-out;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(4px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
-    </section>
-  );
+     {/* Enhanced CSS Animations */}
+     <style>{`
+       .gradient-text {
+         background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #f59e0b 75%, #fbbf24 100%);
+         background-size: 300% 300%;
+         animation: gradientShift 8s ease-in-out infinite;
+       }
+       
+       @keyframes gradientShift {
+         0%, 100% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+       }
+       
+       .animate-pulse-slow {
+         animation: pulseGlow 4s ease-in-out infinite;
+       }
+       
+       @keyframes pulseGlow {
+         0%, 100% { opacity: 0.3; }
+         50% { opacity: 0.6; }
+       }
+       
+       .animate-float {
+         animation: floatMove 6s ease-in-out infinite;
+       }
+       
+       @keyframes floatMove {
+         0%, 100% { transform: translateY(0px) translateX(-50%); }
+         50% { transform: translateY(-20px) translateX(-50%); }
+       }
+       
+       .animate-grid-flow {
+         animation: gridFlow 20s linear infinite;
+       }
+       
+       @keyframes gridFlow {
+         0% { transform: translate(0, 0); }
+         100% { transform: translate(60px, 60px); }
+       }
+       
+       .bg-gradient-radial {
+         background: radial-gradient(circle, var(--tw-gradient-stops));
+       }
+       
+       .line-clamp-2 {
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+       }
+       
+       /* Mobile-specific improvements */
+       @media (max-width: 640px) {
+         .gradient-text {
+           background-size: 200% 200%;
+           animation-duration: 6s;
+         }
+       }
+     `}</style>
+   </section>
+ );
 };
 
-// -------------------- Sub Components --------------------
+// -------------------- Enhanced Sub Components --------------------
 interface StatCardProps {
-  icon: React.ReactNode;
-  value: string;
-  title: string;
+ icon: React.ReactNode;
+ value: string;
+ title: string;
 }
 
 const StatCard: React.FC<StatCardProps> = ({ icon, value, title }) => (
-  <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 text-center shadow-xl backdrop-blur-md transition-colors hover:border-yellow-300/40">
-    <div className="text-yellow-300 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-    <div className="mt-2 text-xl font-bold text-white">{value}</div>
-    <div className="mt-1 text-sm text-gray-300">{title}</div>
-  </div>
+ <motion.div 
+   className="group rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-4 md:p-6 text-center transition-all duration-500 hover:border-yellow-400/30 hover:bg-white/10 hover:shadow-2xl hover:shadow-yellow-400/10"
+   whileHover={{ y: -2, scale: 1.02 }}
+   transition={{ duration: 0.3 }}
+ >
+   <div className="text-yellow-400 mb-2 md:mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
+     {icon}
+   </div>
+   <div className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2 leading-tight">
+     {value}
+   </div>
+   <div className="text-xs md:text-sm text-slate-300 leading-tight">
+     {title}
+   </div>
+ </motion.div>
 );
 
 export default Hero;
