@@ -1,0 +1,300 @@
+{
+  "sponsor.banner": "プレミアムアカバビジネスディレクトリ - パートナーシップ",
+  "header.siteName": "アカバガイド",
+  "header.logoAlt": "アカバガイドのロゴ",
+  "nav.home": "ホーム",
+  "nav.about": "会社概要",
+  "nav.listYourBusiness": "事業内容",
+  "aria.toggleMenu": "トグル・ナビゲーション・メニュー",
+  "hero.loadError": "検索データのロードに失敗しました",
+  "hero.supportersTitle": "大切なサポーター",
+  "hero.supportersDesc": "これらの組織は、アカバの成長と発展を支える上で重要な役割を果たしている。",
+  "hero.sponsors.adc": "アカバの経済成長と発展を促進する",
+  "hero.sponsors.aseza": "アカバの経済特区を統括",
+  "hero.visitWebsite": "ウェブサイトを見る",
+  "hero.brand": "アカバガイド",
+  "hero.tagline": "アカバのビジネス・ハブ",
+  "hero.description": "紅海への玄関口であるヨルダンの観光施設、物流施設、工業用地、商業施設に関する総合ガイドです。",
+  "hero.searchPlaceholder": "ビジネスまたはサブカテゴリーを検索...",
+  "hero.type.business": "ビジネス",
+  "hero.type.subcategory": "サブカテゴリー",
+  "hero.stats.businesses": "掲載企業",
+  "hero.stats.communityTitle": "コミュニティ主導",
+  "hero.stats.communityDesc": "地元の人々と観光客のために作られた",
+  "hero.stats.upToDate": "常に最新",
+  "hero.stats.lastSync": "最後の同期{日付}}",
+  "footer.description": "アカバのビジネス環境を紹介し、観光客と企業をつなぐ信頼できるガイドです。",
+  "footer.logoAlt": "アカバガイドのロゴ",
+  "footer.mainCategoriesTitle": "主なカテゴリー",
+  "footer.quickLinksTitle": "クイックリンク",
+  "footer.contactUsTitle": "お問い合わせ",
+  "footer.privacyPolicy": "プライバシーポリシー",
+  "footer.termsOfService": "利用規約",
+  "footer.allRights": "無断転載を禁じます。",
+  "footer.loadError": "フッターのカテゴリのロードに失敗しました：",
+  "categories.exploreTitle": "アカバのビジネス環境を探る",
+  "categories.exploreDesc": "業種別ディレクトリ",
+  "categories.exploreLabel": "エクスペリエンス",
+  "categories.businesses": "事業内容",
+  "categories.subcategories": "サブカテゴリー",
+  "categories.loadError": "カテゴリー読み込みエラー",
+  "categories.logistics": "物流",
+  "categories.logistics.description": "運輸・海運会社",
+  "categories.industrial": "インダストリアル",
+  "categories.industrial.description": "工場、プラント、メーカー",
+  "categories.tourism": "観光",
+  "categories.tourism.description": "観光客向けの施設とサービス",
+  "categories.commercial": "コマーシャル",
+  "categories.commercial.description": "店舗、市場、オフィス",
+  "categories.healthcare": "ヘルスケア",
+  "categories.healthcare.description": "病院、診療所、薬局、研究所",
+  "categories.governmental": "政府系",
+  "categories.governmental.description": "政府部門",
+  "categories.other": "その他",
+  "sub.title": "サブカテゴリー",
+  "sub.count": "サブカテゴリー",
+  "sub.total": "全事業",
+  "sub.loading": "サブカテゴリーを読み込む...",
+  "sub.errorLoad": "サブカテゴリーのロードに失敗しました。",
+  "sub.none": "サブカテゴリーはありません。",
+  "sub.businesses": "ビジネス",
+  "sub.viewAll": "全てを見る",
+  "sub.back": "バック",
+  "sub.viewPDF": "PDFを見る",
+  "sub.downloadPDF": "PDFダウンロード",
+  "sub.logisticsGuide.title": "ガイドを見る",
+  "sub.logisticsGuide.desc": "ロジスティクスサービスに関する総合ガイド。",
+  "sub.logisticsGuide.alt": "ガイドを見る",
+  "sub.logisticsGuide.downloadOverlay": "ダウンロードガイド",
+  "sub.logisticsGuide.downloadButton": "PDFダウンロード",
+  "sub.supporterLabel": "協賛",
+  "sub.supporter.alt": "アカバ・ウォーター・カンパニーのロゴ",
+  "sub.supporter.aria": "アカバ・ウォーター・カンパニーのウェブサイトへ",
+  "sub.supporter.name": "アカバ・ウォーター・カンパニー",
+  "sub.supporter.desc": "2004年以来、地域に持続可能な水ソリューションを提供。",
+  "sub.supporter.visit": "ウェブサイトへ",
+  "list.heroTitle": "ASEZでビジネスを成長させる",
+  "list.heroDesc": "AqabaGuideの信頼できるディレクトリに参加して、アカバ経済特区の投資家、顧客、パートナーとつながりましょう。",
+  "list.benefitsTitle": "なぜ弊社に掲載するのか？",
+  "list.benefits.visibility.title": "視認性の向上",
+  "list.benefits.visibility.desc": "ASEZのサービスを探している何千もの潜在顧客や投資家にリーチできます。",
+  "list.benefits.advertising.title": "プレミアム広告",
+  "list.benefits.advertising.desc": "スポンサード・リスティング、バナー、フィーチャー・スポットで貴社のビジネスを強調しましょう。",
+  "list.benefits.networking.title": "ネットワーキングの機会",
+  "list.benefits.networking.desc": "ASEZの投資家限定イベントやトレードフォーラムにご招待します。",
+  "list.formTitle": "ビジネスを投稿する",
+  "list.formDesc": "下記のフォームにご記入いただければ、24時間以内に弊社担当よりご連絡させていただき、掲載オプション、広告パッケージ、価格についてご相談させていただきます。",
+  "list.fields.name.label": "事業名",
+  "list.fields.name.placeholder": "例：アカバ・ロジスティクス・ソリューションズ",
+  "list.fields.industry.label": "産業",
+  "list.fields.industry.placeholder": "カテゴリーを選択",
+  "list.fields.contact.label": "担当者",
+  "list.fields.contact.placeholder": "例：ジョン・ドウ",
+  "list.fields.email.label": "電子メール",
+  "list.fields.email.placeholder": "contact@example.com",
+  "list.fields.phone.label": "電話",
+  "list.fields.phone.placeholder": "+962 7x xxx xxxx",
+  "list.fields.message.label": "その他の詳細",
+  "list.fields.message.placeholder": "あなたのビジネス、広告の好み、または特別なリクエストについてお聞かせください...",
+  "list.fields.terms": "アカバガイドの<1>利用</1>規約に同意します。",
+  "list.button.submit": "申込書の提出",
+  "list.status.sending": "送信...",
+  "list.status.sent": "提出された！",
+  "list.status.error": "送信に失敗しました。",
+  "list.cta.title": "お困りですか？",
+  "list.cta.desc": "メール<1>（partners@aqabaguide.com</1>）またはお電話<3>（+962 7 7691 1233</3>）でお問い合わせください。",
+  "detail.back": "リストに戻る",
+  "detail.premiumProfile": "プレミアム・ビジネス・プロフィール",
+  "detail.reviews": "レビュー",
+  "detail.contactTitle": "連絡先＆所在地",
+  "detail.servicesTitle": "特別サービス",
+  "detail.service.support": "24時間365日のカスタマーサポート",
+  "detail.service.consult": "現地コンサルティング",
+  "about.title": "アカバガイドについて",
+  "about.gatewayTitle": "ASEZにおけるビジネス成功へのゲートウェイ",
+  "about.gatewayDesc1": "AqabaGuideは、<0>{{bold1}}、</0>投資家、<1>{{bold2}}での</1>商業活動の確立または拡大を目指す企業を支援するために設計された最高のビジネスディレクトリです。私たちのプラットフォームは戦略的ツールとして機能し、アカバにおける世界クラスのインフラプロジェクト、物流サービス、投資機会に関する正確な詳細を提供します。",
+  "about.gatewayDesc2": "地元の新興企業であれ、グローバルな投資家であれ、中東で最もダイナミックな経済の中心地のひとつであるこの地で成功するために、適切なパートナー、サービス、リソースをご紹介します。",
+  "about.whyTitle": "AqabaGuideを選ぶ理由",
+  "about.features.comprehensive.title": "総合ディレクトリ",
+  "about.features.comprehensive.desc": "ASEZの物流、貿易、観光、産業サービスに関する確認済みの連絡先にアクセスできます。",
+  "about.features.investment.title": "投資サポート",
+  "about.features.investment.desc": "最新の経済情勢、インセンティブ、規制の枠組みについて常に最新情報を入手することができます。",
+  "about.features.networking.title": "戦略的ネットワーキング",
+  "about.features.networking.desc": "企業、政府機関、国際投資家間の橋渡しをする。",
+  "about.features.growth.title": "経済成長",
+  "about.features.growth.desc": "貿易、観光、イノベーションにおける地域のリーダーとしてのアカバのビジョンに貢献する。",
+  "about.missionTitle": "私たちの使命",
+  "about.missionDesc1": "<0>bold}}では</0>、地元、地域、国際的な舞台でアカバの経済発展を促進するため、たゆまぬ努力を続けています。このディレクトリは、私たちのコミットメントを反映しています：",
+  "about.mission.point1": "ASEZにおける良好なビジネス環境の構築。",
+  "about.mission.point2": "中小企業から大企業までの成長をサポートする。",
+  "about.mission.point3": "投資家や起業家向けに、最新の実用的な洞察を提供。",
+  "about.bold.brandName": "アイン・アル・アカバ",
+  "about.bold.entrepreneurs": "請負業者",
+  "about.bold.ASEZ": "ASEZ",
+  "about.joinTitle": "アカバの経済サクセスストーリーに参加しよう",
+  "about.joinDesc": "戦略的立地、税制優遇措置、最先端のインフラが融合したASEZで、無限の可能性を探ってみませんか。AqabaGuideに、新たなチャンスをつかむための第一歩をお任せください。",
+  "about.joinButton": "私たちとつながる",
+  "Category": "カテゴリー",
+  "Description": "説明",
+  "Email": "電子メール",
+  "Image": "画像",
+  "IsPremium": "プレミアム",
+  "Location": "所在地",
+  "Name": "名称",
+  "Phone": "電話",
+  "Rating": "評価",
+  "Reviews": "レビュー",
+  "Subcategory": "サブカテゴリー",
+  "Website": "ウェブサイト",
+  "tailwindcss": "追い風CSS",
+  "subcategories": {
+    "recSaZ8GSIQonWtUP": {
+      "name": "カスタム・クリアランス",
+      "description": "輸出入書類の管理"
+    },
+    "recOts1U1r6Fu5Rqe": {
+      "name": "Martimeサービスプロバイダー",
+      "description": "船舶の供給とサポート"
+    },
+    "recVttIPxLBdUekj5": {
+      "name": "ホテル＆アパートメント",
+      "description": "家具付き宿泊施設"
+    },
+    "recq4jY66uUxMRmPO": {
+      "name": "観光局・レンタカー会社",
+      "description": "旅行案内とレンタカー"
+    },
+    "recEv6uxzVnxCCV8V": {
+      "name": "貿易・商業サービス",
+      "description": "ビジネスサポートとロジスティクス"
+    },
+    "recWw868BaUo5KW9U": {
+      "name": "病院・クリニック",
+      "description": "医療とケア"
+    },
+    "reck5OGOOlmv2Zzee": {
+      "name": "薬局",
+      "description": "薬の調剤とアドバイス"
+    },
+    "recGFVw4JBXJ1Nqh8": {
+      "name": "政府サービス",
+      "description": "許可証と公文書の発行"
+    },
+    "rec5pC1VdAgz5DtVq": {
+      "name": "レストラン",
+      "description": "料理提供"
+    },
+    "recqDDCujh0AMqFAF": {
+      "name": "輸出入",
+      "description": "商品の輸出入"
+    },
+    "recSMDwzx6Qzq5MDM": {
+      "name": "生鮮食品",
+      "description": "生鮮食品＆食料品"
+    },
+    "rect1IOqKF8wDQUyx": {
+      "name": "ベーカリー＆製菓",
+      "description": "ベーカリー＆スイーツ"
+    },
+    "recwUCk79GzljVTND": {
+      "name": "カフェ",
+      "description": "カフェ"
+    },
+    "recfIti1Mxb7ccnUp": {
+      "name": "コーヒー＆ナッツ・ロースターズ",
+      "description": "ロースタリー"
+    },
+    "recTIvmVceJ4kYgTW": {
+      "name": "食料品・食品サプライヤー",
+      "description": "食料品・食品サプライヤー"
+    },
+    "rec0yR9q4pJkETkRx": {
+      "name": "食料品＆スーパーマーケット",
+      "description": "食料品店, ミニマーケット, スーパーマーケット"
+    },
+    "recLpW8IIdV0SKHqQ": {
+      "name": "産業オペレーション＆インフラストラクチャー",
+      "description": "産業システム＆メンテナンス"
+    },
+    "recwbqJAHAlEClt1r": {
+      "name": "産業サービス",
+      "description": "生産,製造,工場"
+    }
+  },
+  "business.back": "バック",
+  "business.searchPlaceholder": "検索ビジネス...",
+  "business.premiumOnly": "プレミアムのみ",
+  "business.errorLoad": "ビジネスのロードに失敗しました。",
+  "business.none": "ビジネスは見つかりませんでした。",
+  "business.viewDetails": "詳細を見る",
+  "sponsors": {
+    "1": {
+      "name": "敏捷性"
+    },
+    "2": {
+      "name": "アカバ・ロジスティクス・ビレッジ（ALV）"
+    },
+    "3": {
+      "name": "アカバ港管理運営会社"
+    },
+    "4": {
+      "name": "アカバ港マリンサービス会社"
+    },
+    "5": {
+      "name": "バドルマリンリペア＆サービス社"
+    },
+    "6": {
+      "name": "貿易金融住宅銀行"
+    },
+    "7": {
+      "name": "CMA CGM"
+    },
+    "8": {
+      "name": "イーグル・ヒルズ"
+    },
+    "9": {
+      "name": "ガルフエージェンシー社"
+    },
+    "10": {
+      "name": "株式会社ゴールデントライアングル"
+    },
+    "11": {
+      "name": "キング・フセイン国際空港"
+    },
+    "12": {
+      "name": "ヨルダン海事庁"
+    },
+    "13": {
+      "name": "株式会社ミース"
+    },
+    "14": {
+      "name": "ナショナル・アビエーション・サービス（NAS）"
+    },
+    "15": {
+      "name": "ナショナル不動産会社"
+    },
+    "16": {
+      "name": "オレンジ・ジョーダン"
+    },
+    "17": {
+      "name": "PBIアカバ工業団地LLP"
+    },
+    "18": {
+      "name": "パシフィック・インターナショナル・ラインズ（PIL）"
+    },
+    "19": {
+      "name": "ヨルダン海事アカデミー"
+    },
+    "20": {
+      "name": "トラストフォーロジスティックサービス株式会社"
+    }
+  },
+  "business": {
+    "back": "バック",
+    "searchPlaceholder": "検索ビジネス...",
+    "errorLoad": "ビジネスのロードに失敗しました。",
+    "none": "ビジネスは見つかりませんでした。",
+    "viewDetails": "詳細を見る",
+    "loadMore": "もっと読む"
+  }
+}

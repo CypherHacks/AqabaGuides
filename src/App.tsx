@@ -11,17 +11,15 @@ import BusinessDetail from './components/BusinessDetail';
 import AboutPage from './components/AboutPage';
 import ListBusinessPage from './components/ListBusinessPage';
 import Footer from './components/Footer';
+import Sponsors from './components/Sponsors';
 
 function HomePage() {
   const navigate = useNavigate();
-  const handleCategorySelect = (categoryId: string) => {
-    navigate(`/categories/${categoryId}`);
-  };
-
   return (
     <>
       <Hero />
-      <CategoryGrid onCategorySelect={handleCategorySelect} />
+      <CategoryGrid onCategorySelect={id => navigate(`/categories/${id}`)} />
+      <Sponsors />
     </>
   );
 }
@@ -29,17 +27,11 @@ function HomePage() {
 function SubcategoriesPage() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const navigate = useNavigate();
-
-  const handleBack = () => navigate(-1);
-  const handleSubcategorySelect = (catId: string, subId: string) => {
-    navigate(`/categories/${catId}/${subId}`);
-  };
-
   return (
     <SubcategoryView
       categoryId={categoryId!}
-      onBack={handleBack}
-      onSubcategorySelect={handleSubcategorySelect}
+      onBack={() => navigate(-1)}
+      onSubcategorySelect={(cat, sub) => navigate(`/categories/${cat}/${sub}`)}
     />
   );
 }
@@ -50,18 +42,12 @@ function BusinessesPage() {
     subcategoryId: string;
   }>();
   const navigate = useNavigate();
-
-  const handleBack = () => navigate(-1);
-  const handleBusinessSelect = (businessId: string) => {
-    navigate(`/business/${businessId}`);
-  };
-
   return (
     <BusinessListing
       categoryId={categoryId!}
       subcategoryId={subcategoryId!}
-      onBack={handleBack}
-      onBusinessSelect={handleBusinessSelect}
+      onBack={() => navigate(-1)}
+      onBusinessSelect={id => navigate(`/business/${id}`)}
     />
   );
 }
@@ -69,37 +55,35 @@ function BusinessesPage() {
 function BusinessDetailPage() {
   const { businessId } = useParams<{ businessId: string }>();
   const navigate = useNavigate();
-
-  const handleBack = () => navigate(-1);
-
   return (
     <BusinessDetail
       businessId={businessId!}
-      onBack={handleBack}
+      onBack={() => navigate(-1)}
     />
   );
 }
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <Header />
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/categories/:categoryId" element={<SubcategoriesPage />} />
-        <Route
-          path="/categories/:categoryId/:subcategoryId"
-          element={<BusinessesPage />}
-        />
-        <Route path="/business/:businessId" element={<BusinessDetailPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/list-your-business" element={<ListBusinessPage />} />
-      </Routes>
+      
+      <main className="relative">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/categories/:categoryId" element={<SubcategoriesPage />} />
+          <Route
+            path="/categories/:categoryId/:subcategoryId"
+            element={<BusinessesPage />}
+          />
+          <Route path="/business/:businessId" element={<BusinessDetailPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/list-your-business" element={<ListBusinessPage />} />
+          <Route path="*" element={<div className="p-8 text-center">Page Not Found</div>} />
+        </Routes>
+      </main>
 
       <Footer />
     </div>
   );
 }
-
-export default App;

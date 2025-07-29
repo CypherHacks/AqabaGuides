@@ -1,0 +1,300 @@
+{
+  "sponsor.banner": "优质亚喀巴企业名录 - 与我们合作",
+  "header.siteName": "亚喀巴指南",
+  "header.logoAlt": "亚喀巴指南》徽标",
+  "nav.home": "首页",
+  "nav.about": "关于我们",
+  "nav.listYourBusiness": "列出您的业务",
+  "aria.toggleMenu": "切换导航菜单",
+  "hero.loadError": "加载搜索数据失败",
+  "hero.supportersTitle": "我们尊贵的支持者",
+  "hero.supportersDesc": "这些组织在支持亚喀巴的增长和发展方面发挥着至关重要的作用",
+  "hero.sponsors.adc": "推动亚喀巴的经济增长和发展",
+  "hero.sponsors.aseza": "监管亚喀巴经济特区",
+  "hero.visitWebsite": "访问网站",
+  "hero.brand": "亚喀巴指南",
+  "hero.tagline": "探索亚喀巴的商业中心",
+  "hero.description": "约旦红海门户的旅游设施、物流、工业用地和商业机构综合指南",
+  "hero.searchPlaceholder": "搜索企业或子类别...",
+  "hero.type.business": "商业",
+  "hero.type.subcategory": "子类别",
+  "hero.stats.businesses": "列出的企业",
+  "hero.stats.communityTitle": "社区驱动",
+  "hero.stats.communityDesc": "为当地人和游客而建",
+  "hero.stats.upToDate": "始终保持最新",
+  "hero.stats.lastSync": "最后同步：{{日期｝",
+  "footer.description": "您值得信赖的亚喀巴商业指南，连接游客和企业。",
+  "footer.logoAlt": "亚喀巴指南》徽标",
+  "footer.mainCategoriesTitle": "主要类别",
+  "footer.quickLinksTitle": "快速链接",
+  "footer.contactUsTitle": "联系我们",
+  "footer.privacyPolicy": "隐私政策",
+  "footer.termsOfService": "服务条款",
+  "footer.allRights": "保留所有权利。",
+  "footer.loadError": "加载页脚分类失败：",
+  "categories.exploreTitle": "探索亚喀巴的商业景观",
+  "categories.exploreDesc": "按行业浏览我们的目录",
+  "categories.exploreLabel": "探索",
+  "categories.businesses": "企业",
+  "categories.subcategories": "子类别",
+  "categories.loadError": "错误加载类别",
+  "categories.logistics": "物流",
+  "categories.logistics.description": "运输和航运公司",
+  "categories.industrial": "工业",
+  "categories.industrial.description": "工厂和制造商",
+  "categories.tourism": "旅游",
+  "categories.tourism.description": "为游客提供的设施和服务",
+  "categories.commercial": "商业",
+  "categories.commercial.description": "商店、市场和办公室",
+  "categories.healthcare": "医疗保健",
+  "categories.healthcare.description": "医院、诊所、药房、实验室",
+  "categories.governmental": "政府",
+  "categories.governmental.description": "政府部门",
+  "categories.other": "其他",
+  "sub.title": "子类别",
+  "sub.count": "子类别",
+  "sub.total": "企业总数",
+  "sub.loading": "正在加载子类别...",
+  "sub.errorLoad": "加载子类别失败。",
+  "sub.none": "无子类别。",
+  "sub.businesses": "企业",
+  "sub.viewAll": "查看全部",
+  "sub.back": "返回",
+  "sub.viewPDF": "查看 PDF",
+  "sub.downloadPDF": "下载 PDF",
+  "sub.logisticsGuide.title": "查看指南",
+  "sub.logisticsGuide.desc": "全面介绍该地区的物流服务，并提供有用资源。",
+  "sub.logisticsGuide.alt": "查看指南",
+  "sub.logisticsGuide.downloadOverlay": "下载指南",
+  "sub.logisticsGuide.downloadButton": "下载 PDF",
+  "sub.supporterLabel": "自豪地支持",
+  "sub.supporter.alt": "亚喀巴水务公司徽标",
+  "sub.supporter.aria": "访问亚喀巴水务公司网站",
+  "sub.supporter.name": "亚喀巴水务公司",
+  "sub.supporter.desc": "自 2004 年起为该地区提供可持续的水解决方案。",
+  "sub.supporter.visit": "访问网站",
+  "list.heroTitle": "在东盟经济区发展您的业务",
+  "list.heroDesc": "加入 AqabaGuide 值得信赖的目录，与亚喀巴经济特区的投资者、客户和合作伙伴建立联系。",
+  "list.benefitsTitle": "为什么选择我们？",
+  "list.benefits.visibility.title": "提高知名度",
+  "list.benefits.visibility.desc": "接触成千上万搜索 ASEZ 服务的潜在客户和投资者。",
+  "list.benefits.advertising.title": "高级广告",
+  "list.benefits.advertising.desc": "通过赞助商列表、横幅广告和特色位置突出您的企业。",
+  "list.benefits.networking.title": "交流机会",
+  "list.benefits.networking.desc": "受邀参加 ASEZ 独家投资者活动和贸易论坛。",
+  "list.formTitle": "提交您的业务",
+  "list.formDesc": "请填写下表，我们的团队将在 24 小时内与您联系，讨论列表选项、广告套餐和价格。",
+  "list.fields.name.label": "企业名称",
+  "list.fields.name.placeholder": "例如，亚喀巴物流解决方案公司",
+  "list.fields.industry.label": "行业",
+  "list.fields.industry.placeholder": "选择类别",
+  "list.fields.contact.label": "联系人",
+  "list.fields.contact.placeholder": "例如，无名氏",
+  "list.fields.email.label": "电子邮件",
+  "list.fields.email.placeholder": "contact@example.com",
+  "list.fields.phone.label": "电话",
+  "list.fields.phone.placeholder": "+962 7x xxx xxxx",
+  "list.fields.message.label": "其他详细信息",
+  "list.fields.message.placeholder": "请告诉我们您的业务、广告偏好或特殊要求...",
+  "list.fields.terms": "我同意 AqabaGuide 的<1>服务条款</1>。",
+  "list.button.submit": "提交申请",
+  "list.status.sending": "发送...",
+  "list.status.sent": "✓ 已提交！",
+  "list.status.error": "✕ 提交失败。",
+  "list.cta.title": "需要帮助吗？",
+  "list.cta.desc": "请发送电子邮件至<1>partners@aqabaguide.com</1>或致电<3>+962 7 7691 1233</3>。",
+  "detail.back": "返回列表",
+  "detail.premiumProfile": "高级业务简介",
+  "detail.reviews": "评论",
+  "detail.contactTitle": "联系方式和地点",
+  "detail.servicesTitle": "特殊服务",
+  "detail.service.support": "全天候客户支持",
+  "detail.service.consult": "现场咨询",
+  "about.title": "关于亚喀巴指南",
+  "about.gatewayTitle": "您在东盟经济区取得商业成功的途径",
+  "about.gatewayDesc1": "AqabaGuide 是首屈一指的商业指南，旨在帮助<0>{{bold1}}</0>、投资者和希望在<1>{{bold2}}</1>建立或扩大商业活动的企业。我们的平台是一个战略工具，提供有关亚喀巴世界级基础设施项目、物流服务和投资机会的准确详细信息。",
+  "about.gatewayDesc2": "无论您是本地初创企业还是全球投资者，我们都能为您提供合适的合作伙伴、服务和资源，助您在中东最具活力的经济中心茁壮成长。",
+  "about.whyTitle": "为什么选择亚喀巴指南？",
+  "about.features.comprehensive.title": "综合目录",
+  "about.features.comprehensive.desc": "获取经核实的 ASEZ 物流、贸易、旅游和工业服务联系方式。",
+  "about.features.investment.title": "投资支持",
+  "about.features.investment.desc": "了解最新的经济发展、激励措施和监管框架。",
+  "about.features.networking.title": "战略网络",
+  "about.features.networking.desc": "在企业、政府实体和国际投资者之间架起桥梁。",
+  "about.features.growth.title": "经济增长",
+  "about.features.growth.desc": "为亚喀巴成为贸易、旅游和创新领域的地区领导者做出贡献。",
+  "about.missionTitle": "我们的使命",
+  "about.missionDesc1": "在<0>{{bold}}</0> ，我们不懈努力，在当地、地区和国际舞台上促进亚喀巴的经济发展。本目录体现了我们的承诺，即",
+  "about.mission.point1": "在 ASEZ 创造有利的商业环境。",
+  "about.mission.point2": "为中小企业和大型企业的发展提供支持。",
+  "about.mission.point3": "为投资者和企业家提供最新、可行的见解。",
+  "about.bold.brandName": "Ayn Al Aqaba",
+  "about.bold.entrepreneurs": "承包商",
+  "about.bold.ASEZ": "ASEZ",
+  "about.joinTitle": "加入亚喀巴的成功经济故事",
+  "about.joinDesc": "探索 ASEZ 的无限可能--这里汇聚了战略性的地理位置、税收优惠和尖端的基础设施。让《亚喀巴指南》成为您开启新机遇的第一步。",
+  "about.joinButton": "与我们联系",
+  "Category": "类别",
+  "Description": "说明",
+  "Email": "电子邮件",
+  "Image": "图片",
+  "IsPremium": "是否高级",
+  "Location": "地点",
+  "Name": "名称",
+  "Phone": "电话",
+  "Rating": "评级",
+  "Reviews": "评论",
+  "Subcategory": "子类别",
+  "Website": "网站",
+  "tailwindcss": "尾风 CSS",
+  "subcategories": {
+    "recSaZ8GSIQonWtUP": {
+      "name": "定制清仓",
+      "description": "管理进出口文书工作"
+    },
+    "recOts1U1r6Fu5Rqe": {
+      "name": "Martime 服务提供商",
+      "description": "供应和支持船只"
+    },
+    "recVttIPxLBdUekj5": {
+      "name": "酒店和酒店公寓",
+      "description": "带家具的客房"
+    },
+    "recq4jY66uUxMRmPO": {
+      "name": "旅游办事处和汽车租赁公司",
+      "description": "旅游指南和租车"
+    },
+    "recEv6uxzVnxCCV8V": {
+      "name": "贸易和商业服务",
+      "description": "业务支持和后勤"
+    },
+    "recWw868BaUo5KW9U": {
+      "name": "医院和诊所",
+      "description": "医疗和护理"
+    },
+    "reck5OGOOlmv2Zzee": {
+      "name": "药店",
+      "description": "配药和建议"
+    },
+    "recGFVw4JBXJ1Nqh8": {
+      "name": "政府服务",
+      "description": "发放许可证和公共记录"
+    },
+    "rec5pC1VdAgz5DtVq": {
+      "name": "餐厅",
+      "description": "食品供应"
+    },
+    "recqDDCujh0AMqFAF": {
+      "name": "进出口",
+      "description": "进出口货物"
+    },
+    "recSMDwzx6Qzq5MDM": {
+      "name": "新鲜食品",
+      "description": "新鲜食品和杂货"
+    },
+    "rect1IOqKF8wDQUyx": {
+      "name": "面包和糖果",
+      "description": "面包和糖果"
+    },
+    "recwUCk79GzljVTND": {
+      "name": "咖啡馆",
+      "description": "咖啡馆"
+    },
+    "recfIti1Mxb7ccnUp": {
+      "name": "咖啡和坚果烘焙师",
+      "description": "烘焙室"
+    },
+    "recTIvmVceJ4kYgTW": {
+      "name": "杂货和食品供应商",
+      "description": "杂货和食品供应商"
+    },
+    "rec0yR9q4pJkETkRx": {
+      "name": "杂货和超市",
+      "description": "杂货店, 小型市场, 超市"
+    },
+    "recLpW8IIdV0SKHqQ": {
+      "name": "工业运营与基础设施",
+      "description": "工业系统与维护"
+    },
+    "recwbqJAHAlEClt1r": {
+      "name": "工业服务",
+      "description": "生产,制造,工厂"
+    }
+  },
+  "business.back": "返回",
+  "business.searchPlaceholder": "搜索企业...",
+  "business.premiumOnly": "仅限保费",
+  "business.errorLoad": "加载业务失败。",
+  "business.none": "未找到企业。",
+  "business.viewDetails": "查看详情",
+  "sponsors": {
+    "1": {
+      "name": "敏捷性"
+    },
+    "2": {
+      "name": "亚喀巴物流村（ALV）"
+    },
+    "3": {
+      "name": "亚喀巴港口管理与运营公司"
+    },
+    "4": {
+      "name": "亚喀巴港海事服务公司"
+    },
+    "5": {
+      "name": "Badr Marine Repairs and Services Co."
+    },
+    "6": {
+      "name": "住房贸易和金融银行"
+    },
+    "7": {
+      "name": "达飞轮船公司"
+    },
+    "8": {
+      "name": "老鹰山"
+    },
+    "9": {
+      "name": "海湾代理公司"
+    },
+    "10": {
+      "name": "金三角投资有限公司"
+    },
+    "11": {
+      "name": "侯赛因国王国际机场"
+    },
+    "12": {
+      "name": "约旦海事局"
+    },
+    "13": {
+      "name": "MEEES 公司"
+    },
+    "14": {
+      "name": "国家航空服务局（NAS）"
+    },
+    "15": {
+      "name": "全国房地产公司"
+    },
+    "16": {
+      "name": "橙色约旦"
+    },
+    "17": {
+      "name": "PBI 亚喀巴工业区有限责任公司"
+    },
+    "18": {
+      "name": "太平洋国际轮船公司（PIL）"
+    },
+    "19": {
+      "name": "约旦海洋研究院"
+    },
+    "20": {
+      "name": "Trust For Logistic Services Ltd."
+    }
+  },
+  "business": {
+    "back": "返回",
+    "searchPlaceholder": "搜索企业...",
+    "errorLoad": "加载业务失败。",
+    "none": "未找到企业。",
+    "viewDetails": "查看详情",
+    "loadMore": "加载更多"
+  }
+}

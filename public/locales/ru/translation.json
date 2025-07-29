@@ -1,0 +1,300 @@
+{
+  "sponsor.banner": "Премиум бизнес справочник Акабы - партнерство с нами",
+  "header.siteName": "АкабаГид",
+  "header.logoAlt": "Логотип AqabaGuide",
+  "nav.home": "Главная",
+  "nav.about": "О нас",
+  "nav.listYourBusiness": "Зарегистрируйте свой бизнес",
+  "aria.toggleMenu": "Toggle navigation menu",
+  "hero.loadError": "Не удалось загрузить данные поиска",
+  "hero.supportersTitle": "Наши уважаемые сторонники",
+  "hero.supportersDesc": "Эти организации играют жизненно важную роль в поддержке роста и развития Акабы",
+  "hero.sponsors.adc": "Стимулирование экономического роста и развития в Акабе",
+  "hero.sponsors.aseza": "Надзор за специальной экономической зоной Акабы",
+  "hero.visitWebsite": "Посетите сайт",
+  "hero.brand": "АкабаГид",
+  "hero.tagline": "Откройте для себя деловой центр Акабы",
+  "hero.description": "Ваш полный путеводитель по туристическим объектам, логистике, промышленным площадкам и коммерческим предприятиям в Иордании, где находятся ворота на Красное море",
+  "hero.searchPlaceholder": "Поиск предприятий или подкатегорий...",
+  "hero.type.business": "Бизнес",
+  "hero.type.subcategory": "Подкатегория",
+  "hero.stats.businesses": "Перечисленные предприятия",
+  "hero.stats.communityTitle": "По инициативе сообщества",
+  "hero.stats.communityDesc": "Создан для местных жителей и посетителей",
+  "hero.stats.upToDate": "Всегда актуально",
+  "hero.stats.lastSync": "Последняя синхронизация: {{дата}}",
+  "footer.description": "Ваш надежный путеводитель по деловому ландшафту Акабы, объединяющий посетителей и предпринимателей.",
+  "footer.logoAlt": "Логотип AqabaGuide",
+  "footer.mainCategoriesTitle": "Основные категории",
+  "footer.quickLinksTitle": "Быстрые ссылки",
+  "footer.contactUsTitle": "Свяжитесь с нами",
+  "footer.privacyPolicy": "Политика конфиденциальности",
+  "footer.termsOfService": "Условия предоставления услуг",
+  "footer.allRights": "Все права защищены.",
+  "footer.loadError": "Не удалось загрузить категории для нижнего колонтитула:",
+  "categories.exploreTitle": "Изучите деловой ландшафт Акабы",
+  "categories.exploreDesc": "Навигация по нашему каталогу по отраслям промышленности",
+  "categories.exploreLabel": "Посетите сайт",
+  "categories.businesses": "Предприятия",
+  "categories.subcategories": "Подкатегории",
+  "categories.loadError": "Ошибка при загрузке категорий",
+  "categories.logistics": "Логистика",
+  "categories.logistics.description": "Транспортные и судоходные компании",
+  "categories.industrial": "Промышленность",
+  "categories.industrial.description": "Фабрики, заводы и производители",
+  "categories.tourism": "Туризм",
+  "categories.tourism.description": "Удобства и услуги для туристов",
+  "categories.commercial": "Коммерческая",
+  "categories.commercial.description": "Магазины, рынки и офисы",
+  "categories.healthcare": "Здравоохранение",
+  "categories.healthcare.description": "Больницы, клиники, аптеки, лаборатории",
+  "categories.governmental": "Государственные",
+  "categories.governmental.description": "Государственные секторы",
+  "categories.other": "Другие",
+  "sub.title": "Подкатегории",
+  "sub.count": "Подкатегории",
+  "sub.total": "Всего предприятий",
+  "sub.loading": "Загрузка подкатегорий..",
+  "sub.errorLoad": "Не удалось загрузить подкатегории.",
+  "sub.none": "Подкатегории отсутствуют.",
+  "sub.businesses": "предприятия",
+  "sub.viewAll": "Смотреть все",
+  "sub.back": "Назад",
+  "sub.viewPDF": "Посмотреть PDF",
+  "sub.downloadPDF": "Скачать PDF",
+  "sub.logisticsGuide.title": "Посмотреть путеводитель",
+  "sub.logisticsGuide.desc": "Исчерпывающий справочник по логистическим услугам в регионе с полезными ресурсами.",
+  "sub.logisticsGuide.alt": "Посмотреть путеводитель",
+  "sub.logisticsGuide.downloadOverlay": "Скачать путеводитель",
+  "sub.logisticsGuide.downloadButton": "Скачать PDF",
+  "sub.supporterLabel": "При поддержке",
+  "sub.supporter.alt": "Логотип компании Aqaba Water Company",
+  "sub.supporter.aria": "Посетите веб-сайт компании Aqaba Water Company",
+  "sub.supporter.name": "Акабская водная компания",
+  "sub.supporter.desc": "Обеспечивает устойчивые решения в области водоснабжения в регионе с 2004 года.",
+  "sub.supporter.visit": "Посетите сайт",
+  "list.heroTitle": "Развивайте свой бизнес в ASEZ",
+  "list.heroDesc": "Присоединяйтесь к надежному каталогу AqabaGuide и общайтесь с инвесторами, клиентами и партнерами в специальной экономической зоне Акабы.",
+  "list.benefitsTitle": "Почему стоит размещать объявления у нас?",
+  "list.benefits.visibility.title": "Повышенная видимость",
+  "list.benefits.visibility.desc": "Охватите тысячи потенциальных клиентов и инвесторов, ищущих услуги в ASEZ.",
+  "list.benefits.advertising.title": "Реклама премиум-класса",
+  "list.benefits.advertising.desc": "Выделите свой бизнес с помощью спонсорских объявлений, баннеров и рекламных роликов.",
+  "list.benefits.networking.title": "Возможности для налаживания контактов",
+  "list.benefits.networking.desc": "Получите приглашение на эксклюзивные мероприятия для инвесторов ASEZ и торговые форумы.",
+  "list.formTitle": "Отправить свой бизнес",
+  "list.formDesc": "Заполните форму ниже, и наши сотрудники свяжутся с вами в течение 24 часов, чтобы обсудить варианты размещения объявлений, рекламные пакеты и цены.",
+  "list.fields.name.label": "Название предприятия",
+  "list.fields.name.placeholder": "например, Aqaba Logistics Solutions",
+  "list.fields.industry.label": "Промышленность",
+  "list.fields.industry.placeholder": "Выберите категорию",
+  "list.fields.contact.label": "Контактное лицо",
+  "list.fields.contact.placeholder": "например, Джон Доу",
+  "list.fields.email.label": "Электронная почта",
+  "list.fields.email.placeholder": "contact@example.com",
+  "list.fields.phone.label": "Телефон",
+  "list.fields.phone.placeholder": "+962 7X XXX XXXX",
+  "list.fields.message.label": "Дополнительные детали",
+  "list.fields.message.placeholder": "Расскажите нам о своем бизнесе, рекламных предпочтениях или особых пожеланиях...",
+  "list.fields.terms": "Я согласен с <1>условиями предоставления услуг</1> AqabaGuide.",
+  "list.button.submit": "Отправить заявку",
+  "list.status.sending": "Посылаю..",
+  "list.status.sent": "✓ Подано!",
+  "list.status.error": "✕ Отправка не удалась.",
+  "list.cta.title": "Нужна помощь?",
+  "list.cta.desc": "Напишите нам на <1>partners@aqabaguide.com</1> или позвоните по телефону <3>+962 7 7691 1233</3>.",
+  "detail.back": "Назад к спискам",
+  "detail.premiumProfile": "Профиль премиум-бизнеса",
+  "detail.reviews": "отзывы",
+  "detail.contactTitle": "Контакты и местоположение",
+  "detail.servicesTitle": "Специальные услуги",
+  "detail.service.support": "круглосуточная поддержка клиентов",
+  "detail.service.consult": "Консультация на месте",
+  "about.title": "Об АкабеГид",
+  "about.gatewayTitle": "Ваш путь к успеху в бизнесе в ASEZ",
+  "about.gatewayDesc1": "AqabaGuide - это ведущий бизнес-каталог, созданный для расширения возможностей <0>{{bold1}}</0>, инвесторов и предприятий, желающих открыть или расширить свою коммерческую деятельность в <1>{{bold2}}</1>. Наша платформа служит стратегическим инструментом, предлагая точную информацию об инфраструктурных проектах мирового класса, логистических услугах и инвестиционных возможностях в Акабе.",
+  "about.gatewayDesc2": "Будь то местный стартап или глобальный инвестор, мы обеспечим вас необходимыми партнерами, услугами и ресурсами для процветания в одном из самых динамичных экономических центров Ближнего Востока.",
+  "about.whyTitle": "Почему стоит выбрать AqabaGuide?",
+  "about.features.comprehensive.title": "Полный справочник",
+  "about.features.comprehensive.desc": "Получите доступ к проверенным контактам для логистики, торговли, туризма и промышленных услуг в ASEZ.",
+  "about.features.investment.title": "Инвестиционная поддержка",
+  "about.features.investment.desc": "Будьте в курсе последних экономических событий, стимулов и нормативно-правовой базы.",
+  "about.features.networking.title": "Стратегическое сетевое взаимодействие",
+  "about.features.networking.desc": "Налаживание связей между предприятиями, государственными структурами и международными инвесторами.",
+  "about.features.growth.title": "Экономический рост",
+  "about.features.growth.desc": "Способствуйте развитию Акабы как регионального лидера в области торговли, туризма и инноваций.",
+  "about.missionTitle": "Наша миссия",
+  "about.missionDesc1": "Мы, <0>{{bold}}</0>, неустанно работаем над тем, чтобы способствовать экономическому развитию Акабы на местном, региональном и международном уровнях. Этот каталог отражает наше стремление к:",
+  "about.mission.point1": "Создание благоприятной бизнес-среды в ASEZ.",
+  "about.mission.point2": "Поддержка роста как малых, так и крупных предприятий.",
+  "about.mission.point3": "Предоставляет актуальные и практичные сведения для инвесторов и предпринимателей.",
+  "about.bold.brandName": "Айн Аль Акаба",
+  "about.bold.entrepreneurs": "подрядчики",
+  "about.bold.ASEZ": "ASEZ",
+  "about.joinTitle": "Присоединяйтесь к истории экономического успеха Акабы",
+  "about.joinDesc": "Откройте для себя бесконечные возможности в ASEZ, где сходятся стратегическое расположение, налоговые льготы и передовая инфраструктура. Пусть AqabaGuide станет вашим первым шагом на пути к открытию новых возможностей.",
+  "about.joinButton": "Связь с нами",
+  "Category": "Категория",
+  "Description": "Описание",
+  "Email": "Электронная почта",
+  "Image": "Изображение",
+  "IsPremium": "Премиум",
+  "Location": "Расположение",
+  "Name": "Имя",
+  "Phone": "Телефон",
+  "Rating": "Рейтинг",
+  "Reviews": "Отзывы",
+  "Subcategory": "Подкатегория",
+  "Website": "Сайт",
+  "tailwindcss": "Tailwind CSS",
+  "subcategories": {
+    "recSaZ8GSIQonWtUP": {
+      "name": "Пользовательский клиренс",
+      "description": "Ведение документации по импорту/экспорту"
+    },
+    "recOts1U1r6Fu5Rqe": {
+      "name": "Поставщик услуг Martime",
+      "description": "Снабжение и поддержка судов"
+    },
+    "recVttIPxLBdUekj5": {
+      "name": "Отели и гостиничные апартаменты",
+      "description": "Меблированное жилье для гостей"
+    },
+    "recq4jY66uUxMRmPO": {
+      "name": "Туристические офисы и агентства по прокату автомобилей",
+      "description": "Рекомендации по путешествиям и аренда автомобилей"
+    },
+    "recEv6uxzVnxCCV8V": {
+      "name": "Торговля и коммерческие услуги",
+      "description": "Поддержка бизнеса и логистика"
+    },
+    "recWw868BaUo5KW9U": {
+      "name": "Больницы и клиники",
+      "description": "Медицинское лечение и уход"
+    },
+    "reck5OGOOlmv2Zzee": {
+      "name": "аптеки",
+      "description": "Выдача лекарств и консультаций"
+    },
+    "recGFVw4JBXJ1Nqh8": {
+      "name": "Государственные услуги",
+      "description": "Выдача разрешений и публичных документов"
+    },
+    "rec5pC1VdAgz5DtVq": {
+      "name": "Рестораны",
+      "description": "Подача блюд"
+    },
+    "recqDDCujh0AMqFAF": {
+      "name": "Импорт и экспорт",
+      "description": "Импорт и экспорт товаров"
+    },
+    "recSMDwzx6Qzq5MDM": {
+      "name": "Свежие продукты",
+      "description": " Свежие продукты и бакалея"
+    },
+    "rect1IOqKF8wDQUyx": {
+      "name": "Пекарня и кондитерская",
+      "description": "пекарня и сладости"
+    },
+    "recwUCk79GzljVTND": {
+      "name": "Кафе",
+      "description": "Кафе"
+    },
+    "recfIti1Mxb7ccnUp": {
+      "name": "Кофейные и ореховые жаровни",
+      "description": "Жаровня"
+    },
+    "recTIvmVceJ4kYgTW": {
+      "name": "Поставщики бакалеи и продуктов питания",
+      "description": "Поставщики бакалеи и продуктов питания"
+    },
+    "rec0yR9q4pJkETkRx": {
+      "name": "Бакалея и супермаркеты",
+      "description": "Продуктовый магазин, мини-маркет, супермаркет"
+    },
+    "recLpW8IIdV0SKHqQ": {
+      "name": "Промышленные операции и инфраструктура",
+      "description": "Промышленные системы и техническое обслуживание"
+    },
+    "recwbqJAHAlEClt1r": {
+      "name": "Промышленные услуги",
+      "description": "Производство, изготовление, фабрика"
+    }
+  },
+  "business.back": "Назад",
+  "business.searchPlaceholder": "Поиск предприятий..",
+  "business.premiumOnly": "Только премиум",
+  "business.errorLoad": "Не удалось загрузить предприятия.",
+  "business.none": "Предприятий не найдено.",
+  "business.viewDetails": "Посмотреть детали",
+  "sponsors": {
+    "1": {
+      "name": "Ловкость"
+    },
+    "2": {
+      "name": "Логистическая деревня Акаба (ALV)"
+    },
+    "3": {
+      "name": "Акабская компания по управлению и эксплуатации порта"
+    },
+    "4": {
+      "name": "Компания морских услуг порта Акаба"
+    },
+    "5": {
+      "name": "Компания Badr Marine Repairs and Services Co."
+    },
+    "6": {
+      "name": "Жилищный банк торговли и финансов"
+    },
+    "7": {
+      "name": "CMA CGM"
+    },
+    "8": {
+      "name": "Орлиные холмы"
+    },
+    "9": {
+      "name": "Компания \"Агентство Галф"
+    },
+    "10": {
+      "name": "Компания Golden Triangle for Investment Co."
+    },
+    "11": {
+      "name": "Международный аэропорт имени короля Хусейна"
+    },
+    "12": {
+      "name": "Морское управление Иордании"
+    },
+    "13": {
+      "name": "MEEES Corp."
+    },
+    "14": {
+      "name": "Национальные авиационные услуги (NAS)"
+    },
+    "15": {
+      "name": "Национальная компания недвижимости"
+    },
+    "16": {
+      "name": "Оранжевый Джордан"
+    },
+    "17": {
+      "name": "PBI Aqaba Industrial Estate LLP"
+    },
+    "18": {
+      "name": "Пасифик Интернэшнл Лайнз (ПИЛ)"
+    },
+    "19": {
+      "name": "Иорданская академия морских исследований"
+    },
+    "20": {
+      "name": "Траст Фор Лоджистик Сервисиз Лтд."
+    }
+  },
+  "business": {
+    "back": "Назад",
+    "searchPlaceholder": "Поиск предприятий..",
+    "errorLoad": "Не удалось загрузить предприятия.",
+    "none": "Предприятий не найдено.",
+    "viewDetails": "Посмотреть детали",
+    "loadMore": "Загрузка Подробнее"
+  }
+}

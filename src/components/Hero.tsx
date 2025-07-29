@@ -1,18 +1,27 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   getCategories,
   getSubcategories,
-  getBusinesses,
+  getAllBusinesses,
   Subcategory,
   Business,
 } from '../lib/airtable';
-import { Building2, Anchor, ExternalLink, BookOpen } from 'lucide-react';
+import {
+  Building2,
+  ExternalLink,
+  Search as SearchIcon,
+  Users,
+  Clock,
+} from 'lucide-react';
 import ADC from '../assets/ADC.png';
 import ASEZA from '../assets/ASEZA.png';
 import Map from '../assets/Map.png';
+import { useTranslation } from 'react-i18next';
 
-// --- Search Types & Cache ---
+// -------------------- Types & Cache --------------------
 interface SubWithCat extends Subcategory {
   categoryId: string;
 }
@@ -29,98 +38,106 @@ type SearchData = {
 const CACHE_TTL = 1000 * 60 * 5; // 5 minutes
 let searchCache: (SearchData & { timestamp: number }) | null = null;
 
-const fetchSearchData = async (): Promise<SearchData> => {
-  const cats = await getCategories();
+const fetchSearchData = async (_locale: string): Promise<SearchData> => {
+  const categories = await getCategories();
   const subArrays = await Promise.all(
-    cats.map(cat =>
-      getSubcategories(cat.id).then(subs =>
-        subs.map(s => ({ ...s, categoryId: cat.id } as SubWithCat))
+    categories.map((cat) =>
+      getSubcategories(cat.id).then((subs) =>
+        subs.map((s) => ({ ...s, categoryId: cat.id } as SubWithCat))
       )
     )
   );
+
   const allSubs = subArrays.flat();
-  const bizArrays = await Promise.all(
-    allSubs.map(subcat => getBusinesses(subcat.categoryId, subcat.id))
-  );
-  const allBiz = bizArrays.flat();
-  return { subcategories: allSubs, businesses: allBiz };
+  const businesses = await getAllBusinesses();
+
+  return {
+    subcategories: allSubs,
+    businesses,
+  };
 };
 
+// -------------------- Component --------------------
 const Hero: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // Search state
-  const [query, setQuery] = useState<string>('');
+  const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [subcategories, setSubcategories] = useState<SubWithCat[]>([]);
   const [businesses, setBusinesses] = useState<Business[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [lastSync, setLastSync] = useState<number | null>(null);
 
-  // Load & cache search data
+  // Load & cache subcategories & businesses
   useEffect(() => {
     let cancelled = false;
-    const loadData = async () => {
-      setLoading(true);
-      setError(null);
+    (async () => {
       try {
+        setLoading(true);
         const now = Date.now();
         let data: SearchData;
         if (searchCache && now - searchCache.timestamp < CACHE_TTL) {
-          data = {
-            subcategories: searchCache.subcategories,
-            businesses: searchCache.businesses,
-          };
+          data = searchCache;
         } else {
-          data = await fetchSearchData();
+          data = await fetchSearchData(i18n.language);
           searchCache = { ...data, timestamp: now };
         }
         if (!cancelled) {
           setSubcategories(data.subcategories);
           setBusinesses(data.businesses);
+          // use cache timestamp if available, fallback to now
+          setLastSync(searchCache?.timestamp ?? now);
         }
       } catch (e) {
-        console.error('Search init error', e);
-        if (!cancelled) setError('Failed to load search data');
+        console.error(t('hero.loadError'), e);
+        if (!cancelled) setError(t('hero.loadError'));
       } finally {
         if (!cancelled) setLoading(false);
       }
-    };
-    loadData();
+    })();
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [t, i18n.language]);
 
-  // Update suggestions
+  // Update suggestions when query changes
   useEffect(() => {
     if (!query.trim() || loading || error) {
       setSuggestions([]);
       return;
     }
     const q = query.toLowerCase();
+
     const bizMatches: Suggestion[] = businesses
-      .filter(b => b.name.toLowerCase().includes(q))
+      .filter((b) => {
+        const ar = b.name.toLowerCase();
+        const en = (b.name_en ?? '').toLowerCase();
+        return ar.includes(q) || en.includes(q);
+      })
       .slice(0, 5)
-      .map(b => ({
-        type: 'business' as const,
+      .map((b) => ({
+        type: 'business',
         id: b.id,
-        name: b.name,
+        name: i18n.language === 'en' ? b.name_en ?? b.name : b.name,
       }));
+
     const subMatches: Suggestion[] = subcategories
-      .filter(s => s.name.toLowerCase().includes(q))
+      .filter((s) => s.name.toLowerCase().includes(q))
       .slice(0, 5)
-      .map(s => ({
-        type: 'subcategory' as const,
+      .map((s) => ({
+        type: 'subcategory',
         id: s.id,
         name: s.name,
         categoryId: s.categoryId,
       }));
+
     setSuggestions([...bizMatches, ...subMatches]);
     setIsOpen(true);
-  }, [query, businesses, subcategories, loading, error]);
+  }, [query, businesses, subcategories, loading, error, i18n.language]);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -133,6 +150,7 @@ const Hero: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Handle selection
   const handleSelect = (item: Suggestion) => {
     setQuery('');
     setIsOpen(false);
@@ -143,147 +161,233 @@ const Hero: React.FC = () => {
     }
   };
 
-  // Sponsors data
   const sponsors = [
     {
       name: 'Aqaba Development Corporation',
       logo: ADC,
       url: 'https://www.adc.jo/',
-      description: 'Driving economic growth and development in Aqaba',
+      description: t('hero.sponsors.adc'),
     },
     {
       name: 'Aqaba Special Economic Zone Authority',
       logo: ASEZA,
       url: 'https://aseza.jo/Default/En',
-      description: "Overseeing Aqaba's special economic zone",
+      description: t('hero.sponsors.aseza'),
     },
   ];
 
-  return (
-    <section className="relative bg-gray-900 overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: `url(${Map})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+  // Motion variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.6 } }),
+  };
 
-      {/* Sponsors */}
-      <div className="relative bg-gray-900/90 py-8 shadow-xl border-b border-gray-700">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center mb-6">
-            <h3 className="text-2xl font-bold text-center text-white">
-              Our Valued Supporters
-            </h3>
-            <p className="text-gray-300 text-center max-w-2xl mt-2">
-              These organizations play a vital role in supporting Aqaba's growth and development
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto">
-            {sponsors.map((sponsor, index) => (
-              <a
-                key={index}
-                href={sponsor.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-xl shadow-lg border border-gray-700 hover:border-yellow-400/50 transition-all duration-300 hover:scale-[1.02] w-full md:w-1/2 flex flex-col"
-              >
-                <div className="p-6 flex flex-col md:flex-row items-center flex-grow">
-                  <div className="mb-4 md:mb-0 md:mr-6 flex-shrink-0 bg-white p-3 rounded-lg shadow-sm border border-gray-200/50">
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="h-16 w-auto object-contain max-w-[180px]"
-                    />
-                  </div>
-                  <div className="text-center md:text-left flex-grow">
-                    <h4 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors">
-                      {sponsor.name}
-                    </h4>
-                    <p className="text-gray-300 text-sm mt-1">
-                      {sponsor.description}
-                    </p>
-                    <div className="mt-3 inline-flex items-center text-sm text-gray-400 group-hover:text-yellow-300 transition-colors">
-                      Visit website
-                      <ExternalLink className="w-4 h-4 ml-1" />
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+  const formattedSync = lastSync
+    ? new Intl.DateTimeFormat(i18n.language, { dateStyle: 'medium' }).format(new Date(lastSync))
+    : '—';
+
+  return (
+    <section className="relative isolate overflow-hidden bg-gray-950 text-white">
+      {/* Decorative Background Layers */}
+      <div
+        className="absolute inset-0 -z-20 opacity-40"
+        style={{ backgroundImage: `url(${Map})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      />
+      <div className="absolute inset-0 -z-30 bg-gradient-to-b from-gray-900 via-gray-950 to-black" />
+      <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-yellow-400/30 via-yellow-200/10 to-transparent blur-3xl" />
+
+      {/* Animated grid overlay */}
+      <div className="absolute inset-0 -z-10 opacity-20 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
+        <div
+          className="h-full w-full animate-slow-pan bg-[length:200%_200%]"
+          style={{
+            backgroundImage:
+              'linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(0deg, rgba(255,255,255,.05) 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+          }}
+        />
       </div>
 
-      {/* Hero & Search */}
-      <div className="relative container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent animate-gradient">
-              AqabaGuide
-            </span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-200">
-            Discover Aqaba's Business Hub
-          </h2>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Your comprehensive guide to tourist facilities, logistics, industrial sites,
-            and commercial establishments in Jordan's gateway to the Red Sea
-          </p>
+      {/* Sponsors */}
+      <motion.div
+        className="relative py-10 border-b border-white/10 backdrop-blur-sm bg-gray-900/70"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="container mx-auto px-4">
+          <motion.div className="flex flex-col items-center mb-8" variants={fadeUp}>
+            <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
+              {t('hero.supportersTitle')}
+            </h3>
+            <p className="mt-2 max-w-2xl text-center text-gray-300 leading-relaxed">
+              {t('hero.supportersDesc')}
+            </p>
+          </motion.div>
 
-          {/* Search Input */}
-          <div ref={containerRef} className="relative w-full max-w-md mx-auto">
+          <div className="relative overflow-hidden">
+            <ul className="flex flex-col md:flex-row items-stretch justify-center gap-8 max-w-5xl mx-auto">
+              {sponsors.map((s, i) => (
+                <motion.li key={s.name} custom={i} variants={fadeUp} className="flex-1">
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block h-full rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-yellow-300/40 hover:shadow-[0_0_30px_rgba(250,204,21,.15)] hover:-translate-y-1"
+                  >
+                    <div className="flex h-full flex-col items-center md:flex-row md:items-start gap-6">
+                      <div className="flex-shrink-0 rounded-xl bg-white p-4 shadow-md">
+                        <img src={s.logo} alt={s.name} className="h-16 w-auto object-contain max-w-[180px]" />
+                      </div>
+                      <div className="text-center md:text-left flex-grow">
+                        <h4 className="text-lg font-bold text-white transition-colors group-hover:text-yellow-300">
+                          {s.name}
+                        </h4>
+                        <p className="mt-1 text-sm text-gray-300">{s.description}</p>
+                        <span className="mt-3 inline-flex items-center text-sm text-gray-400 transition-colors group-hover:text-yellow-200">
+                          {t('hero.visitWebsite')} <ExternalLink className="ml-1 h-4 w-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Hero Content */}
+      <div className="relative container mx-auto px-4 py-20 md:py-28">
+        <motion.div
+          className="mx-auto max-w-3xl text-center space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight" variants={fadeUp}>
+            <span className="gradient-text bg-clip-text text-transparent">{t('hero.brand')}</span>
+          </motion.h1>
+
+          <motion.h2 className="text-2xl md:text-3xl font-semibold text-gray-200" custom={1} variants={fadeUp}>
+            {t('hero.tagline')}
+          </motion.h2>
+
+          <motion.p className="text-lg md:text-xl leading-relaxed text-gray-300" custom={2} variants={fadeUp}>
+            {t('hero.description')}
+          </motion.p>
+
+          {/* Search */}
+          <motion.div ref={containerRef} className="relative mx-auto mt-10 w-full max-w-md" custom={3} variants={fadeUp}>
+            <SearchIcon className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
             <input
               type="text"
-              placeholder="Search businesses or subcategories..."
+              placeholder={t('hero.searchPlaceholder')}
               value={query}
-              onChange={e => setQuery(e.target.value)}
+              onChange={(e) => setQuery(e.target.value)}
               onFocus={() => query && setIsOpen(true)}
-              className="w-full px-4 py-2 rounded-full border border-gray-600 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              aria-autocomplete="list"
+              aria-expanded={isOpen}
+              aria-controls="hero-suggestions"
+              className="peer w-full rounded-full border border-white/10 bg-white/10 px-12 py-3 text-white placeholder-gray-400 backdrop-blur-sm outline-none transition-all focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-300/40"
             />
+            {/* Glow effect */}
+            <div
+              className="pointer-events-none absolute inset-0 rounded-full opacity-0 blur-xl transition-opacity peer-focus:opacity-40"
+              style={{
+                background:
+                  'radial-gradient(ellipse at center, rgba(250,204,21,.35) 0%, rgba(250,204,21,0) 70%)',
+              }}
+            />
+
             {isOpen && suggestions.length > 0 && (
-              <ul className="absolute top-full mt-1 w-full bg-gray-800 border border-gray-700 rounded-xl shadow-lg max-h-60 overflow-auto z-50">
-                {suggestions.map(item => (
+              <ul
+                id="hero-suggestions"
+                role="listbox"
+                className="absolute top-full z-50 mt-2 max-h-64 w-full overflow-auto rounded-2xl border border-white/10 bg-gray-900/95 backdrop-blur-xl shadow-2xl divide-y divide-white/5 animate-fade-in"
+              >
+                {suggestions.map((item) => (
                   <li
                     key={`${item.type}-${item.id}`}
+                    role="option"
                     onClick={() => handleSelect(item)}
-                    className="px-4 py-2 hover:bg-gray-700 cursor-pointer flex justify-between items-center"
+                    className="flex cursor-pointer justify-between px-4 py-3 text-sm text-white transition-colors hover:bg-white/10"
                   >
-                    <span className="text-white">{item.name}</span>
-                    <span className="text-sm text-gray-400">
-                      {item.type === 'business' ? 'Business' : 'Subcategory'}
+                    <span>{item.name}</span>
+                    <span className="text-gray-400">
+                      {t(item.type === 'business' ? 'hero.type.business' : 'hero.type.subcategory')}
                     </span>
                   </li>
                 ))}
               </ul>
             )}
-          </div>
+          </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/10 hover:border-yellow-400/30 transition-colors">
-              <Building2 className="w-7 h-7 mx-auto text-yellow-400" />
-              <div className="text-xl font-bold text-white">500+</div>
-              <div className="text-gray-300 text-sm">Businesses Listed</div>
-            </div>
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/10 hover:border-yellow-400/30 transition-colors">
-              <BookOpen className="w-7 h-7 mx-auto text-yellow-400" />
-              <div className="text-xl font-bold text-white">4</div>
-              <div className="text-gray-300 text-sm">Guides Published</div>
-            </div>
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/10 hover:border-yellow-400/30 transition-colors">
-              <Anchor className="w-7 h-7 mx-auto text-yellow-400" />
-              <div className="text-xl font-bold text-white">4</div>
-              <div className="text-gray-300 text-sm">Key Sectors</div>
-            </div>
-          </div>
-        </div>
+          <motion.div className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-5 md:grid-cols-3" custom={4} variants={fadeUp}>
+            <StatCard
+              icon={<Building2 className="mx-auto h-7 w-7" />}
+              value="1000+"
+              title={t('hero.stats.businesses')}
+            />
+            <StatCard
+              icon={<Users className="mx-auto h-7 w-7" />}
+              value={t('hero.stats.communityTitle', 'Community Driven')}
+              title={t('hero.stats.communityDesc', 'Built for locals & visitors')}
+            />
+            <StatCard
+              icon={<Clock className="mx-auto h-7 w-7" />}
+              value={`Last Sync: ${formattedSync}`}
+              title={t('hero.stats.upToDate', 'Always up‑to‑date')}
+            />
+          </motion.div>
+        </motion.div>
       </div>
+
+      {/* Local styles for animations */}
+      <style>{`
+        .gradient-text {
+          background-image: linear-gradient(90deg, #fde047, #facc15, #fde047);
+          background-size: 200% 200%;
+          animation: gradientShift 6s linear infinite;
+        }
+        @keyframes gradientShift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-slow-pan {
+          animation: slowPan 30s linear infinite;
+        }
+        @keyframes slowPan {
+          0% { background-position: 0% 0%; }
+          100% { background-position: 200% 200%; }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.25s ease-out;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </section>
   );
 };
+
+// -------------------- Sub Components --------------------
+interface StatCardProps {
+  icon: React.ReactNode;
+  value: string;
+  title: string;
+}
+
+const StatCard: React.FC<StatCardProps> = ({ icon, value, title }) => (
+  <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 text-center shadow-xl backdrop-blur-md transition-colors hover:border-yellow-300/40">
+    <div className="text-yellow-300 group-hover:scale-110 transition-transform duration-300">{icon}</div>
+    <div className="mt-2 text-xl font-bold text-white">{value}</div>
+    <div className="mt-1 text-sm text-gray-300">{title}</div>
+  </div>
+);
 
 export default Hero;

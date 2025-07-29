@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rec3Aq9D2vhwm3mTB",
+    "name": "Logistics",
+    "description": "Transport & shipping companies",
+    "icon": "https://cdn-icons-png.flaticon.com/512/8478/8478348.png",
+    "subCount": 2,
+    "bizCount": 523
+  },
+  {
+    "id": "recB5om03TPw0P558",
+    "name": "Industrial",
+    "description": "Factories, plants, and manufacturers",
+    "icon": "https://cdn-icons-png.flaticon.com/512/4469/4469850.png",
+    "subCount": 2,
+    "bizCount": 62
+  },
+  {
+    "id": "recBhaJWUpjkzdeMl",
+    "name": "Tourism",
+    "description": "Facilities and services for tourists",
+    "icon": "https://cdn-icons-png.flaticon.com/512/4480/4480608.png",
+    "subCount": 2,
+    "bizCount": 139
+  },
+  {
+    "id": "recmjEiR7EMb8CbVH",
+    "name": "HealthCare",
+    "description": "Hospitals, Clinics, Pharmacies, Labs",
+    "icon": "https://cdn-icons-png.flaticon.com/512/4434/4434478.png",
+    "subCount": 2,
+    "bizCount": 72
+  },
+  {
+    "id": "recvhKHj12kVGSaBP",
+    "name": "Commercial",
+    "description": "Shops, markets, and offices",
+    "icon": "https://cdn-icons-png.flaticon.com/512/4279/4279596.png",
+    "subCount": 9,
+    "bizCount": 883
+  },
+  {
+    "id": "recw2M2JCwbRwpZID",
+    "name": "Governmental",
+    "description": "Governmental Sectors",
+    "icon": "https://landportal.org/sites/default/files/2023-05/396px-Coat_of_arms_of_Jordan.svg_.png",
+    "subCount": 1,
+    "bizCount": 69
+  }
+]

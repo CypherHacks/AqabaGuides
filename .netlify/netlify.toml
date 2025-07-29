@@ -1,3 +1,5 @@
+functionsDirectory = "/home/fadi/Desktop/AqabaGuide/.netlify/functions"
+functionsDirectoryOrigin = "ui"
 plugins = []
 headers = []
 redirects = []
@@ -7,10 +9,11 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/home/fadi/Desktop/project/dist"
+publish = "/home/fadi/Desktop/AqabaGuide/dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
 command = "npm run build"
+functions = "/home/fadi/Desktop/AqabaGuide/.netlify/functions"
 
 [build.environment]
 

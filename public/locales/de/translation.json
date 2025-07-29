@@ -1,0 +1,300 @@
+{
+  "sponsor.banner": "Premium Aqaba Business Directory - Partner mit uns",
+  "header.siteName": "AqabaFührer",
+  "header.logoAlt": "AqabaLogo-Führer",
+  "nav.home": "Startseite",
+  "nav.about": "Über uns",
+  "nav.listYourBusiness": "Ihr Unternehmen auflisten",
+  "aria.toggleMenu": "Navigationsmenü umschalten",
+  "hero.loadError": "Suchdaten konnten nicht geladen werden",
+  "hero.supportersTitle": "Unsere geschätzten Unterstützer",
+  "hero.supportersDesc": "Diese Organisationen spielen eine wichtige Rolle bei der Förderung des Wachstums und der Entwicklung Aqabas",
+  "hero.sponsors.adc": "Förderung von Wirtschaftswachstum und Entwicklung in Aqaba",
+  "hero.sponsors.aseza": "Aufsicht über die Sonderwirtschaftszone von Aqaba",
+  "hero.visitWebsite": "Website besuchen",
+  "hero.brand": "AqabaFührer",
+  "hero.tagline": "Entdecken Sie Aqabas Geschäftszentrum",
+  "hero.description": "Ihr umfassender Führer zu touristischen Einrichtungen, Logistik, Industriestandorten und Gewerbebetrieben in Jordaniens Tor zum Roten Meer",
+  "hero.searchPlaceholder": "Unternehmen oder Unterkategorien suchen...",
+  "hero.type.business": "Business",
+  "hero.type.subcategory": "Unterkategorie",
+  "hero.stats.businesses": "Aufgelistete Unternehmen",
+  "hero.stats.communityTitle": "Von der Gemeinschaft getrieben",
+  "hero.stats.communityDesc": "Gebaut für Einheimische und Besucher",
+  "hero.stats.upToDate": "Immer auf dem neuesten Stand",
+  "hero.stats.lastSync": "Letzte Synchronisierung: {{Datum}}",
+  "footer.description": "Ihr zuverlässiger Führer durch die Geschäftswelt von Aqaba, der Besucher und Unternehmen miteinander verbindet.",
+  "footer.logoAlt": "AqabaLogo-Führer",
+  "footer.mainCategoriesTitle": "Hauptkategorien",
+  "footer.quickLinksTitle": "Schnelle Links",
+  "footer.contactUsTitle": "Kontakt",
+  "footer.privacyPolicy": "Datenschutzbestimmungen",
+  "footer.termsOfService": "Bedingungen der Dienstleistung",
+  "footer.allRights": "Alle Rechte vorbehalten.",
+  "footer.loadError": "Die Kategorien für die Fußzeile konnten nicht geladen werden:",
+  "categories.exploreTitle": "Erkunden Sie Aqabas Geschäftslandschaft",
+  "categories.exploreDesc": "Navigieren Sie in unserem Verzeichnis nach Wirtschaftszweigen",
+  "categories.exploreLabel": "Erkunden Sie",
+  "categories.businesses": "Unternehmen",
+  "categories.subcategories": "Unterkategorien",
+  "categories.loadError": "Fehler beim Laden von Kategorien",
+  "categories.logistics": "Logistik",
+  "categories.logistics.description": "Transport- und Schifffahrtsunternehmen",
+  "categories.industrial": "Industriell",
+  "categories.industrial.description": "Fabriken, Anlagen und Hersteller",
+  "categories.tourism": "Tourismus",
+  "categories.tourism.description": "Einrichtungen und Dienstleistungen für Touristen",
+  "categories.commercial": "Kommerziell",
+  "categories.commercial.description": "Geschäfte, Märkte und Büros",
+  "categories.healthcare": "Gesundheitswesen",
+  "categories.healthcare.description": "Krankenhäuser, Kliniken, Apotheken, Laboratorien",
+  "categories.governmental": "Staatliche",
+  "categories.governmental.description": "Staatliche Sektoren",
+  "categories.other": "Andere",
+  "sub.title": "Unterkategorien",
+  "sub.count": "Unterkategorien",
+  "sub.total": "Unternehmen insgesamt",
+  "sub.loading": "Unterkategorien laden..",
+  "sub.errorLoad": "Die Unterkategorien konnten nicht geladen werden.",
+  "sub.none": "Keine Unterkategorien vorhanden.",
+  "sub.businesses": "unternehmen",
+  "sub.viewAll": "Alle anzeigen",
+  "sub.back": "Zurück",
+  "sub.viewPDF": "PDF anzeigen",
+  "sub.downloadPDF": "PDF herunterladen",
+  "sub.logisticsGuide.title": "Leitfaden anzeigen",
+  "sub.logisticsGuide.desc": "Umfassender Leitfaden zu Logistikdienstleistungen in der Region mit hilfreichen Ressourcen.",
+  "sub.logisticsGuide.alt": "Leitfaden anzeigen",
+  "sub.logisticsGuide.downloadOverlay": "Leitfaden herunterladen",
+  "sub.logisticsGuide.downloadButton": "PDF herunterladen",
+  "sub.supporterLabel": "Mit Stolz unterstützt von",
+  "sub.supporter.alt": "Logo der Wassergesellschaft Aqaba",
+  "sub.supporter.aria": "Besuchen Sie die Website der Aqaba Water Company",
+  "sub.supporter.name": "Aqaba Wasser Gesellschaft",
+  "sub.supporter.desc": "Wir bieten seit 2004 nachhaltige Wasserlösungen für die Region an.",
+  "sub.supporter.visit": "Website besuchen",
+  "list.heroTitle": "Wachsen Sie mit Ihrem Unternehmen in ASEZ",
+  "list.heroDesc": "Treten Sie dem zuverlässigen Verzeichnis von AqabaGuide bei und knüpfen Sie Kontakte zu Investoren, Kunden und Partnern in der Sonderwirtschaftszone Aqaba.",
+  "list.benefitsTitle": "Warum bei uns listen?",
+  "list.benefits.visibility.title": "Erhöhte Sichtbarkeit",
+  "list.benefits.visibility.desc": "Erreichen Sie Tausende von potenziellen Kunden und Investoren, die nach Dienstleistungen in der ASEZ suchen.",
+  "list.benefits.advertising.title": "Premium-Werbung",
+  "list.benefits.advertising.desc": "Heben Sie Ihr Unternehmen mit gesponserten Einträgen, Bannern und hervorgehobenen Spots hervor.",
+  "list.benefits.networking.title": "Gelegenheiten zum Networking",
+  "list.benefits.networking.desc": "Werden Sie zu exklusiven ASEZ-Investorenveranstaltungen und Handelsforen eingeladen.",
+  "list.formTitle": "Ihr Unternehmen einreichen",
+  "list.formDesc": "Füllen Sie das nachstehende Formular aus, und unser Team wird sich innerhalb von 24 Stunden mit Ihnen in Verbindung setzen, um die Eintragsoptionen, Werbepakete und Preise zu besprechen.",
+  "list.fields.name.label": "Name des Unternehmens",
+  "list.fields.name.placeholder": "z. B. Aqaba Logistics Solutions",
+  "list.fields.industry.label": "Industrie",
+  "list.fields.industry.placeholder": "Kategorie auswählen",
+  "list.fields.contact.label": "Kontaktperson",
+  "list.fields.contact.placeholder": "z.B. John Doe",
+  "list.fields.email.label": "E-Mail",
+  "list.fields.email.placeholder": "contact@example.com",
+  "list.fields.phone.label": "Telefon",
+  "list.fields.phone.placeholder": "+962 7X XXX XXXX",
+  "list.fields.message.label": "Zusätzliche Details",
+  "list.fields.message.placeholder": "Erzählen Sie uns von Ihrem Unternehmen, Ihren Werbevorlieben oder besonderen Wünschen...",
+  "list.fields.terms": "Ich stimme den <1>Allgemeinen Geschäftsbedingungen</1> von AqabaGuide zu.",
+  "list.button.submit": "Bewerbung einreichen",
+  "list.status.sending": "Sending…",
+  "list.status.sent": "✓ Eingereicht!",
+  "list.status.error": "übermittlung fehlgeschlagen.",
+  "list.cta.title": "Brauchen Sie Hilfe?",
+  "list.cta.desc": "Senden Sie uns eine E-Mail an <1>partners@aqabaguide.com</1> oder rufen Sie uns unter <3>+962 7 7691 1233</3> an.",
+  "detail.back": "Zurück zu Listings",
+  "detail.premiumProfile": "Premium Business Profil",
+  "detail.reviews": "bewertungen",
+  "detail.contactTitle": "Kontakt &amp; Standort",
+  "detail.servicesTitle": "Besondere Dienstleistungen",
+  "detail.service.support": "24/7 Kundenbetreuung",
+  "detail.service.consult": "Vor-Ort-Beratung",
+  "about.title": "Über AqabaGuide",
+  "about.gatewayTitle": "Ihr Tor zum geschäftlichen Erfolg in der ASEZ",
+  "about.gatewayDesc1": "AqabaGuide ist das führende Branchenverzeichnis, das <0>{{bold1}}</0>, Investoren und Unternehmen, die ihre Geschäftstätigkeit in der <1>{{bold2}}</1> aufbauen oder erweitern möchten, unterstützt. Unsere Plattform dient als strategisches Werkzeug und bietet präzise Details über Infrastrukturprojekte von Weltrang, Logistikdienstleistungen und Investitionsmöglichkeiten in Aqaba.",
+  "about.gatewayDesc2": "Ob Sie ein lokales Startup oder ein globaler Investor sind, wir bringen Sie mit den richtigen Partnern, Dienstleistungen und Ressourcen zusammen, damit Sie in einem der dynamischsten Wirtschaftszentren des Nahen Ostens erfolgreich sein können.",
+  "about.whyTitle": "Warum AqabaGuide wählen?",
+  "about.features.comprehensive.title": "Umfassendes Verzeichnis",
+  "about.features.comprehensive.desc": "Zugang zu verifizierten Kontakten für Logistik, Handel, Tourismus und industrielle Dienstleistungen in der ASEZ.",
+  "about.features.investment.title": "Unterstützung von Investitionen",
+  "about.features.investment.desc": "Bleiben Sie auf dem Laufenden über die neuesten wirtschaftlichen Entwicklungen, Anreize und rechtlichen Rahmenbedingungen.",
+  "about.features.networking.title": "Strategische Netzwerkarbeit",
+  "about.features.networking.desc": "Herstellung von Verbindungen zwischen Unternehmen, staatlichen Stellen und internationalen Investoren.",
+  "about.features.growth.title": "Wirtschaftswachstum",
+  "about.features.growth.desc": "Beitrag zur Vision Aqabas als regionaler Marktführer in den Bereichen Handel, Tourismus und Innovation.",
+  "about.missionTitle": "Unser Auftrag",
+  "about.missionDesc1": "Wir von <0>{{bold}}</0> arbeiten unermüdlich daran, die wirtschaftliche Entwicklung Aqabas auf lokaler, regionaler und internationaler Ebene zu fördern. Dieses Verzeichnis spiegelt unser Engagement für:",
+  "about.mission.point1": "Schaffung eines günstigen Geschäftsumfelds in der ASEZ.",
+  "about.mission.point2": "Unterstützung des Wachstums von KMU und Großunternehmen gleichermaßen.",
+  "about.mission.point3": "Bereitstellung aktueller, umsetzbarer Erkenntnisse für Investoren und Unternehmer.",
+  "about.bold.brandName": "Ayn Al Aqaba",
+  "about.bold.entrepreneurs": "unternehmer",
+  "about.bold.ASEZ": "ASEZ",
+  "about.joinTitle": "Werden Sie Teil von Aqabas wirtschaftlicher Erfolgsgeschichte",
+  "about.joinDesc": "Entdecken Sie die unendlichen Möglichkeiten der ASEZ, wo strategische Lage, steuerliche Anreize und eine hochmoderne Infrastruktur zusammentreffen. Lassen Sie AqabaGuide Ihr erster Schritt zur Erschließung neuer Möglichkeiten sein.",
+  "about.joinButton": "Mit uns verbinden",
+  "Category": "Kategorie",
+  "Description": "Beschreibung",
+  "Email": "E-Mail",
+  "Image": "Bild",
+  "IsPremium": "Ist Premium",
+  "Location": "Standort",
+  "Name": "Name",
+  "Phone": "Telefon",
+  "Rating": "Bewertung",
+  "Reviews": "Bewertungen",
+  "Subcategory": "Unterkategorie",
+  "Website": "Website",
+  "tailwindcss": "Tailwind CSS",
+  "subcategories": {
+    "recSaZ8GSIQonWtUP": {
+      "name": "Zollabfertigung",
+      "description": "Verwaltung von Import-/Exportpapieren"
+    },
+    "recOts1U1r6Fu5Rqe": {
+      "name": "Martime-Dienstleister",
+      "description": "Versorgung und Unterstützung von Schiffen"
+    },
+    "recVttIPxLBdUekj5": {
+      "name": "Hotels &amp; Hotelwohnungen",
+      "description": "Möblierte Gästeunterkünfte"
+    },
+    "recq4jY66uUxMRmPO": {
+      "name": "Fremdenverkehrsbüros und Autovermietungen",
+      "description": "Reiseberatung und Autovermietung"
+    },
+    "recEv6uxzVnxCCV8V": {
+      "name": "Handel und kommerzielle Dienstleistungen",
+      "description": "Unternehmensunterstützung und Logistik"
+    },
+    "recWw868BaUo5KW9U": {
+      "name": "Krankenhäuser und Kliniken",
+      "description": "Medizinische Behandlung und Pflege"
+    },
+    "reck5OGOOlmv2Zzee": {
+      "name": "apotheken",
+      "description": "Ausgabe von Medikamenten und Beratung"
+    },
+    "recGFVw4JBXJ1Nqh8": {
+      "name": "Staatliche Dienstleistungen",
+      "description": "Erteilt Genehmigungen und öffentliche Aufzeichnungen"
+    },
+    "rec5pC1VdAgz5DtVq": {
+      "name": "Restaurants",
+      "description": "Essen servieren"
+    },
+    "recqDDCujh0AMqFAF": {
+      "name": "Einfuhr und Ausfuhr",
+      "description": "Einfuhr und Ausfuhr von Waren"
+    },
+    "recSMDwzx6Qzq5MDM": {
+      "name": "Frische Lebensmittel",
+      "description": " Frische Lebensmittel &amp; Lebensmittelgeschäfte"
+    },
+    "rect1IOqKF8wDQUyx": {
+      "name": "Bäckerei und Konditorei",
+      "description": "bäckerei &amp; Süßigkeiten"
+    },
+    "recwUCk79GzljVTND": {
+      "name": "Cafés",
+      "description": "Cafés"
+    },
+    "recfIti1Mxb7ccnUp": {
+      "name": "Kaffee- und Nussrösterei",
+      "description": "Rösterei"
+    },
+    "recTIvmVceJ4kYgTW": {
+      "name": "Lebensmittel- und Nahrungsmittellieferanten",
+      "description": "Lebensmittel- und Nahrungsmittellieferanten"
+    },
+    "rec0yR9q4pJkETkRx": {
+      "name": "Lebensmittelgeschäfte &amp; Supermärkte",
+      "description": "Lebensmittelladen, Minimarkt, Supermarkt"
+    },
+    "recLpW8IIdV0SKHqQ": {
+      "name": "Industrieller Betrieb und Infrastruktur",
+      "description": "Industrielle Systeme und Wartung"
+    },
+    "recwbqJAHAlEClt1r": {
+      "name": "Industrielle Dienstleistungen",
+      "description": "Produktion,Fertigung,Fabrik"
+    }
+  },
+  "business.back": "Zurück",
+  "business.searchPlaceholder": "Unternehmen suchen..",
+  "business.premiumOnly": "Premium Only",
+  "business.errorLoad": "Die Unternehmen konnten nicht geladen werden.",
+  "business.none": "Keine Unternehmen gefunden.",
+  "business.viewDetails": "Details anzeigen",
+  "sponsors": {
+    "1": {
+      "name": "Beweglichkeit"
+    },
+    "2": {
+      "name": "Aqaba Logistics Village (ALV)"
+    },
+    "3": {
+      "name": "Aqaba Gesellschaft für Hafenmanagement und -betrieb"
+    },
+    "4": {
+      "name": "Aqaba Port Marine Services Gesellschaft"
+    },
+    "5": {
+      "name": "Badr Marine Repairs and Services Co."
+    },
+    "6": {
+      "name": "Die Wohnbaubank für Handel und Finanzen"
+    },
+    "7": {
+      "name": "CMA CGM"
+    },
+    "8": {
+      "name": "Eagle Hills"
+    },
+    "9": {
+      "name": "Golfagentur Gesellschaft"
+    },
+    "10": {
+      "name": "Goldenes Dreieck für Investment Co."
+    },
+    "11": {
+      "name": "Internationaler Flughafen König Hussein"
+    },
+    "12": {
+      "name": "Jordanische Schifffahrtsbehörde"
+    },
+    "13": {
+      "name": "MEEES Corp."
+    },
+    "14": {
+      "name": "Nationale Luftfahrtdienste (NAS)"
+    },
+    "15": {
+      "name": "Nationale Immobiliengesellschaft"
+    },
+    "16": {
+      "name": "Orange Jordanien"
+    },
+    "17": {
+      "name": "PBI Aqaba Industrial Estate LLP"
+    },
+    "18": {
+      "name": "Internationale Pazifik-Linien (PIL)"
+    },
+    "19": {
+      "name": "Jordanische Akademie für Maritime Studien"
+    },
+    "20": {
+      "name": "Vertrauen für logistische Dienstleistungen Ltd."
+    }
+  },
+  "business": {
+    "back": "Zurück",
+    "searchPlaceholder": "Unternehmen suchen..",
+    "errorLoad": "Die Unternehmen konnten nicht geladen werden.",
+    "none": "Keine Unternehmen gefunden.",
+    "viewDetails": "Details anzeigen",
+    "loadMore": "Mehr laden"
+  }
+}

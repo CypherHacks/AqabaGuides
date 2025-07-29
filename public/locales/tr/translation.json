@@ -1,0 +1,300 @@
+{
+  "sponsor.banner": "Premium Akabe İşletme Rehberi - Bizimle Ortak Olun",
+  "header.siteName": "AqabaGuide",
+  "header.logoAlt": "AqabaGuide logosu",
+  "nav.home": "Ev",
+  "nav.about": "Hakkımızda",
+  "nav.listYourBusiness": "İşletmenizi Listeleyin",
+  "aria.toggleMenu": "Gezinti menüsünü aç / kapat",
+  "hero.loadError": "Arama verileri yüklenemedi",
+  "hero.supportersTitle": "Değerli Destekçilerimiz",
+  "hero.supportersDesc": "Bu kuruluşlar Akabe'nin büyüme ve kalkınmasının desteklenmesinde hayati bir rol oynamaktadır",
+  "hero.sponsors.adc": "Akabe'de ekonomik büyüme ve kalkınmayı desteklemek",
+  "hero.sponsors.aseza": "Akabe'nin özel ekonomik bölgesinin denetlenmesi",
+  "hero.visitWebsite": "Web sitesini ziyaret edin",
+  "hero.brand": "AqabaGuide",
+  "hero.tagline": "Akabe'nin İş Merkezini Keşfedin",
+  "hero.description": "Ürdün'ün Kızıldeniz'e açılan kapısındaki turistik tesisler, lojistik, sanayi siteleri ve ticari kuruluşlar için kapsamlı rehberiniz",
+  "hero.searchPlaceholder": "İşletmeleri veya alt kategorileri arayın...",
+  "hero.type.business": "İş Dünyası",
+  "hero.type.subcategory": "Alt Kategori",
+  "hero.stats.businesses": "Listelenen İşletmeler",
+  "hero.stats.communityTitle": "Toplum Odaklı",
+  "hero.stats.communityDesc": "Yerel halk ve ziyaretçiler için tasarlandı",
+  "hero.stats.upToDate": "Her zaman güncel",
+  "hero.stats.lastSync": "Son senkronizasyon: {{tarih}}",
+  "footer.description": "Akabe'nin iş dünyası için güvenilir rehberiniz, ziyaretçileri ve işletmeleri birbirine bağlıyor.",
+  "footer.logoAlt": "AqabaGuide logosu",
+  "footer.mainCategoriesTitle": "Ana Kategoriler",
+  "footer.quickLinksTitle": "Hızlı Bağlantılar",
+  "footer.contactUsTitle": "Bize Ulaşın",
+  "footer.privacyPolicy": "Gizlilik Politikası",
+  "footer.termsOfService": "Hizmet Koşulları",
+  "footer.allRights": "Tüm hakları saklıdır.",
+  "footer.loadError": "Altbilgi için kategoriler yüklenemedi:",
+  "categories.exploreTitle": "Akabe'nin İş Ortamını Keşfedin",
+  "categories.exploreDesc": "Rehberimizde endüstri sektörüne göre gezinin",
+  "categories.exploreLabel": "Keşfedin",
+  "categories.businesses": "İşletmeler",
+  "categories.subcategories": "Alt kategoriler",
+  "categories.loadError": "Kategoriler yüklenirken hata oluştu",
+  "categories.logistics": "Lojistik",
+  "categories.logistics.description": "Nakliye ve nakliye şirketleri",
+  "categories.industrial": "Endüstriyel",
+  "categories.industrial.description": "Fabrikalar, tesisler ve imalatçılar",
+  "categories.tourism": "Turizm",
+  "categories.tourism.description": "Turistler için tesisler ve hizmetler",
+  "categories.commercial": "Ticari",
+  "categories.commercial.description": "Mağazalar, marketler ve ofisler",
+  "categories.healthcare": "Sağlık Hizmetleri",
+  "categories.healthcare.description": "Hastaneler, Klinikler, Eczaneler, Laboratuvarlar",
+  "categories.governmental": "Devlet",
+  "categories.governmental.description": "Kamu Sektörleri",
+  "categories.other": "Diğer",
+  "sub.title": "Alt Kategoriler",
+  "sub.count": "Alt Kategoriler",
+  "sub.total": "Toplam İşletmeler",
+  "sub.loading": "Alt kategoriler yükleniyor..",
+  "sub.errorLoad": "Alt kategoriler yüklenemedi.",
+  "sub.none": "Alt kategori mevcut değil.",
+  "sub.businesses": "işletmeler",
+  "sub.viewAll": "Tümünü Görüntüle",
+  "sub.back": "Geri",
+  "sub.viewPDF": "PDF Görüntüle",
+  "sub.downloadPDF": "İndir PDF",
+  "sub.logisticsGuide.title": "Kılavuzu Görüntüle",
+  "sub.logisticsGuide.desc": "Yardımcı kaynaklarla birlikte bölgedeki lojistik hizmetleri için kapsamlı bir rehber.",
+  "sub.logisticsGuide.alt": "Kılavuzu Görüntüle",
+  "sub.logisticsGuide.downloadOverlay": "Kılavuzu İndirin",
+  "sub.logisticsGuide.downloadButton": "İndir PDF",
+  "sub.supporterLabel": "Gururla Destekleyenler",
+  "sub.supporter.alt": "Akabe Su Şirketi Logosu",
+  "sub.supporter.aria": "Aqaba Water Company web sitesini ziyaret edin",
+  "sub.supporter.name": "Akabe Su Şirketi",
+  "sub.supporter.desc": "2004'ten beri bölge için sürdürülebilir su çözümleri sağlıyoruz.",
+  "sub.supporter.visit": "Web sitesini ziyaret edin",
+  "list.heroTitle": "ASEZ'de İşinizi Büyütün",
+  "list.heroDesc": "AqabaGuide'ın güvenilir rehberine katılın ve Akabe Özel Ekonomik Bölgesi'ndeki yatırımcılar, müşteriler ve ortaklarla bağlantı kurun.",
+  "list.benefitsTitle": "Neden Bizimle Listelemelisiniz?",
+  "list.benefits.visibility.title": "Artan Görünürlük",
+  "list.benefits.visibility.desc": "ASEZ'de hizmet arayan binlerce potansiyel müşteri ve yatırımcıya ulaşın.",
+  "list.benefits.advertising.title": "Premium Reklamcılık",
+  "list.benefits.advertising.desc": "İşletmenizi sponsorlu listeler, afişler ve öne çıkan spotlarla vurgulayın.",
+  "list.benefits.networking.title": "Ağ Oluşturma Fırsatları",
+  "list.benefits.networking.desc": "Özel ASEZ yatırımcı etkinliklerine ve ticaret forumlarına davet edilin.",
+  "list.formTitle": "İşletmenizi Gönderin",
+  "list.formDesc": "Aşağıdaki formu doldurun; ekibimiz listeleme seçenekleri, reklam paketleri ve fiyatlandırma hakkında görüşmek üzere 24 saat içinde sizinle iletişime geçecektir.",
+  "list.fields.name.label": "İşletme Adı",
+  "list.fields.name.placeholder": "örneğin, Aqaba Lojistik Çözümleri",
+  "list.fields.industry.label": "Endüstri",
+  "list.fields.industry.placeholder": "Kategori Seçiniz",
+  "list.fields.contact.label": "İlgili Kişi",
+  "list.fields.contact.placeholder": "örneğin, John Doe",
+  "list.fields.email.label": "E-posta",
+  "list.fields.email.placeholder": "contact@example.com",
+  "list.fields.phone.label": "Telefon",
+  "list.fields.phone.placeholder": "+962 7X XXX XXXX",
+  "list.fields.message.label": "Ek Ayrıntılar",
+  "list.fields.message.placeholder": "Bize işiniz, reklam tercihleriniz veya özel istekleriniz hakkında bilgi verin...",
+  "list.fields.terms": "AqabaGuide'ın <1>Hizmet Şartlarını</1> kabul ediyorum.",
+  "list.button.submit": "Başvuru Gönder",
+  "list.status.sending": "Gönderiyorum",
+  "list.status.sent": "✓ Gönderildi!",
+  "list.status.error": "✕ Gönderim başarısız oldu.",
+  "list.cta.title": "Yardıma mı ihtiyacınız var?",
+  "list.cta.desc": "Bize <1>partners@aqabaguide.com</1> adresinden e-posta gönderin veya <3>+962 7 7691 1233</3> numaralı telefonu arayın.",
+  "detail.back": "Listelere Geri Dön",
+  "detail.premiumProfile": "Premium İşletme Profili",
+  "detail.reviews": "yorumlar",
+  "detail.contactTitle": "İletişim &amp; Konum",
+  "detail.servicesTitle": "Özel Hizmetler",
+  "detail.service.support": "7/24 Müşteri Desteği",
+  "detail.service.consult": "Yerinde Danışmanlık",
+  "about.title": "AqabaGuide Hakkında",
+  "about.gatewayTitle": "ASEZ'de İş Başarısına Açılan Kapınız",
+  "about.gatewayDesc1": "AqabaGuide, <0>{{bold1}}</0>, yatırımcıları ve <1>{{bold2}}</1>'de ticari faaliyetlerini kurmak veya genişletmek isteyen işletmeleri güçlendirmek için tasarlanmış önde gelen iş rehberidir. Platformumuz, Akabe'deki dünya standartlarındaki altyapı projeleri, lojistik hizmetleri ve yatırım fırsatları hakkında kesin ayrıntılar sunan stratejik bir araç olarak hizmet vermektedir.",
+  "about.gatewayDesc2": "İster yerel bir girişim ister küresel bir yatırımcı olun, Orta Doğu'nun en dinamik ekonomik merkezlerinden birinde başarılı olmanız için sizi doğru ortaklar, hizmetler ve kaynaklarla buluşturuyoruz.",
+  "about.whyTitle": "Neden AqabaGuide'ı Seçmelisiniz?",
+  "about.features.comprehensive.title": "Kapsamlı Dizin",
+  "about.features.comprehensive.desc": "ASEZ'deki lojistik, ticaret, turizm ve endüstriyel hizmetler için doğrulanmış irtibatlara erişin.",
+  "about.features.investment.title": "Yatırım Desteği",
+  "about.features.investment.desc": "En son ekonomik gelişmeler, teşvikler ve düzenleyici çerçevelerden haberdar olun.",
+  "about.features.networking.title": "Stratejik Ağ Oluşturma",
+  "about.features.networking.desc": "İşletmeler, devlet kurumları ve uluslararası yatırımcılar arasında köprü bağlantıları kurmak.",
+  "about.features.growth.title": "Ekonomik Büyüme",
+  "about.features.growth.desc": "Akabe'nin ticaret, turizm ve inovasyon alanlarında bölgesel bir lider olma vizyonuna katkıda bulunun.",
+  "about.missionTitle": "Misyonumuz",
+  "about.missionDesc1": "<0>Bold}}</0> olarak Akabe'nin ekonomik gelişimini yerel, bölgesel ve uluslararası platformlarda desteklemek için yorulmadan çalışıyoruz. Bu rehber aşağıdaki hususlara olan bağlılığımızı yansıtmaktadır:",
+  "about.mission.point1": "ASEZ'de elverişli bir iş ortamı yaratılması.",
+  "about.mission.point2": "Hem KOBİ'lerin hem de büyük ölçekli işletmelerin büyümesini desteklemek.",
+  "about.mission.point3": "Yatırımcılar ve girişimciler için güncel, eyleme geçirilebilir içgörüler sağlamak.",
+  "about.bold.brandName": "Ayn Al Akabe",
+  "about.bold.entrepreneurs": "müteahhitler",
+  "about.bold.ASEZ": "ASEZ",
+  "about.joinTitle": "Akabe'nin Ekonomik Başarı Hikayesine Katılın",
+  "about.joinDesc": "Stratejik konum, vergi teşvikleri ve son teknoloji altyapının bir araya geldiği ASEZ'deki sonsuz olasılıkları keşfedin. AqabaGuide'ın yeni fırsatların kilidini açmaya yönelik ilk adımınız olmasına izin verin.",
+  "about.joinButton": "Bizimle İletişime Geçin",
+  "Category": "Kategori",
+  "Description": "Açıklama",
+  "Email": "E-posta",
+  "Image": "Resim",
+  "IsPremium": "Premium mu",
+  "Location": "Konum",
+  "Name": "İsim",
+  "Phone": "Telefon",
+  "Rating": "Değerlendirme",
+  "Reviews": "Yorumlar",
+  "Subcategory": "Alt Kategori",
+  "Website": "Web sitesi",
+  "tailwindcss": "Tailwind CSS",
+  "subcategories": {
+    "recSaZ8GSIQonWtUP": {
+      "name": "Özel Gümrükleme",
+      "description": "İthalat/ihracat evrak işlerini yönetir"
+    },
+    "recOts1U1r6Fu5Rqe": {
+      "name": "Martime hizmet sağlayıcısı",
+      "description": "Gemileri tedarik eder ve destekler"
+    },
+    "recVttIPxLBdUekj5": {
+      "name": "Oteller &amp; Otel daireleri",
+      "description": "Mobilyalı konuk konaklama birimleri"
+    },
+    "recq4jY66uUxMRmPO": {
+      "name": "Turizm ofisleri &amp; Araç kiralama acenteleri",
+      "description": "Seyahat rehberliği ve araç kiralama"
+    },
+    "recEv6uxzVnxCCV8V": {
+      "name": "Ticaret ve Ticari hizmetler",
+      "description": "İş desteği ve lojistik"
+    },
+    "recWw868BaUo5KW9U": {
+      "name": "Hastaneler ve Klinikler",
+      "description": "Tıbbi tedavi ve bakım"
+    },
+    "reck5OGOOlmv2Zzee": {
+      "name": "eczaneler",
+      "description": "İlaç ve tavsiye dağıtır"
+    },
+    "recGFVw4JBXJ1Nqh8": {
+      "name": "Devlet Hizmetleri",
+      "description": "İzinleri ve kamu kayıtlarını düzenler"
+    },
+    "rec5pC1VdAgz5DtVq": {
+      "name": "Restoranlar",
+      "description": "Yemek servisi"
+    },
+    "recqDDCujh0AMqFAF": {
+      "name": "İthalat &amp; İhracat",
+      "description": "Mal İthalatı ve İhracatı"
+    },
+    "recSMDwzx6Qzq5MDM": {
+      "name": "Taze Gıdalar",
+      "description": " Taze Gıda &amp; Bakkaliye"
+    },
+    "rect1IOqKF8wDQUyx": {
+      "name": "Fırıncılık ve Şekerleme",
+      "description": "fırın &amp; tatlılar"
+    },
+    "recwUCk79GzljVTND": {
+      "name": "Kafeler",
+      "description": "Kafeler"
+    },
+    "recfIti1Mxb7ccnUp": {
+      "name": "Coffee &amp; Nut Roasters",
+      "description": "Roastery"
+    },
+    "recTIvmVceJ4kYgTW": {
+      "name": "Bakkal &amp; Gıda Tedarikçileri",
+      "description": "Bakkal &amp; Gıda Tedarikçileri"
+    },
+    "rec0yR9q4pJkETkRx": {
+      "name": "Bakkal &amp; Süpermarketler",
+      "description": "Bakkal, Mini market, Süpermarket"
+    },
+    "recLpW8IIdV0SKHqQ": {
+      "name": "Endüstriyel Operasyonlar ve Altyapı",
+      "description": "Endüstriyel Sistemler &amp; Bakım"
+    },
+    "recwbqJAHAlEClt1r": {
+      "name": "Endüstriyel Hizmetler",
+      "description": "Üretim,İmalat,Fabrika"
+    }
+  },
+  "business.back": "Geri",
+  "business.searchPlaceholder": "İşletmeleri arayın..",
+  "business.premiumOnly": "Sadece Premium",
+  "business.errorLoad": "İşletmeler yüklenemedi.",
+  "business.none": "Hiçbir işletme bulunamadı.",
+  "business.viewDetails": "Detayları Görüntüle",
+  "sponsors": {
+    "1": {
+      "name": "Çeviklik"
+    },
+    "2": {
+      "name": "Akabe Lojistik Köyü (ALV)"
+    },
+    "3": {
+      "name": "Akabe Liman Yönetimi ve İşletmeciliği Şirketi"
+    },
+    "4": {
+      "name": "Akabe Limanı Deniz Hizmetleri Şirketi"
+    },
+    "5": {
+      "name": "Badr Denizcilik Onarım ve Hizmetleri A.Ş."
+    },
+    "6": {
+      "name": "Ticaret ve Finans için Konut Bankası"
+    },
+    "7": {
+      "name": "CMA CGM"
+    },
+    "8": {
+      "name": "Eagle Hills"
+    },
+    "9": {
+      "name": "Körfez Acente Şirketi"
+    },
+    "10": {
+      "name": "Yatırım için Altın Üçgen Co."
+    },
+    "11": {
+      "name": "Kral Hüseyin Uluslararası Havalimanı"
+    },
+    "12": {
+      "name": "Ürdün Denizcilik Otoritesi"
+    },
+    "13": {
+      "name": "MEEES Corp."
+    },
+    "14": {
+      "name": "Ulusal Havacılık Hizmetleri (NAS)"
+    },
+    "15": {
+      "name": "Ulusal Emlak Şirketi"
+    },
+    "16": {
+      "name": "Turuncu Jordan"
+    },
+    "17": {
+      "name": "PBI Aqaba Industrial Estate LLP"
+    },
+    "18": {
+      "name": "Pacific International Lines (PIL)"
+    },
+    "19": {
+      "name": "Ürdün Denizcilik Araştırmaları Akademisi"
+    },
+    "20": {
+      "name": "Trust For Logistic Services Ltd."
+    }
+  },
+  "business": {
+    "back": "Geri",
+    "searchPlaceholder": "İşletmeleri arayın..",
+    "errorLoad": "İşletmeler yüklenemedi.",
+    "none": "Hiçbir işletme bulunamadı.",
+    "viewDetails": "Detayları Görüntüle",
+    "loadMore": "Daha Fazla Yükle"
+  }
+}
