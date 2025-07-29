@@ -6,6 +6,11 @@ import fetch from 'node-fetch';
 
 dotenv.config();
 
+if (process.env.SKIP_TRANSLATIONS === 'true') {
+  console.log('⚠️ SKIP_TRANSLATIONS is set — skipping translation step.');
+  process.exit(0);
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
