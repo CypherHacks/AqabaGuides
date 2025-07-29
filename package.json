@@ -7,7 +7,7 @@
     "dev": "vite",
     "generate-translations": "node scripts/translate-locales.js",
     "build:counts": "tsx scripts/generateCategoryCounts.ts",
-    "build": "npm run build:counts && [ \"$NODE_ENV\" != \"production\" ] && npm run generate-translations && vite build",
+ "build": "node scripts/build.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
