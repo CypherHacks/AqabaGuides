@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from 'react';
 import { Routes, Route, useNavigate, useParams } from 'react-router-dom';
 
@@ -65,7 +64,7 @@ function BusinessDetailPage() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       <Header />
       
       <main className="relative">
