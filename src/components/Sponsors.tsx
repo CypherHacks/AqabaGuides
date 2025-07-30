@@ -257,12 +257,6 @@ const Sponsors: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Enhanced Header Section */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-6 shadow-lg">
-            <div className="w-3 h-3 bg-white rounded-full mr-1 animate-pulse"></div>
-            <div className="w-3 h-3 bg-white rounded-full mr-1 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-            <div className="w-3 h-3 bg-white rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-          </div>
-          
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6 leading-tight">
             {t('hero.supportersTitle')}
           </h2>
