@@ -1,7 +1,7 @@
 {
-  "sponsor.banner":        "Premium Aqaba Business Directory - Partner With Us",
+  "sponsor.banner":        "Premium Aqaba Business Directory: Partner with Us",
   "header.siteName":       "AqabaGuide",
-  "header.logoAlt":        "AqabaGuide logo",
+  "header.logoAlt":        "AqabaGuide Logo",
   "nav.home":              "Home",
   "nav.about":             "About Us",
   "nav.listYourBusiness":  "List Your Business",
@@ -19,13 +19,9 @@
   "hero.searchPlaceholder": "Search businesses or subcategories...",
   "hero.type.business":     "Business",
   "hero.type.subcategory":  "Subcategory",
-  "hero.stats.businesses": "Businesses Listed",
-  "hero.stats.communityTitle": "Community Driven",
-  "hero.stats.communityDesc": "Built for locals & visitors",
-  "hero.stats.upToDate": "Always up‑to‑date",
 
   "footer.description":        "Your trusted guide to Aqaba's business landscape, connecting visitors and businesses.",
-  "footer.logoAlt":            "AqabaGuide logo",
+  "footer.logoAlt":            "AqabaGuide Logo",
   "footer.mainCategoriesTitle": "Main Categories",
   "footer.quickLinksTitle":    "Quick Links",
   "footer.contactUsTitle":     "Contact Us",
@@ -58,30 +54,30 @@
   "sub.title":                 "Subcategories",
   "sub.count":                 "Subcategories",
   "sub.total":                 "Total Businesses",
-  "sub.loading":               "Loading sub-categories…",
+  "sub.loading":               "Loading sub-categories...",
   "sub.errorLoad":             "Failed to load sub-categories.",
   "sub.none":                  "No sub-categories available.",
   "sub.businesses":            "businesses",
   "sub.viewAll":               "View All",
-  "sub.back":         "Back",
-  "sub.viewPDF":      "View PDF",
-  "sub.downloadPDF":  "Download PDF",
+  "sub.back":                  "Back",
+  "sub.viewPDF":               "View PDF",
+  "sub.downloadPDF":           "Download PDF",
 
   "sub.logisticsGuide.title":          "View Guide",
-  "sub.logisticsGuide.desc":           "Comprehensive guide to logistics services in the region with helpful resources.",
+  "sub.logisticsGuide.desc":           "Comprehensive guide to logistics services in the region with helpful resources",
   "sub.logisticsGuide.alt":            "View Guide",
-  "sub.logisticsGuide.downloadOverlay": "Download Guide",
-  "sub.logisticsGuide.downloadButton":  "Download PDF",
+  "sub.logisticsGuide.downloadOverlay":"Download Guide",
+  "sub.logisticsGuide.downloadButton": "Download PDF",
 
   "sub.supporterLabel":  "Proudly Supported by",
   "sub.supporter.alt":   "Aqaba Water Company Logo",
   "sub.supporter.aria":  "Visit Aqaba Water Company website",
   "sub.supporter.name":  "Aqaba Water Company",
-  "sub.supporter.desc":  "Providing sustainable water solutions for the region since 2004.",
+  "sub.supporter.desc":  "Sustainable water solutions since 2004",
   "sub.supporter.visit": "Visit Website",
 
   "list.heroTitle":            "Grow Your Business in ASEZ",
-  "list.heroDesc":             "Join AqabaGuide's trusted directory and connect with investors, customers, and partners in the Aqaba Special Economic Zone.",
+  "list.heroDesc":             "Join AqabaGuide's directory and connect with investors, customers, and partners in the Aqaba Special Economic Zone.",
   "list.benefitsTitle":        "Why List With Us?",
   "list.benefits.visibility.title":   "Increased Visibility",
   "list.benefits.visibility.desc":    "Reach thousands of potential clients and investors searching for services in ASEZ.",
@@ -105,7 +101,7 @@
   "list.fields.message.placeholder":"Tell us about your business, advertising preferences, or special requests...",
   "list.fields.terms":              "I agree to AqabaGuide's <1>Terms of Service</1>.",
   "list.button.submit":             "Submit Application",
-  "list.status.sending":            "Sending…",
+  "list.status.sending":            "Sending...",
   "list.status.sent":               "✓ Submitted!",
   "list.status.error":              "✕ Submission failed.",
   "list.cta.title":                 "Need Help?",
@@ -119,7 +115,7 @@
   "detail.service.support":"24/7 Customer Support",
   "detail.service.consult":"On-site Consultation",
 
- "about.title": "About AqabaGuide",
+  "about.title": "About AqabaGuide",
   "about.gatewayTitle": "Your Gateway to Business Success in ASEZ",
   "about.gatewayDesc1": "AqabaGuide is the premier business directory designed to empower <0>{{bold1}}</0>, investors, and businesses looking to establish or expand their commercial activities in the <1>{{bold2}}</1>. Our platform serves as a strategic tool, offering precise details on world-class infrastructure projects, logistics services, and investment opportunities in Aqaba.",
   "about.gatewayDesc2": "Whether you're a local startup or a global investor, we connect you with the right partners, services, and resources to thrive in one of the Middle East's most dynamic economic hubs.",
@@ -158,13 +154,13 @@
   "Website":        "Website",
   "tailwindcss":    "Tailwind CSS",
 
-"subcategories": {
+  "subcategories": {
     "recSaZ8GSIQonWtUP": {
-      "name":        "Custom Clearance",
+      "name":        "Customs Clearance",
       "description": "Manages import/export paperwork"
     },
     "recOts1U1r6Fu5Rqe": {
-      "name":        "Martime service provider",
+      "name":        "Maritime service provider",
       "description": "Supplies and supports vessels"
     },
     "recVttIPxLBdUekj5": {
@@ -184,7 +180,7 @@
       "description": "Medical treatment and care"
     },
     "reck5OGOOlmv2Zzee": {
-      "name":        "pharmacies",
+      "name":        "Pharmacies",
       "description": "Dispenses medications and advice"
     },
     "recGFVw4JBXJ1Nqh8": {
@@ -201,11 +197,11 @@
     },
     "recSMDwzx6Qzq5MDM": {
       "name":        "Fresh Foods",
-      "description": " Fresh Food & Grocery"
+      "description": "Fresh Food & Grocery"
     },
     "rect1IOqKF8wDQUyx": {
       "name":        "Bakery & Confectionery",
-      "description": "bakery & sweets"
+      "description": "Bakery & sweets"
     },
     "recwUCk79GzljVTND": {
       "name":        "Cafés",
@@ -229,19 +225,19 @@
      },
       "recwbqJAHAlEClt1r": {
       "name":        "Industrial Services",
-      "description": "Production,Manufacturing,Factory"
+      "description": "Production, Manufacturing, Factory"
     }
   },
 
   "business.back":              "Back",
-  "business.searchPlaceholder": "Search businesses…",
+  "business.searchPlaceholder": "Search businesses...",
   "business.premiumOnly":       "Premium Only",
   "business.errorLoad":         "Failed to load businesses.",
   "business.none":              "No businesses found.",
   "business.viewDetails":       "View Details",
   "business": {
     "back":               "Back",
-    "searchPlaceholder":  "Search businesses…",
+    "searchPlaceholder":  "Search businesses...",
     "errorLoad":          "Failed to load businesses.",
     "none":               "No businesses found.",
     "viewDetails":        "View Details",

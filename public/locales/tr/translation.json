@@ -18,11 +18,7 @@
   "hero.searchPlaceholder": "İşletmeleri veya alt kategorileri arayın...",
   "hero.type.business": "İş Dünyası",
   "hero.type.subcategory": "Alt Kategori",
-  "hero.stats.businesses": "Listelenen İşletmeler",
-  "hero.stats.communityTitle": "Toplum Odaklı",
-  "hero.stats.communityDesc": "Yerel halk ve ziyaretçiler için tasarlandı",
-  "hero.stats.upToDate": "Her zaman güncel",
-  "hero.stats.lastSync": "Son senkronizasyon: {{tarih}}",
+ 
   "footer.description": "Akabe'nin iş dünyası için güvenilir rehberiniz, ziyaretçileri ve işletmeleri birbirine bağlıyor.",
   "footer.logoAlt": "AqabaGuide logosu",
   "footer.mainCategoriesTitle": "Ana Kategoriler",

@@ -18,11 +18,7 @@
   "hero.searchPlaceholder": "搜索企业或子类别...",
   "hero.type.business": "商业",
   "hero.type.subcategory": "子类别",
-  "hero.stats.businesses": "列出的企业",
-  "hero.stats.communityTitle": "社区驱动",
-  "hero.stats.communityDesc": "为当地人和游客而建",
-  "hero.stats.upToDate": "始终保持最新",
-  "hero.stats.lastSync": "最后同步：{{日期｝",
+ 
   "footer.description": "您值得信赖的亚喀巴商业指南，连接游客和企业。",
   "footer.logoAlt": "亚喀巴指南》徽标",
   "footer.mainCategoriesTitle": "主要类别",

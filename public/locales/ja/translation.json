@@ -18,11 +18,7 @@
   "hero.searchPlaceholder": "ビジネスまたはサブカテゴリーを検索...",
   "hero.type.business": "ビジネス",
   "hero.type.subcategory": "サブカテゴリー",
-  "hero.stats.businesses": "掲載企業",
-  "hero.stats.communityTitle": "コミュニティ主導",
-  "hero.stats.communityDesc": "地元の人々と観光客のために作られた",
-  "hero.stats.upToDate": "常に最新",
-  "hero.stats.lastSync": "最後の同期{日付}}",
+
   "footer.description": "アカバのビジネス環境を紹介し、観光客と企業をつなぐ信頼できるガイドです。",
   "footer.logoAlt": "アカバガイドのロゴ",
   "footer.mainCategoriesTitle": "主なカテゴリー",

@@ -18,11 +18,7 @@
   "hero.searchPlaceholder": "Unternehmen oder Unterkategorien suchen...",
   "hero.type.business": "Business",
   "hero.type.subcategory": "Unterkategorie",
-  "hero.stats.businesses": "Aufgelistete Unternehmen",
-  "hero.stats.communityTitle": "Von der Gemeinschaft getrieben",
-  "hero.stats.communityDesc": "Gebaut für Einheimische und Besucher",
-  "hero.stats.upToDate": "Immer auf dem neuesten Stand",
-  "hero.stats.lastSync": "Letzte Synchronisierung: {{Datum}}",
+  
   "footer.description": "Ihr zuverlässiger Führer durch die Geschäftswelt von Aqaba, der Besucher und Unternehmen miteinander verbindet.",
   "footer.logoAlt": "AqabaLogo-Führer",
   "footer.mainCategoriesTitle": "Hauptkategorien",

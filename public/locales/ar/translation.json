@@ -6,22 +6,21 @@
   "nav.about": "نبذة عنا",
   "nav.listYourBusiness": "أدرج نشاطك التجاري",
   "aria.toggleMenu": "تبديل قائمة التصفح",
+
   "hero.loadError": "فشل تحميل بيانات البحث",
   "hero.supportersTitle": "داعمونا الكرام",
-  "hero.supportersDesc": "تلعب هذه المنظمات دوراً حيوياً في دعم نمو العقبة وتطورها",
+  "hero.supportersDesc": "تلعب هذه المنظمات دورًا حيويًا في دعم نمو العقبة وتطورها",
   "hero.sponsors.adc": "دفع عجلة النمو الاقتصادي والتنمية في العقبة",
-  "hero.sponsors.aseza": "الإشراف على المنطقة الاقتصادية الخاصة في العقبة",
+  "hero.sponsors.aseza": "الإشراف على المنطقة الاقتصادية الخاصة بالعقبة",
   "hero.visitWebsite": "زيارة الموقع الإلكتروني",
   "hero.brand": "دليل العقبة",
   "hero.tagline": "اكتشف مركز الأعمال في العقبة",
-  "hero.description": "دليلك الشامل للمرافق السياحية، والخدمات اللوجستية، والمواقع الصناعية، والمنشآت التجارية في بوابة الأردن على البحر الأحمر",
+  "hero.description": "دليلك الشامل للمرافق السياحية والخدمات اللوجستية والمواقع الصناعية والمنشآت التجارية في بوابة الأردن على البحر الأحمر",
   "hero.searchPlaceholder": "ابحث عن الشركات أو الفئات الفرعية...",
   "hero.type.business": "الأعمال التجارية",
   "hero.type.subcategory": "الفئة الفرعية",
-  "hero.stats.businesses": "الشركات المدرجة",
-  "hero.stats.communityTitle": "مدفوعة من المجتمع",
-  "hero.stats.communityDesc": "مصممة للسكان المحليين والزوار",
-  "hero.stats.upToDate": "محدّثة دائماً",
+  
+
   "footer.description": "دليلك الموثوق به لمشهد الأعمال في العقبة، الذي يربط بين الزائرين والشركات.",
   "footer.logoAlt": "شعار دليل العقبة",
   "footer.mainCategoriesTitle": "الفئات الرئيسية",
@@ -31,29 +30,31 @@
   "footer.termsOfService": "شروط الخدمة",
   "footer.allRights": "جميع الحقوق محفوظة.",
   "footer.loadError": "فشل تحميل الفئات للتذييل:",
+
   "categories.exploreTitle": "استكشف المشهد التجاري في العقبة",
   "categories.exploreDesc": "تصفح دليلنا حسب قطاع الصناعة",
   "categories.exploreLabel": "استكشف",
   "categories.businesses": "الشركات",
   "categories.subcategories": "الفئات الفرعية",
-  "categories.loadError": "فئات الأخطاء في تحميل الأخطاء",
+  "categories.loadError": "فشل تحميل الفئات",
   "categories.logistics": "الخدمات اللوجستية",
   "categories.logistics.description": "شركات النقل والشحن",
-  "categories.industrial": "صناعي",
-  "categories.industrial.description": "المصانع والمعامل والمصانع والمصنعون",
+  "categories.industrial": "الصناعية",
+  "categories.industrial.description": "المصانع والمعامل والمصنعون",
   "categories.tourism": "السياحة",
   "categories.tourism.description": "المرافق والخدمات للسياح",
-  "categories.commercial": "تجاري",
+  "categories.commercial": "التجارية",
   "categories.commercial.description": "المتاجر والأسواق والمكاتب",
   "categories.healthcare": "الرعاية الصحية",
-  "categories.healthcare.description": "المستشفيات، والعيادات، والصيدليات، والمختبرات",
-  "categories.governmental": "حكومي",
+  "categories.healthcare.description": "المستشفيات والعيادات والصيدليات والمختبرات",
+  "categories.governmental": "الحكومية",
   "categories.governmental.description": "القطاعات الحكومية",
   "categories.other": "أخرى",
+
   "sub.title": "الفئات الفرعية",
   "sub.count": "الفئات الفرعية",
   "sub.total": "مجموع الشركات",
-  "sub.loading": "تحميل الفئات الفرعية..",
+  "sub.loading": "تحميل الفئات الفرعية...",
   "sub.errorLoad": "فشل تحميل الفئات الفرعية.",
   "sub.none": "لا توجد فئات فرعية متاحة.",
   "sub.businesses": "الأعمال التجارية",
@@ -61,61 +62,66 @@
   "sub.back": "رجوع",
   "sub.viewPDF": "عرض ملف PDF",
   "sub.downloadPDF": "تنزيل ملف PDF",
+
   "sub.logisticsGuide.title": "عرض الدليل",
-  "sub.logisticsGuide.desc": "دليل شامل للخدمات اللوجستية في المنطقة مع موارد مفيدة.",
+  "sub.logisticsGuide.desc": "دليل شامل للخدمات اللوجستية في المنطقة مع موارد مفيدة",
   "sub.logisticsGuide.alt": "عرض الدليل",
   "sub.logisticsGuide.downloadOverlay": "تنزيل الدليل",
   "sub.logisticsGuide.downloadButton": "تنزيل ملف PDF",
+
   "sub.supporterLabel": "مدعوم بفخر من",
   "sub.supporter.alt": "شعار شركة مياه العقبة",
-  "sub.supporter.aria": "قم بزيارة الموقع الإلكتروني لشركة مياه العقبة",
+  "sub.supporter.aria": "زيارة الموقع الإلكتروني لشركة مياه العقبة",
   "sub.supporter.name": "شركة مياه العقبة",
-  "sub.supporter.desc": "توفير حلول مياه مستدامة للمنطقة منذ عام 2004.",
+  "sub.supporter.desc": "حلول مياه مستدامة منذ عام 2004",
   "sub.supporter.visit": "زيارة الموقع الإلكتروني",
-  "list.heroTitle": "تنمية أعمالك في منطقة الشرق الأوسط وأفريقيا وجنوب شرق آسيا",
-  "list.heroDesc": "انضم إلى دليل AqabaGuide الموثوق وتواصل مع المستثمرين والعملاء والشركاء في منطقة العقبة الاقتصادية الخاصة.",
+
+  "list.heroTitle": "نمِّ عملك التجاري في المنطقة الاقتصادية الخاصة بالعقبة",
+  "list.heroDesc": "انضم إلى دليل العقبة الموثوق وتواصل مع المستثمرين والعملاء والشركاء في المنطقة الاقتصادية الخاصة بالعقبة.",
   "list.benefitsTitle": "لماذا تدرج معنا؟",
   "list.benefits.visibility.title": "زيادة الرؤية",
-  "list.benefits.visibility.desc": "يمكنك الوصول إلى آلاف العملاء والمستثمرين المحتملين الذين يبحثون عن خدمات في المنطقة الاقتصادية الخاصة الآسيوية.",
+  "list.benefits.visibility.desc": "الوصول إلى آلاف العملاء والمستثمرين المحتملين الباحثين عن خدمات في المنطقة الاقتصادية الخاصة بالعقبة.",
   "list.benefits.advertising.title": "الإعلانات المميزة",
-  "list.benefits.advertising.desc": "قم بتسليط الضوء على نشاطك التجاري من خلال القوائم الدعائية واللافتات والمواقع المميزة.",
+  "list.benefits.advertising.desc": "تسليط الضوء على نشاطك التجاري من خلال القوائم الدعائية واللافتات والمواقع المميزة.",
   "list.benefits.networking.title": "فرص التواصل",
-  "list.benefits.networking.desc": "احصل على دعوة لحضور فعاليات مستثمري المنطقة الاقتصادية الخاصة بالدقم الحصرية والمنتديات التجارية.",
+  "list.benefits.networking.desc": "دعوات لفعاليات المستثمرين في المنطقة الاقتصادية الخاصة بالعقبة والمنتديات التجارية.",
   "list.formTitle": "أرسل نشاطك التجاري",
-  "list.formDesc": "أكمل النموذج أدناه، وسيقوم فريقنا بالاتصال بك في غضون 24 ساعة لمناقشة خيارات الإدراج وباقات الإعلانات والأسعار.",
+  "list.formDesc": "أكمل النموذج أدناه، وسيتواصل معك فريقنا خلال 24 ساعة لمناقشة خيارات الإدراج وباقات الإعلانات والأسعار.",
   "list.fields.name.label": "الاسم التجاري",
-  "list.fields.name.placeholder": "على سبيل المثال، شركة العقبة للحلول اللوجستية",
+  "list.fields.name.placeholder": "مثال: شركة العقبة للحلول اللوجستية",
   "list.fields.industry.label": "الصناعة",
   "list.fields.industry.placeholder": "اختر الفئة",
-  "list.fields.contact.label": "الاتصال بالشخص",
-  "list.fields.contact.placeholder": "على سبيل المثال، جون دو",
+  "list.fields.contact.label": "جهة الاتصال",
+  "list.fields.contact.placeholder": "مثال: جون دو",
   "list.fields.email.label": "البريد الإلكتروني",
   "list.fields.email.placeholder": "contact@example.com",
   "list.fields.phone.label": "الهاتف",
-  "list.fields.phone.placeholder": "+962 7x 7x xxx xxxxxxxx",
+  "list.fields.phone.placeholder": "+962 7X XXX XXXX",
   "list.fields.message.label": "تفاصيل إضافية",
   "list.fields.message.placeholder": "أخبرنا عن عملك أو تفضيلاتك الإعلانية أو طلباتك الخاصة...",
-  "list.fields.terms": "أوافق على <1>شروط خدمة</1> AqabaGuide.",
+  "list.fields.terms": "أوافق على <1>شروط الخدمة</1> في دليل العقبة.",
   "list.button.submit": "تقديم الطلب",
-  "list.status.sending": "إرسال..",
-  "list.status.sent": "✓ مقدم!",
+  "list.status.sending": "إرسال...",
+  "list.status.sent": "✓ تم التقديم!",
   "list.status.error": "✕ فشل التقديم.",
   "list.cta.title": "هل تحتاج إلى مساعدة؟",
-  "list.cta.desc": "راسلنا عبر البريد الإلكتروني <1>partners@aqabaguide.com</1> أو اتصل بنا على <3>+962 7 7 7691 1233</3>.",
+  "list.cta.desc": "راسلنا عبر <1>partners@aqabaguide.com</1> أو اتصل على <3>+962 7 7691 1233</3>",
+
   "detail.back": "العودة إلى القوائم",
   "detail.premiumProfile": "الملف التجاري المميز",
   "detail.reviews": "المراجعات",
   "detail.contactTitle": "الاتصال والموقع",
   "detail.servicesTitle": "الخدمات الخاصة",
-  "detail.service.support": "دعم العملاء على مدار الساعة طوال أيام الأسبوع",
+  "detail.service.support": "دعم العملاء 24/7",
   "detail.service.consult": "استشارة في الموقع",
+
   "about.title": "نبذة عن دليل العقبة",
-  "about.gatewayTitle": "بوابتك لنجاح الأعمال في المنطقة الاقتصادية الخاصة الآسيوية",
-  "about.gatewayDesc1": "AqabaGuide هو دليل الأعمال الرئيسي المصمم لتمكين <0>{{bold1}}</0> والمستثمرين والشركات التي تتطلع إلى تأسيس أو توسيع أنشطتها التجارية في <1>{{bold2}}</1>. تعمل منصتنا كأداة استراتيجية تقدم تفاصيل دقيقة عن مشاريع البنية التحتية والخدمات اللوجستية وفرص الاستثمار في العقبة.",
-  "about.gatewayDesc2": "وسواء كنت شركة ناشئة محلية أو مستثمراً عالمياً، فنحن نربطك بالشركاء المناسبين والخدمات والموارد المناسبة لتزدهر في أحد أكثر المراكز الاقتصادية ديناميكية في الشرق الأوسط.",
-  "about.whyTitle": "لماذا تختار AqabaGuide؟",
+  "about.gatewayTitle": "بوابتك لنجاح الأعمال في المنطقة الاقتصادية الخاصة بالعقبة",
+  "about.gatewayDesc1": "دليل العقبة هو الدليل التجاري الرئيسي المصمم لتمكين <0>{{bold1}}</0> والمستثمرين والشركات التي تتطلع إلى تأسيس أو توسيع أنشطتها التجارية في <1>{{bold2}}</1>. توفر منصتنا تفاصيل دقيقة عن مشاريع البنية التحتية والخدمات اللوجستية وفرص الاستثمار في العقبة",
+  "about.gatewayDesc2": "سواء كنت شركة ناشئة محلية أم مستثمرًا عالميًا، نربطك بالشركاء والخدمات والموارد المناسبة لتزدهر في واحد من أكثر المراكز الاقتصادية ديناميكية في الشرق الأوسط",
+  "about.whyTitle": "لماذا تختار دليل العقبة؟",
   "about.features.comprehensive.title": "الدليل الشامل",
-  "about.features.comprehensive.desc": "الوصول إلى جهات الاتصال التي تم التحقق منها للخدمات اللوجستية والتجارية والسياحية والصناعية في المنطقة الاقتصادية الخاصة الآسيوية.",
+  "about.features.comprehensive.desc": "الوصول إلى جهات الاتصال الموثوقة لخدمات اللوجستيات والتجارة والسياحة والخدمات الصناعية في المنطقة الاقتصادية الخاصة بالعقبة.",
   "about.features.investment.title": "دعم الاستثمار",
   "about.features.investment.desc": "اطلع على أحدث التطورات الاقتصادية والحوافز والأطر التنظيمية.",
   "about.features.networking.title": "الربط الشبكي الاستراتيجي",
@@ -123,21 +129,22 @@
   "about.features.growth.title": "النمو الاقتصادي",
   "about.features.growth.desc": "المساهمة في رؤية العقبة كرائد إقليمي في التجارة والسياحة والابتكار.",
   "about.missionTitle": "مهمتنا",
-  "about.missionDesc1": "في <0>{{بولد}}،</0> نعمل بلا كلل لتعزيز التنمية الاقتصادية في العقبة على المستويات المحلية والإقليمية والدولية. ويعكس هذا الدليل التزامنا بـ",
-  "about.mission.point1": "تهيئة بيئة أعمال مواتية في المنطقة الاقتصادية الخاصة الآسيوية.",
-  "about.mission.point2": "دعم نمو الشركات الصغيرة والمتوسطة والشركات الكبيرة على حد سواء.",
+  "about.missionDesc1": "في <0>{{bold}}</0>، نعمل بلا كلل لتعزيز التنمية الاقتصادية في العقبة على المستويات المحلية والإقليمية والدولية. ويعكس هذا الدليل التزامنا بـ",
+  "about.mission.point1": "تهيئة بيئة أعمال مواتية في المنطقة الاقتصادية الخاصة بالعقبة.",
+  "about.mission.point2": "دعم نمو الشركات الصغيرة والمتوسطة والكبيرة على حد سواء.",
   "about.mission.point3": "توفير رؤى حديثة وقابلة للتنفيذ للمستثمرين ورواد الأعمال.",
   "about.bold.brandName": "عين العقبة",
-  "about.bold.entrepreneurs": "المتعاقدون",
-  "about.bold.ASEZ": "أسيز",
+  "about.bold.entrepreneurs": "رواد الأعمال",
+  "about.bold.ASEZ": "ASEZ",
   "about.joinTitle": "انضم إلى قصة النجاح الاقتصادي في العقبة",
-  "about.joinDesc": "استكشف الإمكانيات اللامتناهية في منطقة العقبة الاقتصادية الخاصة - حيث يجتمع الموقع الاستراتيجي والحوافز الضريبية والبنية التحتية المتطورة. اجعل من AqabaGuide خطوتك الأولى نحو إطلاق فرص جديدة.",
+  "about.joinDesc": "استكشف الإمكانيات اللامتناهية في المنطقة الاقتصادية الخاصة بالعقبة — حيث يجتمع الموقع الاستراتيجي والحوافز الضريبية والبنية التحتية المتطورة. اجعل من دليل العقبة خطوتك الأولى نحو إطلاق فرص جديدة.",
   "about.joinButton": "تواصل معنا",
+
   "Category": "الفئة",
   "Description": "الوصف",
   "Email": "البريد الإلكتروني",
   "Image": "الصورة",
-  "IsPremium": "هو بريميوم",
+  "IsPremium": "مميز فقط",
   "Location": "الموقع",
   "Name": "الاسم",
   "Phone": "الهاتف",
@@ -146,34 +153,35 @@
   "Subcategory": "الفئة الفرعية",
   "Website": "الموقع الإلكتروني",
   "tailwindcss": "Tailwind CSS",
+
   "subcategories": {
     "recSaZ8GSIQonWtUP": {
-      "name": "التخليص المخصص",
+      "name": "التخليص الجمركي",
       "description": "إدارة أوراق الاستيراد/التصدير"
     },
     "recOts1U1r6Fu5Rqe": {
-      "name": "مزود خدمة مارتيم",
-      "description": "إمدادات ودعم السفن"
+      "name": "مزود خدمة بحرية",
+      "description": "تجهيز السفن ودعمها"
     },
     "recVttIPxLBdUekj5": {
       "name": "الفنادق والشقق الفندقية",
-      "description": "أماكن إقامة النزلاء المفروشة"
+      "description": "أماكن إقامة مفروشة"
     },
     "recq4jY66uUxMRmPO": {
       "name": "مكاتب السياحة ووكالات تأجير السيارات",
-      "description": "إرشادات السفر وتأجير السيارات"
+      "description": "إرشاد السفر وتأجير السيارات"
     },
     "recEv6uxzVnxCCV8V": {
-      "name": "التجارة والخدمات التجارية",
+      "name": "الخدمات التجارية والتجارية",
       "description": "دعم الأعمال والخدمات اللوجستية"
     },
     "recWw868BaUo5KW9U": {
       "name": "المستشفيات والعيادات",
-      "description": "العلاج الطبي والرعاية الطبية"
+      "description": "العلاج والرعاية الطبية"
     },
     "reck5OGOOlmv2Zzee": {
       "name": "الصيدليات",
-      "description": "صرف الأدوية وتقديم المشورة الطبية"
+      "description": "صرف الأدوية وتقديم المشورة"
     },
     "recGFVw4JBXJ1Nqh8": {
       "name": "الخدمات الحكومية",
@@ -185,11 +193,11 @@
     },
     "recqDDCujh0AMqFAF": {
       "name": "الاستيراد والتصدير",
-      "description": "استيراد البضائع وتصديرها"
+      "description": "استيراد وتصدير البضائع"
     },
     "recSMDwzx6Qzq5MDM": {
       "name": "الأطعمة الطازجة",
-      "description": " الأغذية الطازجة والبقالة"
+      "description": "الأغذية الطازجة والبقالة"
     },
     "rect1IOqKF8wDQUyx": {
       "name": "المخبوزات والحلويات",
@@ -209,7 +217,7 @@
     },
     "rec0yR9q4pJkETkRx": {
       "name": "البقالة والسوبر ماركت",
-      "description": "متجر بقالة، سوق صغير، سوبر ماركت، سوبر ماركت"
+      "description": "متجر بقالة، سوبر ماركت"
     },
     "recLpW8IIdV0SKHqQ": {
       "name": "العمليات الصناعية والبنية التحتية",
@@ -217,19 +225,20 @@
     },
     "recwbqJAHAlEClt1r": {
       "name": "الخدمات الصناعية",
-      "description": "الإنتاج، التصنيع، المصنع، المصنع"
+      "description": "الإنتاج والتصنيع"
     }
   },
+
   "business.back": "رجوع",
-  "business.searchPlaceholder": "ابحث عن الشركات..",
-  "business.premiumOnly": "قسط فقط",
+  "business.searchPlaceholder": "ابحث عن الشركات...",
+  "business.premiumOnly": "مميز فقط",
   "business.errorLoad": "فشل تحميل الأعمال التجارية.",
   "business.none": "لم يتم العثور على أي أعمال تجارية.",
   "business.viewDetails": "عرض التفاصيل",
 
   "business": {
     "back": "رجوع",
-    "searchPlaceholder": "ابحث عن الشركات..",
+    "searchPlaceholder": "ابحث عن الشركات...",
     "errorLoad": "فشل تحميل الأعمال التجارية.",
     "none": "لم يتم العثور على أي أعمال تجارية.",
     "viewDetails": "عرض التفاصيل",

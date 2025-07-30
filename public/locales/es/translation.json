@@ -18,11 +18,7 @@
   "hero.searchPlaceholder": "Buscar empresas o subcategorías...",
   "hero.type.business": "Empresas",
   "hero.type.subcategory": "Subcategoría",
-  "hero.stats.businesses": "Listado de empresas",
-  "hero.stats.communityTitle": "Impulsado por la comunidad",
-  "hero.stats.communityDesc": "Construido para locales y visitantes",
-  "hero.stats.upToDate": "Siempre al día",
-  "hero.stats.lastSync": "Última sincronización: {{date}}",
+  
   "footer.description": "Su guía de confianza sobre el panorama empresarial de Aqaba, que conecta a visitantes y empresas.",
   "footer.logoAlt": "Logotipo de AqabaGuide",
   "footer.mainCategoriesTitle": "Categorías principales",

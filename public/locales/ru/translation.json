@@ -18,11 +18,7 @@
   "hero.searchPlaceholder": "Поиск предприятий или подкатегорий...",
   "hero.type.business": "Бизнес",
   "hero.type.subcategory": "Подкатегория",
-  "hero.stats.businesses": "Перечисленные предприятия",
-  "hero.stats.communityTitle": "По инициативе сообщества",
-  "hero.stats.communityDesc": "Создан для местных жителей и посетителей",
-  "hero.stats.upToDate": "Всегда актуально",
-  "hero.stats.lastSync": "Последняя синхронизация: {{дата}}",
+
   "footer.description": "Ваш надежный путеводитель по деловому ландшафту Акабы, объединяющий посетителей и предпринимателей.",
   "footer.logoAlt": "Логотип AqabaGuide",
   "footer.mainCategoriesTitle": "Основные категории",
