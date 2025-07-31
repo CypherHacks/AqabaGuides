@@ -155,11 +155,21 @@ const Hero: React.FC = () => {
   };
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', damping: 12, stiffness: 100 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: 'spring', damping: 12, stiffness: 100 },
+    },
   };
   const searchInputVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', damping: 12, stiffness: 100, delay: 0.4 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: 'spring', damping: 12, stiffness: 100, delay: 0.4 },
+    },
   };
 
   return (
@@ -190,15 +200,15 @@ const Hero: React.FC = () => {
           />
         </div>
         
-        {/* Desktop image - MODIFIED SECTION */}
+        {/* Desktop image - scaled up slightly */}
         <div className="hidden md:block w-full h-full">
           <motion.img
             src={Map}
             alt="Decorative map background"
             className="block w-full h-full object-cover object-center"
             style={{
-              transform: 'scale(0.8) translateY(0%)',
-              transformOrigin: 'center center'
+              transform: 'scale(1.05) translateY(0%)',
+              transformOrigin: 'center center',
             }}
           />
         </div>
