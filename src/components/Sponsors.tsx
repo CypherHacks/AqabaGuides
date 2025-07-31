@@ -35,10 +35,28 @@ interface Sponsor {
   name_ar: string;
   logo: string;
   profileUrl?: string;
-  pdfUrl: string;
+  pdfUrl?: string;
+  isMain?: boolean; // Added new property to identify main sponsors
+
 }
 
 const sponsorsData: Sponsor[] = [
+  {
+    id: 'main1',
+    name_en: 'ASEZA',
+    name_ar: 'سلطة منطقة العقبة الاقتصادية الخاصة',
+    logo: 'https://eservices.aseza.jo/assets/img/Slogo.png',
+    profileUrl: 'https://aseza.jo/Default/Ar',
+    isMain: true
+  },
+  {
+    id: 'main2',
+    name_en: 'ADC',
+    name_ar: 'شركة تطوير العقبة',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypWUsAWEhFz620RmXtGnl4ID9pasnSlfJcw&s',
+    profileUrl: 'https://www.adc.jo/',
+    isMain: true
+  },
   {
     id: '1',
     name_en: 'Agility',
@@ -210,6 +228,9 @@ const sponsorsData: Sponsor[] = [
 const Sponsors: React.FC = () => {
   const { t, i18n } = useTranslation();
 
+   const mainSponsors = sponsorsData.filter(sponsor => sponsor.isMain);
+  const otherSponsors = sponsorsData.filter(sponsor => !sponsor.isMain);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -245,7 +266,7 @@ const Sponsors: React.FC = () => {
     return logoUrl;
   };
 
-  return (
+     return (
     <section className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-30">
@@ -266,6 +287,64 @@ const Sponsors: React.FC = () => {
           <p className="text-xl text-slate-600 leading-relaxed font-light">
             {t('hero.supportersDesc')}
           </p>
+        </div>
+
+        {/* MAIN SPONSORS SECTION - SIMPLIFIED DESIGN */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-10 text-slate-800">
+          </h3>
+          <div className="flex flex-wrap justify-center gap-8">
+            {mainSponsors.map(sponsor => {
+              const displayName = i18n.language === 'ar' ? sponsor.name_ar : sponsor.name_en;
+              return (
+                <div 
+                  key={sponsor.id} 
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 relative overflow-hidden"
+                  style={{
+                    width: '280px',
+                    height: '220px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  {/* Logo with white background */}
+                  <div 
+                    className="relative h-24 w-full mb-4 flex items-center justify-center p-4 bg-white rounded-lg"
+                    style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={displayName}
+                      className="max-h-full max-w-full object-contain"
+                      onError={e => {
+                        (e.target as HTMLImageElement).src = `https://via.placeholder.com/200x100?text=${encodeURIComponent(displayName)}`;
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Name */}
+                  <h4 className="text-lg font-semibold text-slate-800 mb-3 text-center">
+                    {displayName}
+                  </h4>
+                  
+                  {/* Website Link */}
+                  {sponsor.profileUrl && (
+                    <a
+                      href={sponsor.profileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
+                    >
+                      <span>Visit Website</span>
+                      <ExternalLink className="w-4 h-4 ml-1" />
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Enhanced Slider */}
@@ -318,25 +397,7 @@ const Sponsors: React.FC = () => {
                             {t('hero.visitWebsite')}
                             <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
                           </a>
-                        )}
-
-                        {/* PDF Actions */}
-                        <div className="grid grid-cols-2 gap-3">
-                          <button
-                            onClick={() => handleViewPdf(sponsor.pdfUrl)}
-                            className="group/view flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-800 py-3 px-4 rounded-xl transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-md transform hover:scale-[1.02] active:scale-[0.98]"
-                          >
-                            <Eye className="w-4 h-4 mr-2 group-hover/view:scale-110 transition-transform duration-200" />
-                            View
-                          </button>
-                          <button
-                            onClick={() => handleDownloadPdf(sponsor.pdfUrl, displayName)}
-                            className="group/download flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white py-3 px-4 rounded-xl transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]"
-                          >
-                            <Download className="w-4 h-4 mr-2 group-hover/download:scale-110 transition-transform duration-200" />
-                            Download
-                          </button>
-                        </div>
+                        )}                       
                       </div>
                     </div>
                   </div>
