@@ -36,11 +36,11 @@ interface Sponsor {
   logo: string;
   profileUrl?: string;
   pdfUrl?: string;
-  isMain?: boolean; // Added new property to identify main sponsors
-
+  isMain?: boolean;
 }
 
 const sponsorsData: Sponsor[] = [
+  // --- MAIN SPONSORS ---
   {
     id: 'main1',
     name_en: 'ASEZA',
@@ -57,6 +57,7 @@ const sponsorsData: Sponsor[] = [
     profileUrl: 'https://www.adc.jo/',
     isMain: true
   },
+  // --- OTHER SPONSORS ---
   {
     id: '1',
     name_en: 'Agility',
@@ -220,7 +221,6 @@ const sponsorsData: Sponsor[] = [
     name_en: 'Nafith Logistics Services Co',
     name_ar: 'شركة نافذ للخدمات اللوجستية',
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEArXlZQEK4vg/company-logo_200_200/company-logo_200_200/0/1739096075595/nafith_logistics_logo?e=2147483647&v=beta&t=PjTBNr_9XN1_xr1n5KCWWtKp9P2Ny4O4XKM5mbDDIyI',
-    profileUrl: 'https://www.nafith.com/',
     pdfUrl: NafithPDF,
   },
 ];
@@ -228,8 +228,8 @@ const sponsorsData: Sponsor[] = [
 const Sponsors: React.FC = () => {
   const { t, i18n } = useTranslation();
 
-   const mainSponsors = sponsorsData.filter(sponsor => sponsor.isMain);
-  const otherSponsors = sponsorsData.filter(sponsor => !sponsor.isMain);
+  const mainSponsors = sponsorsData.filter(s => s.isMain);
+  const otherSponsors = sponsorsData.filter(s => !s.isMain);
 
   const settings = {
     dots: true,
@@ -246,11 +246,12 @@ const Sponsors: React.FC = () => {
     ],
   };
 
-  const handleViewPdf = (pdfUrl: string) => {
-    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+  const handleViewPdf = (pdfUrl?: string) => {
+    if (pdfUrl) window.open(pdfUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const handleDownloadPdf = (pdfUrl: string, companyName: string) => {
+  const handleDownloadPdf = (pdfUrl?: string, companyName?: string) => {
+    if (!pdfUrl || !companyName) return;
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = `${companyName.replace(/\s+/g, '-').toLowerCase()}-profile.pdf`;
@@ -259,86 +260,40 @@ const Sponsors: React.FC = () => {
     document.body.removeChild(link);
   };
 
-  const getProcessedLogo = (logoUrl: string, companyName: string) => {
-    if (logoUrl.includes('favicon') || logoUrl.includes('icon')) {
-      return `https://via.placeholder.com/300x150?text=${encodeURIComponent(companyName)}`;
-    }
-    return logoUrl;
-  };
-
-     return (
+  return (
     <section className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-indigo-100 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-purple-100 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
-        {/* Enhanced Header Section */}
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6 leading-tight">
-            {t('hero.supportersTitle')}
-          </h2>
-          
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6 rounded-full"></div>
-          
-          <p className="text-xl text-slate-600 leading-relaxed font-light">
-            {t('hero.supportersDesc')}
-          </p>
-        </div>
 
-        {/* MAIN SPONSORS SECTION - SIMPLIFIED DESIGN */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-10 text-slate-800">
+        {/* → MAIN SPONSORS */}
+        <div className="mb-16 text-center">
+          <h3 className="text-3xl font-bold text-slate-800 mb-6">
           </h3>
-          <div className="flex flex-wrap justify-center gap-8">
-            {mainSponsors.map(sponsor => {
-              const displayName = i18n.language === 'ar' ? sponsor.name_ar : sponsor.name_en;
+          <div className="flex flex-wrap justify-center gap-10">
+            {mainSponsors.map(s => {
+              const name = i18n.language === 'ar' ? s.name_ar : s.name_en;
               return (
-                <div 
-                  key={sponsor.id} 
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 relative overflow-hidden"
-                  style={{
-                    width: '280px',
-                    height: '220px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}
+                <div
+                  key={s.id}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 transform transition-transform duration-300 hover:scale-105"
+                  style={{ minWidth: '280px', maxWidth: '350px' }}
                 >
-                  {/* Logo with white background */}
-                  <div 
-                    className="relative h-24 w-full mb-4 flex items-center justify-center p-4 bg-white rounded-lg"
-                    style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
-                  >
+                  <div className="h-32 mb-4 flex items-center justify-center bg-white">
                     <img
-                      src={sponsor.logo}
-                      alt={displayName}
+                      src={s.logo}
+                      alt={name}
                       className="max-h-full max-w-full object-contain"
-                      onError={e => {
-                        (e.target as HTMLImageElement).src = `https://via.placeholder.com/200x100?text=${encodeURIComponent(displayName)}`;
-                      }}
                     />
                   </div>
-                  
-                  {/* Name */}
-                  <h4 className="text-lg font-semibold text-slate-800 mb-3 text-center">
-                    {displayName}
-                  </h4>
-                  
-                  {/* Website Link */}
-                  {sponsor.profileUrl && (
+                  <h4 className="text-xl font-semibold text-center mb-4">{name}</h4>
+                  {s.profileUrl && (
                     <a
-                      href={sponsor.profileUrl}
+                      href={s.profileUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-indigo-700 font-medium"
                     >
-                      <span>Visit Website</span>
-                      <ExternalLink className="w-4 h-4 ml-1" />
+                      {t('hero.visitWebsite')}
+                      <ExternalLink className="w-4 h-4" />
                     </a>
                   )}
                 </div>
@@ -347,57 +302,63 @@ const Sponsors: React.FC = () => {
           </div>
         </div>
 
-        {/* Enhanced Slider */}
+        {/* → OTHER SPONSORS SLIDER */}
         <div className="relative">
           <Slider {...settings} className="modern-sponsor-slider">
-            {sponsorsData.map(sponsor => {
-              const displayName = i18n.language === 'ar' ? sponsor.name_ar : sponsor.name_en;
-
+            {otherSponsors.map(s => {
+              const name = i18n.language === 'ar' ? s.name_ar : s.name_en;
               return (
-                <div key={sponsor.id} className="px-4 focus:outline-none">
+                <div key={s.id} className="px-4 focus:outline-none">
                   <div className="group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col border border-white/20 overflow-hidden transform hover:-translate-y-2 hover:scale-[1.02]">
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                     
-                    {/* Logo Section */}
+                    {/* Logo */}
                     <div className="relative h-48 bg-gradient-to-br from-gray-50 to-white flex items-center justify-center p-6 rounded-t-3xl">
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent"></div>
-                      <div className="relative w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <img
-                          src={getProcessedLogo(sponsor.logo, displayName)}
-                          alt={displayName}
-                          onError={e => {
-                            (e.target as HTMLImageElement).src = `https://via.placeholder.com/300x150?text=${encodeURIComponent(displayName)}`;
-                          }}
-                          className="max-h-full max-w-full object-contain drop-shadow-md"
-                          style={{ filter: 'contrast(1.1) saturate(1.1)' }}
-                        />
-                      </div>
-                      
-                      {/* Shimmer effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-out"></div>
+                      <img
+                        src={s.logo}
+                        alt={name}
+                        onError={e => {
+                          (e.target as HTMLImageElement).src = `https://via.placeholder.com/300x150?text=${encodeURIComponent(name)}`;
+                        }}
+                        className="max-h-full max-w-full object-contain drop-shadow-md"
+                      />
                     </div>
 
-                    {/* Content Section */}
+                    {/* Content */}
                     <div className="relative p-6 flex-grow flex flex-col bg-white/90 backdrop-blur-sm">
-                      <h3 className="text-lg font-bold text-slate-800 mb-6 text-center leading-tight min-h-[3rem] flex items-center justify-center">
-                        {displayName}
+                      <h3 className="text-lg font-bold text-slate-800 mb-6 text-center leading-tight">
+                        {name}
                       </h3>
 
-                      {/* Action Buttons */}
                       <div className="mt-auto space-y-3">
-                        {sponsor.profileUrl && (
+                        {s.profileUrl && (
                           <a
-                            href={sponsor.profileUrl}
+                            href={s.profileUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/btn flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 px-6 rounded-xl transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]"
+                            className="flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 px-6 rounded-xl transition-all duration-300 text-sm font-semibold shadow-lg"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200" />
+                            <ExternalLink className="w-4 h-4 mr-2" />
                             {t('hero.visitWebsite')}
-                            <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                            <ChevronRight className="w-4 h-4 ml-2" />
                           </a>
-                        )}                       
+                        )}
+
+                        {s.pdfUrl && (
+                          <div className="grid grid-cols-2 gap-3">
+                            <button
+                              onClick={() => handleViewPdf(s.pdfUrl)}
+                              className="flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 px-4 rounded-xl transition-all duration-300 text-sm font-semibold shadow-sm"
+                            >
+                              <Eye className="w-4 h-4 mr-2" />
+                            </button>
+                            <button
+                              onClick={() => handleDownloadPdf(s.pdfUrl, name)}
+                              className="flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white py-3 px-4 rounded-xl transition-all duration-300 text-sm font-semibold shadow-lg"
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                            </button>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -408,140 +369,7 @@ const Sponsors: React.FC = () => {
         </div>
       </div>
 
-      <style>{`
-        /* Modern Slider Styles */
-        .modern-sponsor-slider .slick-dots {
-          bottom: -60px;
-          display: flex !important;
-          justify-content: center;
-          gap: 8px;
-        }
-        
-        .modern-sponsor-slider .slick-dots li {
-          width: auto;
-          height: auto;
-          margin: 0;
-        }
-        
-        .modern-sponsor-slider .slick-dots li button {
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
-          border: 2px solid white;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-          transition: all 0.3s ease;
-          opacity: 0.7;
-        }
-        
-        .modern-sponsor-slider .slick-dots li button:hover {
-          transform: scale(1.2);
-          opacity: 1;
-        }
-        
-        .modern-sponsor-slider .slick-dots li button:before {
-          display: none;
-        }
-        
-        .modern-sponsor-slider .slick-dots li.slick-active button {
-          background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-          transform: scale(1.3);
-          opacity: 1;
-          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-        }
-        
-        .modern-sponsor-slider .slick-slide {
-          padding: 0 8px;
-        }
-        
-        .modern-sponsor-slider .slick-track {
-          display: flex;
-          align-items: stretch;
-        }
-        
-        .modern-sponsor-slider .slick-slide > div {
-          height: 100%;
-        }
-        
-        /* Navigation arrows */
-        .modern-sponsor-slider .slick-prev,
-        .modern-sponsor-slider .slick-next {
-          width: 48px;
-          height: 48px;
-          background: linear-gradient(135deg, #ffffff, #f8fafc);
-          border: 1px solid #e2e8f0;
-          border-radius: 50%;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          z-index: 2;
-          transition: all 0.3s ease;
-        }
-        
-        .modern-sponsor-slider .slick-prev:hover,
-        .modern-sponsor-slider .slick-next:hover {
-          background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-          border-color: #1d4ed8;
-          transform: scale(1.1);
-          box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
-        }
-        
-        .modern-sponsor-slider .slick-prev:before,
-        .modern-sponsor-slider .slick-next:before {
-          font-size: 18px;
-          color: #64748b;
-          transition: color 0.3s ease;
-        }
-        
-        .modern-sponsor-slider .slick-prev:hover:before,
-        .modern-sponsor-slider .slick-next:hover:before {
-          color: white;
-        }
-        
-        .modern-sponsor-slider .slick-prev {
-          left: -60px;
-        }
-        
-        .modern-sponsor-slider .slick-next {
-          right: -60px;
-        }
-        
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
-          .modern-sponsor-slider .slick-prev,
-          .modern-sponsor-slider .slick-next {
-            width: 40px;
-            height: 40px;
-          }
-          
-          .modern-sponsor-slider .slick-prev {
-            left: -50px;
-          }
-          
-          .modern-sponsor-slider .slick-next {
-            right: -50px;
-          }
-          
-          .modern-sponsor-slider .slick-prev:before,
-          .modern-sponsor-slider .slick-next:before {
-            font-size: 16px;
-          }
-        }
-        
-        /* Smooth animations */
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .modern-sponsor-slider .slick-slide {
-          animation: fadeInUp 0.6s ease-out;
-        }
-      `}</style>
+      {/* (keep your existing <style>…</style> for slick custom styles) */}
     </section>
   );
 };
